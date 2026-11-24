@@ -1,0 +1,189 @@
+[
+  {
+    "name": "Signal Hill",
+    "city": "Cape Town",
+    "province": "Western Cape",
+    "lat": -33.9178,
+    "lon": 18.4028,
+    "elevation_m": 340,
+    "organization": "COSSA / MJC Hilaal Forum",
+    "source": "COSSA Constitution §1.3.1 & cossa.co.za",
+    "notes": "Historic elevated Cape Peninsula vantage point (340 m ASL); primary COSSA station."
+  },
+  {
+    "name": "Three Anchor Bay",
+    "city": "Cape Town",
+    "province": "Western Cape",
+    "lat": -33.9065,
+    "lon": 18.3967,
+    "elevation_m": 5,
+    "organization": "COSSA / MJC Hilaal Forum / VOC Broadcast",
+    "source": "COSSA Constitution §1.3.1 & cossa.co.za",
+    "notes": "Sea-level beachfront vantage point 4 km from CBD; primary Voice of the Cape (VOC) live outside-broadcast hub."
+  },
+  {
+    "name": "Bakoven",
+    "city": "Cape Town",
+    "province": "Western Cape",
+    "lat": -33.9598,
+    "lon": 18.3728,
+    "elevation_m": 15,
+    "organization": "COSSA",
+    "source": "COSSA Constitution §1.3.1",
+    "notes": "Atlantic seaboard coastal horizon station."
+  },
+  {
+    "name": "Lagoon Beach",
+    "city": "Cape Town (Milnerton)",
+    "province": "Western Cape",
+    "lat": -33.891,
+    "lon": 18.4827,
+    "elevation_m": 4,
+    "organization": "MCW / COSSA",
+    "source": "MCW Report 1435rmd (Abdullah Salie: S33°53.4585' E18°29.960')",
+    "notes": "Coastal Table Bay beach horizon facing west over Robben Island."
+  },
+  {
+    "name": "Parow",
+    "city": "Cape Town",
+    "province": "Western Cape",
+    "lat": -33.9068,
+    "lon": 18.58,
+    "elevation_m": 42,
+    "organization": "MCW South Africa",
+    "source": "MCW South Africa Observer Network",
+    "notes": "Northern suburbs Cape Town observer station."
+  },
+  {
+    "name": "Stellenbosch",
+    "city": "Stellenbosch",
+    "province": "Western Cape",
+    "lat": -33.9321,
+    "lon": 18.8602,
+    "elevation_m": 136,
+    "organization": "COSSA",
+    "source": "COSSA Constitution §1.3.1",
+    "notes": "Boland inland Western Cape station."
+  },
+  {
+    "name": "Gordon's Bay",
+    "city": "Gordon's Bay",
+    "province": "Western Cape",
+    "lat": -34.1656,
+    "lon": 18.8669,
+    "elevation_m": 25,
+    "organization": "COSSA",
+    "source": "COSSA Constitution §1.3.1",
+    "notes": "False Bay eastern coastal station."
+  },
+  {
+    "name": "Grabouw",
+    "city": "Grabouw",
+    "province": "Western Cape",
+    "lat": -34.1514,
+    "lon": 19.0156,
+    "elevation_m": 315,
+    "organization": "COSSA",
+    "source": "COSSA Constitution §1.3.1",
+    "notes": "Overberg high-elevation inland station."
+  },
+  {
+    "name": "Laudium - Masjidus Salaam Minaret",
+    "city": "Pretoria (Tshwane)",
+    "province": "Gauteng",
+    "lat": -25.77966,
+    "lon": 28.109,
+    "elevation_m": 1380,
+    "organization": "HilalWatchZA / MCW",
+    "source": "hilal-data.json (sightmod hz-pmvjnz2oa)",
+    "notes": "Highveld inland station with documented horizon profile (azimuth center 276.3°, FOV 69°)."
+  },
+  {
+    "name": "Randburg Northcliff Tower",
+    "city": "Johannesburg",
+    "province": "Gauteng",
+    "lat": -26.205994,
+    "lon": 28.032063,
+    "elevation_m": 1750,
+    "organization": "HilalWatchZA / MCW",
+    "source": "hilal-data.json (sightmod hz-pmvjobict)",
+    "notes": "High-elevation Johannesburg ridge horizon station."
+  },
+  {
+    "name": "Azaadville",
+    "city": "Krugersdorp",
+    "province": "Gauteng",
+    "lat": -26.1708,
+    "lon": 27.7488,
+    "elevation_m": 1650,
+    "organization": "HilalWatchZA / Wifaqul Ulama SA",
+    "source": "hilal-data.json (sightings)",
+    "notes": "West Rand Gauteng observation station."
+  },
+  {
+    "name": "Rustenburg",
+    "city": "Rustenburg",
+    "province": "North West",
+    "lat": -25.6672,
+    "lon": 27.2421,
+    "elevation_m": 1170,
+    "organization": "MCW South Africa",
+    "source": "MCW South Africa Observer Network & 1444shw",
+    "notes": "Active MCW observer station (Tehseen Raza Hamdani)."
+  },
+  {
+    "name": "Zeerust",
+    "city": "Zeerust",
+    "province": "North West",
+    "lat": -25.545,
+    "lon": 26.0778,
+    "elevation_m": 1190,
+    "organization": "UUCSA / HilalWatchZA",
+    "source": "hilal-data.json (sightings)",
+    "notes": "Western North West dry-highveld observation point."
+  },
+  {
+    "name": "Makhado (Louis Trichardt)",
+    "city": "Makhado",
+    "province": "Limpopo",
+    "lat": -23.0436,
+    "lon": 29.9047,
+    "elevation_m": 960,
+    "organization": "UUCSA / HilalWatchZA",
+    "source": "hilal-data.json (sightings)",
+    "notes": "Northernmost South African station (~23°S), low latitude advantage."
+  },
+  {
+    "name": "eMalahleni (Witbank)",
+    "city": "eMalahleni",
+    "province": "Mpumalanga",
+    "lat": -25.8728,
+    "lon": 29.2553,
+    "elevation_m": 1560,
+    "organization": "MCW South Africa",
+    "source": "MCW South Africa Observer Network",
+    "notes": "Mpumalanga Highveld station (Shakil Vayani)."
+  },
+  {
+    "name": "Durban (JUKZN / MCW Hub)",
+    "city": "Durban",
+    "province": "KwaZulu-Natal",
+    "lat": -29.8587,
+    "lon": 31.0218,
+    "elevation_m": 20,
+    "organization": "Jamiatul Ulama KZN / MCW",
+    "source": "MCW South Africa Observer Network & jamiat.org.za",
+    "notes": "National coordination hub (Rashid Motala, Yusuf Essack) & KZN Hilaal committee."
+  },
+  {
+    "name": "Gqeberha (Malabar / Port Elizabeth)",
+    "city": "Gqeberha",
+    "province": "Eastern Cape",
+    "lat": -33.9139,
+    "lon": 25.5823,
+    "elevation_m": 80,
+    "organization": "UUCSA / MCW / HilalWatchZA",
+    "source": "hilal-data.json & MCW 1435zhj",
+    "notes": "Eastern Cape coastal observation station."
+  }
+]

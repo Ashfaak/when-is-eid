@@ -1,0 +1,756 @@
+@import 'leaflet/dist/leaflet.css';
+
+:root {
+  --bg: #070c1b;
+  --surface: #0e1630;
+  --surface-2: #162244;
+  --border: rgba(242, 169, 0, 0.22);
+  --border-subtle: rgba(148, 163, 184, 0.16);
+  --text: #f1f5f9;
+  --muted: #9fb0cb;
+  --accent: #109648;
+  --accent-bright: #10b981;
+  --accent-2: #1d6fe2;
+  --accent-cyan: #38bdf8;
+  --gold: #f2a900;
+  --danger: #d92b2b;
+  --ivory: #f8fafc;
+  --font-display: 'Cinzel', Georgia, serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Ndebele Stepped Concentric Diamond x Islamic Star Frieze */
+.art-frieze {
+  height: 13px;
+  width: 100%;
+  flex-shrink: 0;
+  border-bottom: 1.5px solid #040710;
+  background-color: #060913;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='14' viewBox='0 0 96 14'%3E%3Crect width='96' height='14' fill='%23060913'/%3E%3Cpolygon points='24,0 38,7 24,14 10,7' fill='%23d92b2b' stroke='%23060913' stroke-width='1.2'/%3E%3Cpolygon points='24,2 34,7 24,12 14,7' fill='%231d6fe2' stroke='%23f8fafc' stroke-width='0.8'/%3E%3Cpolygon points='24,4 30,7 24,10 18,7' fill='%23f2a900' stroke='%23060913' stroke-width='0.8'/%3E%3Cpolygon points='24,5.5 27,7 24,8.5 21,7' fill='%23109648'/%3E%3Cpolygon points='72,0 86,7 72,14 58,7' fill='%23109648' stroke='%23060913' stroke-width='1.2'/%3E%3Cpolygon points='72,2 82,7 72,12 62,7' fill='%23f2a900' stroke='%23060913' stroke-width='0.8'/%3E%3Cpolygon points='72,4 78,7 72,10 66,7' fill='%231d6fe2' stroke='%23f8fafc' stroke-width='0.7'/%3E%3Cpolygon points='72,5.5 75,7 72,8.5 69,7' fill='%23d92b2b'/%3E%3Crect x='45' y='4' width='6' height='6' fill='%23f2a900' stroke='%23060913' stroke-width='0.8'/%3E%3Crect x='45' y='4' width='6' height='6' transform='rotate(45 48 7)' fill='none' stroke='%23f8fafc' stroke-width='0.8'/%3E%3Crect x='93' y='4' width='6' height='6' fill='%23f2a900' stroke='%23060913' stroke-width='0.8'/%3E%3Crect x='-3' y='4' width='6' height='6' fill='%23f2a900' stroke='%23060913' stroke-width='0.8'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-size: 96px 13px;
+}
+
+/* Topbar */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 1.1rem;
+  background: linear-gradient(180deg, #111b3a 0%, var(--surface) 100%);
+  border-bottom: 1px solid var(--border);
+  z-index: 1200;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-emblem {
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 6px rgba(242, 169, 0, 0.25));
+}
+
+.brand h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--ivory);
+}
+
+.brand-sub {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
+.controls-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+}
+
+.control-group label {
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+select,
+input[type='text'] {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 0.42rem 0.65rem;
+  font-size: 0.84rem;
+  font-family: var(--font-sans);
+  outline: none;
+}
+
+select:focus,
+input[type='text']:focus {
+  border-color: var(--gold);
+}
+
+.search-group {
+  min-width: 265px;
+  position: relative;
+}
+
+.search-wrap {
+  display: flex;
+  gap: 0.3rem;
+  position: relative;
+}
+
+.search-wrap input {
+  width: 100%;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  max-height: 290px;
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+}
+
+.search-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.search-item:hover,
+.search-item.active {
+  background: var(--surface-2);
+}
+
+.search-item small {
+  color: var(--gold);
+  font-size: 0.72rem;
+}
+
+.segmented {
+  display: inline-flex;
+  background: var(--surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 2px;
+}
+
+.segmented.small {
+  width: 100%;
+  margin-bottom: 0.45rem;
+}
+
+.seg-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 0.34rem 0.65rem;
+  font-size: 0.77rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex: 1;
+  white-space: nowrap;
+}
+
+.seg-btn.active {
+  background: linear-gradient(135deg, var(--gold) 0%, #fbbf24 100%);
+  color: #060913;
+  font-weight: 700;
+}
+
+.icon-btn,
+.ghost-btn {
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.42rem 0.68rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.icon-btn:hover,
+.ghost-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* Main Workspace */
+.workspace {
+  display: grid;
+  grid-template-columns: 425px 1fr;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Subtle Islamic 8-point star & Ndebele diamond geometric lattice */
+.sidebar {
+  overflow-y: auto;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  background-color: var(--bg);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f2a900' stroke-opacity='0.06' stroke-width='1'%3E%3Cpolygon points='32,4 60,32 32,60 4,32'/%3E%3Crect x='16' y='16' width='32' height='32'/%3E%3Crect x='16' y='16' width='32' height='32' transform='rotate(45 32 32)'/%3E%3Ccircle cx='32' cy='32' r='6' stroke='%231d6fe2' stroke-opacity='0.08'/%3E%3C/g%3E%3C/svg%3E");
+  border-right: 1px solid var(--border);
+}
+
+.card {
+  position: relative;
+  flex-shrink: 0;
+  background: rgba(14, 22, 48, 0.94);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 0.9rem;
+  box-shadow: 0 8px 24px rgba(3, 6, 16, 0.45);
+}
+
+.hero-card {
+  background: linear-gradient(160deg, rgba(29, 111, 226, 0.16), rgba(16, 150, 72, 0.12) 45%, rgba(14, 22, 48, 0.98) 85%);
+  border: 1px solid rgba(242, 169, 0, 0.45);
+  overflow: hidden;
+  padding-top: 1.1rem;
+}
+
+.hero-card::before,
+.modal-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='5' viewBox='0 0 40 5'%3E%3Crect width='10' height='5' x='0' fill='%23109648'/%3E%3Crect width='10' height='5' x='10' fill='%23f2a900'/%3E%3Crect width='10' height='5' x='20' fill='%231d6fe2'/%3E%3Crect width='10' height='5' x='30' fill='%23d92b2b'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.45rem;
+}
+
+.card h2 {
+  margin: 0.1rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.14rem;
+  font-weight: 700;
+  color: var(--ivory);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--ivory);
+}
+
+.eyebrow {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+}
+
+.location-line {
+  font-size: 0.8rem;
+  color: var(--accent-cyan);
+  margin-bottom: 0.7rem;
+  font-weight: 500;
+}
+
+.badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.22rem 0.52rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.badge-local_sighting { background: rgba(16, 150, 72, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.48); }
+.badge-follow_saudi { background: rgba(29, 111, 226, 0.22); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.48); }
+.badge-follow_turkey_diyanet { background: rgba(168, 85, 247, 0.2); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.48); }
+.badge-regional_criteria { background: rgba(242, 169, 0, 0.2); color: #fcd34d; border: 1px solid rgba(242, 169, 0, 0.5); }
+.badge-split_communities { background: rgba(217, 43, 43, 0.2); color: #fda4af; border: 1px solid rgba(217, 43, 43, 0.48); }
+
+.mono-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.16rem 0.44rem;
+  color: var(--gold);
+}
+
+/* Eid Day Probability Bars */
+.eid-days {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.eid-day-row {
+  background: rgba(7, 12, 27, 0.78);
+  border: 1px solid var(--border-subtle);
+  border-radius: 9px;
+  padding: 0.55rem 0.65rem;
+}
+
+.eid-day-row.likely {
+  border-color: rgba(242, 169, 0, 0.55);
+}
+
+.eid-day-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.3rem;
+}
+
+.eid-date {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.eid-pct {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--accent-bright);
+}
+
+.eid-bar-track {
+  height: 7px;
+  background: rgba(148, 163, 184, 0.14);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 0.28rem;
+}
+
+.eid-bar-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.eid-sub {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.rule-note {
+  margin: 0.65rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.muted-small {
+  margin: 0 0 0.55rem;
+  font-size: 0.74rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Scatter Plot */
+.scatter-wrap {
+  position: relative;
+  width: 100%;
+  background: rgba(7, 12, 27, 0.85);
+  border: 1px solid var(--border-subtle);
+  border-radius: 9px;
+  padding: 0.35rem;
+}
+
+.scatter-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(14, 22, 48, 0.97);
+  border: 1px solid var(--gold);
+  border-radius: 7px;
+  padding: 0.38rem 0.52rem;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--text);
+  z-index: 30;
+  max-width: 220px;
+}
+
+.analog-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.32rem;
+  margin-top: 0.55rem;
+}
+
+.analog-chip {
+  font-family: var(--font-mono);
+  font-size: 0.69rem;
+  padding: 0.16rem 0.42rem;
+  border-radius: 5px;
+  border: 1px solid var(--border-subtle);
+}
+
+.analog-chip.yes {
+  background: rgba(16, 150, 72, 0.18);
+  border-color: rgba(16, 185, 129, 0.45);
+  color: #6ee7b7;
+}
+
+.analog-chip.no {
+  background: rgba(217, 43, 43, 0.16);
+  border-color: rgba(217, 43, 43, 0.42);
+  color: #fda4af;
+}
+
+/* Sky Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.metric-box {
+  background: rgba(7, 12, 27, 0.68);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 0.42rem 0.55rem;
+}
+
+.metric-label {
+  font-size: 0.67rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.metric-val {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.12rem;
+}
+
+/* Stations List */
+.stations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.36rem;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.station-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.44rem 0.58rem;
+  background: rgba(7, 12, 27, 0.62);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text);
+  width: 100%;
+}
+
+.station-row:hover,
+.station-row.active {
+  border-color: var(--gold);
+  background: var(--surface-2);
+}
+
+.station-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.station-meta {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.station-prob {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Map Stage */
+.map-stage {
+  position: relative;
+  min-height: 0;
+  height: 100%;
+  background: #060a14;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  background: #060a14;
+}
+
+.map-overlay {
+  position: absolute;
+  z-index: 900;
+  pointer-events: auto;
+}
+
+.map-overlay.top-right {
+  top: 12px;
+  right: 12px;
+}
+
+.map-overlay.bottom-left {
+  bottom: 22px;
+  left: 12px;
+}
+
+.layer-panel,
+.legend-card {
+  background: rgba(14, 22, 48, 0.93);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
+}
+
+.layer-panel {
+  width: 268px;
+}
+
+.panel-title {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  padding: 0.22rem 0;
+  cursor: pointer;
+}
+
+.legend-card {
+  max-width: 340px;
+  font-size: 0.74rem;
+}
+
+.legend-gradient {
+  height: 10px;
+  border-radius: 999px;
+  margin: 0.35rem 0 0.2rem;
+  background: linear-gradient(90deg, rgba(217, 43, 43, 0.35) 0%, #f2a900 30%, #eab308 50%, #1d6fe2 75%, #109648 100%);
+}
+
+.legend-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--muted);
+}
+
+.zone-legend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.28rem 0.55rem;
+  margin-top: 0.45rem;
+  padding-top: 0.42rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.zone-dot-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.zone-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 15, 0.78);
+  backdrop-filter: blur(4px);
+}
+
+.modal-card {
+  position: relative;
+  width: min(760px, 100%);
+  max-height: 85vh;
+  overflow-y: auto;
+  background-color: var(--surface);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f2a900' stroke-opacity='0.04' stroke-width='1'%3E%3Cpolygon points='32,4 60,32 32,60 4,32'/%3E%3Crect x='16' y='16' width='32' height='32'/%3E%3Crect x='16' y='16' width='32' height='32' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E");
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.35rem 1.25rem 1.2rem;
+  z-index: 1;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  color: var(--ivory);
+}
+
+.modal-body {
+  font-size: 0.84rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+
+.modal-body h3 {
+  color: var(--gold);
+  margin-top: 1rem;
+}
+
+.modal-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.65rem 0;
+  font-size: 0.78rem;
+}
+
+.modal-body th,
+.modal-body td {
+  border: 1px solid var(--border-subtle);
+  padding: 0.38rem 0.5rem;
+  text-align: left;
+}
+
+.modal-body th {
+  background: var(--surface-2);
+  color: var(--gold);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Leaflet overrides */
+.leaflet-tile-pane {
+  filter: invert(92%) hue-rotate(180deg) brightness(84%) contrast(92%) saturate(55%);
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.leaflet-tooltip {
+  background: rgba(14, 22, 48, 0.95);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-size: 0.76rem;
+}
+
+@media (max-width: 960px) {
+  #app {
+    height: auto;
+    overflow: auto;
+  }
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+  .map-stage {
+    height: 65vh;
+    min-height: 420px;
+  }
+}

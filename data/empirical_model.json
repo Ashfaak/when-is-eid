@@ -1,0 +1,4479 @@
+{
+  "model": {
+    "name": "South Africa COSSA/UUCSA Empirical Naked-Eye Logistic",
+    "b0": 0.342681,
+    "b1": 10.65907,
+    "k_eff": 2.5,
+    "hard_limits": {
+      "min_arcl_deg": 6.4,
+      "min_lag_min": 0.0
+    },
+    "cv_metrics": {
+      "n_samples": 187,
+      "n_feasible": 165,
+      "n_sighted": 85,
+      "n_not_sighted": 102,
+      "q50_midpoint": -0.0321,
+      "brier_score": 0.0522,
+      "log_loss": 0.1719,
+      "accuracy": 0.9198,
+      "roc_auc": 0.9818,
+      "comparison_3d_brier": 0.0569,
+      "comparison_3d_auc": 0.9777
+    }
+  },
+  "calibration_bins": [
+    {
+      "label": "Below Danjon / Moonset <= Sunset",
+      "q_min": -99.0,
+      "q_max": -0.25,
+      "n": 78,
+      "k": 1,
+      "empirical_rate": 0.0128,
+      "predicted_mean": 0.0136
+    },
+    {
+      "label": "Very Thin / Marginal (q -0.25 to -0.05)",
+      "q_min": -0.25,
+      "q_max": -0.05,
+      "n": 20,
+      "k": 4,
+      "empirical_rate": 0.2,
+      "predicted_mean": 0.2716
+    },
+    {
+      "label": "Transition Zone (q -0.05 to +0.08)",
+      "q_min": -0.05,
+      "q_max": 0.08,
+      "n": 21,
+      "k": 13,
+      "empirical_rate": 0.619,
+      "predicted_mean": 0.6155
+    },
+    {
+      "label": "Clear-Sky Naked Eye (q +0.08 to +0.25)",
+      "q_min": 0.08,
+      "q_max": 0.25,
+      "n": 17,
+      "k": 16,
+      "empirical_rate": 0.9412,
+      "predicted_mean": 0.8795
+    },
+    {
+      "label": "Easily Visible (q +0.25 to +0.55)",
+      "q_min": 0.25,
+      "q_max": 0.55,
+      "n": 26,
+      "k": 26,
+      "empirical_rate": 1.0,
+      "predicted_mean": 0.9862
+    },
+    {
+      "label": "High Crescent (q > +0.55)",
+      "q_min": 0.55,
+      "q_max": 99.0,
+      "n": 25,
+      "k": 25,
+      "empirical_rate": 1.0,
+      "predicted_mean": 0.9997
+    }
+  ],
+  "historical_observations": [
+    {
+      "hy": 1430,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2009-09-19",
+      "start": "2009-09-20",
+      "eid": "2009-09-20",
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.2518,
+      "sa_best_v": 7.1903,
+      "arcv": 12.098,
+      "w": 0.3723,
+      "arcl": 12.347,
+      "lag": 60.09,
+      "age": 21.93,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1430,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2009-10-18",
+      "start": "2009-10-20",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.4862,
+      "sa_best_v": -0.1897,
+      "arcv": 6.229,
+      "w": 0.1196,
+      "arcl": 7.072,
+      "lag": 32.11,
+      "age": 11.48,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1430,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2009-11-17",
+      "start": "2009-11-18",
+      "eid": "2009-11-27",
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.0538,
+      "sa_best_v": 5.2103,
+      "arcv": 10.719,
+      "w": 0.2702,
+      "arcl": 10.809,
+      "lag": 59.32,
+      "age": 22.26,
+      "cities": [
+        "Bakoven",
+        "Cape Town",
+        "Durban",
+        "Signal Hill"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2010-01-15",
+      "start": "2010-01-17",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.9538,
+      "sa_best_v": -4.866,
+      "arcv": 2.07,
+      "w": 0.0363,
+      "arcl": 4.027,
+      "lag": 9.98,
+      "age": 9.86,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2010-02-14",
+      "start": "2010-02-16",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -1.0193,
+      "sa_best_v": -5.5209,
+      "arcv": 0.954,
+      "w": 0.1105,
+      "arcl": 7.025,
+      "lag": 4.27,
+      "age": 13.98,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2010-03-16",
+      "start": "2010-03-18",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.9111,
+      "sa_best_v": -4.439,
+      "arcv": 1.287,
+      "w": 0.2337,
+      "arcl": 10.143,
+      "lag": 5.73,
+      "age": 19.35,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2010-04-15",
+      "start": "2010-04-17",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.4127,
+      "sa_best_v": 0.5453,
+      "arcv": 4.971,
+      "w": 0.4557,
+      "arcl": 13.987,
+      "lag": 23.47,
+      "age": 27.37,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2010-05-15",
+      "start": "2010-05-16",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.7076,
+      "sa_best_v": 11.7482,
+      "arcv": 13.48,
+      "w": 0.95,
+      "arcl": 19.909,
+      "lag": 67.89,
+      "age": 38.41,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2010-06-13",
+      "start": "2010-06-14",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.4226,
+      "sa_best_v": 8.8982,
+      "arcv": 12.781,
+      "w": 0.5517,
+      "arcl": 14.97,
+      "lag": 65.05,
+      "age": 28.14,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2010-07-12",
+      "start": "2010-07-13",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.065,
+      "sa_best_v": 5.3216,
+      "arcv": 10.688,
+      "w": 0.2941,
+      "arcl": 10.819,
+      "lag": 52.69,
+      "age": 19.85,
+      "cities": [
+        "Bakoven",
+        "Cape Town",
+        "Durban",
+        "Signal Hill",
+        "Three Anchor Bay"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2010-08-10",
+      "start": "2010-08-12",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.3293,
+      "sa_best_v": 1.3795,
+      "arcv": 7.605,
+      "w": 0.1512,
+      "arcl": 7.713,
+      "lag": 39.07,
+      "age": 13.07,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2010-09-09",
+      "start": "2010-09-10",
+      "eid": "2010-09-10",
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 1.07,
+      "sa_best_v": 15.3717,
+      "arcv": 17.849,
+      "w": 0.8087,
+      "arcl": 17.924,
+      "lag": 88.64,
+      "age": 30.06,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Pietermaritzburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2010-10-08",
+      "start": "2010-10-09",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.3518,
+      "sa_best_v": 8.19,
+      "arcv": 12.831,
+      "w": 0.4183,
+      "arcl": 12.944,
+      "lag": 65.38,
+      "age": 22.15,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg",
+        "Signal Hill"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1431,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2010-11-06",
+      "start": "2010-11-08",
+      "eid": "2010-11-17",
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.4289,
+      "sa_best_v": 0.3834,
+      "arcv": 6.823,
+      "w": 0.1163,
+      "arcl": 6.88,
+      "lag": 36.7,
+      "age": 12.44,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1432,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2011-02-03",
+      "start": "2011-02-05",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.9846,
+      "sa_best_v": -5.1735,
+      "arcv": 1.183,
+      "w": 0.1298,
+      "arcl": 7.576,
+      "lag": 5.42,
+      "age": 14.44,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1432,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2011-03-05",
+      "start": "2011-03-07",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.9156,
+      "sa_best_v": -4.4843,
+      "arcv": 1.271,
+      "w": 0.2289,
+      "arcl": 10.125,
+      "lag": 5.63,
+      "age": 19.79,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1432,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2011-04-04",
+      "start": "2011-04-06",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.625,
+      "sa_best_v": -1.5783,
+      "arcv": 3.574,
+      "w": 0.3303,
+      "arcl": 12.145,
+      "lag": 16.39,
+      "age": 25.5,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1432,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2011-05-04",
+      "start": "2011-05-06",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0299,
+      "sa_best_v": 4.9711,
+      "arcv": 9.035,
+      "w": 0.5195,
+      "arcl": 15.101,
+      "lag": 44.04,
+      "age": 32.74,
+      "cities": [
+        "Cape Town"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1432,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2011-06-03",
+      "start": "2011-06-04",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 1.1528,
+      "sa_best_v": 16.1995,
+      "arcv": 17.767,
+      "w": 0.9817,
+      "arcl": 20.496,
+      "lag": 89.36,
+      "age": 42.34,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1432,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2011-07-02",
+      "start": "2011-07-03",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.6976,
+      "sa_best_v": 11.6481,
+      "arcv": 15.342,
+      "w": 0.5855,
+      "arcl": 15.611,
+      "lag": 75.75,
+      "age": 30.56,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1432,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2011-07-31",
+      "start": "2011-08-01",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.2185,
+      "sa_best_v": 6.8566,
+      "arcv": 11.9,
+      "w": 0.349,
+      "arcl": 11.902,
+      "lag": 61.7,
+      "age": 21.42,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1432,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2011-08-29",
+      "start": "2011-08-31",
+      "eid": "2011-08-31",
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.2952,
+      "sa_best_v": 1.7202,
+      "arcv": 7.78,
+      "w": 0.1784,
+      "arcl": 8.426,
+      "lag": 38.83,
+      "age": 13.36,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1432,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2011-10-27",
+      "start": "2011-10-28",
+      "eid": "2011-11-06",
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.2382,
+      "sa_best_v": 7.0541,
+      "arcv": 11.982,
+      "w": 0.3688,
+      "arcl": 12.067,
+      "lag": 63.06,
+      "age": 21.22,
+      "cities": [
+        "Cape Town",
+        "Johannesburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2011-11-25",
+      "start": "2011-11-27",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.614,
+      "sa_best_v": -1.4676,
+      "arcv": 5.164,
+      "w": 0.0851,
+      "arcl": 5.825,
+      "lag": 28.52,
+      "age": 11.44,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2011-12-25",
+      "start": "2011-12-27",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.1343,
+      "sa_best_v": 3.329,
+      "arcv": 8.267,
+      "w": 0.367,
+      "arcl": 12.287,
+      "lag": 40.95,
+      "age": 22.88,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2012-01-24",
+      "start": "2012-01-26",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0758,
+      "sa_best_v": 5.4297,
+      "arcv": 8.437,
+      "w": 0.7102,
+      "arcl": 17.42,
+      "lag": 39.67,
+      "age": 33.37,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2012-02-22",
+      "start": "2012-02-24",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.9083,
+      "sa_best_v": -4.4111,
+      "arcv": 1.333,
+      "w": 0.2307,
+      "arcl": 10.012,
+      "lag": 5.98,
+      "age": 18.15,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2012-03-23",
+      "start": "2012-03-25",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.5891,
+      "sa_best_v": -1.2192,
+      "arcv": 3.889,
+      "w": 0.3378,
+      "arcl": 12.255,
+      "lag": 17.6,
+      "age": 25.61,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2012-04-22",
+      "start": "2012-04-23",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0709,
+      "sa_best_v": 3.9627,
+      "arcv": 8.38,
+      "w": 0.4573,
+      "arcl": 14.322,
+      "lag": 39.72,
+      "age": 32.43,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg",
+        "Rustenburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2012-05-21",
+      "start": "2012-05-23",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.6336,
+      "sa_best_v": -1.6636,
+      "arcv": 4.913,
+      "w": 0.0941,
+      "arcl": 6.474,
+      "lag": 24.11,
+      "age": 15.65,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2012-06-20",
+      "start": "2012-06-21",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0801,
+      "sa_best_v": 5.4728,
+      "arcv": 10.907,
+      "w": 0.2827,
+      "arcl": 11.132,
+      "lag": 54.13,
+      "age": 24.36,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Signal Hill"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2012-07-19",
+      "start": "2012-07-21",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.509,
+      "sa_best_v": -0.4176,
+      "arcv": 6.154,
+      "w": 0.0948,
+      "arcl": 6.382,
+      "lag": 32.58,
+      "age": 11.56,
+      "cities": [
+        "Cape Town"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2012-08-18",
+      "start": "2012-08-19",
+      "eid": "2012-08-19",
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.3542,
+      "sa_best_v": 8.2137,
+      "arcv": 12.913,
+      "w": 0.4082,
+      "arcl": 13.038,
+      "lag": 64.73,
+      "age": 24.4,
+      "cities": [
+        "Cape Town"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2012-09-16",
+      "start": "2012-09-18",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.2996,
+      "sa_best_v": 1.6757,
+      "arcv": 7.804,
+      "w": 0.1671,
+      "arcl": 8.238,
+      "lag": 38.65,
+      "age": 14.46,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1433,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2012-10-16",
+      "start": "2012-10-17",
+      "eid": "2012-10-26",
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.7946,
+      "sa_best_v": 12.6179,
+      "arcv": 15.91,
+      "w": 0.6581,
+      "arcl": 16.188,
+      "lag": 81.83,
+      "age": 28.96,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2012-11-14",
+      "start": "2012-11-15",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": -0.0695,
+      "sa_best_v": 3.9771,
+      "arcv": 9.34,
+      "w": 0.2947,
+      "arcl": 10.768,
+      "lag": 50.45,
+      "age": 19.31,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2012-12-13",
+      "start": "2012-12-15",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.9206,
+      "sa_best_v": -4.5341,
+      "arcv": 2.22,
+      "w": 0.0655,
+      "arcl": 5.077,
+      "lag": 11.13,
+      "age": 8.19,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2013-01-12",
+      "start": "2013-01-14",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.3756,
+      "sa_best_v": 0.9163,
+      "arcv": 5.616,
+      "w": 0.4081,
+      "arcl": 12.809,
+      "lag": 27.08,
+      "age": 21.33,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2013-02-11",
+      "start": "2013-02-13",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": 0.1042,
+      "sa_best_v": 5.7138,
+      "arcv": 8.11,
+      "w": 0.8238,
+      "arcl": 18.527,
+      "lag": 37.25,
+      "age": 33.53,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2013-03-12",
+      "start": "2013-03-14",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.6868,
+      "sa_best_v": -2.1962,
+      "arcv": 3.248,
+      "w": 0.281,
+      "arcl": 10.915,
+      "lag": 14.64,
+      "age": 20.58,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2013-04-11",
+      "start": "2013-04-13",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0669,
+      "sa_best_v": 4.0028,
+      "arcv": 8.402,
+      "w": 0.4604,
+      "arcl": 14.194,
+      "lag": 38.99,
+      "age": 30.32,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2013-05-11",
+      "start": "2013-05-12",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.66,
+      "sa_best_v": 11.2721,
+      "arcv": 14.393,
+      "w": 0.6894,
+      "arcl": 17.555,
+      "lag": 69.93,
+      "age": 39.04,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2013-06-09",
+      "start": "2013-06-10",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0114,
+      "sa_best_v": 4.558,
+      "arcv": 10.212,
+      "w": 0.2457,
+      "arcl": 10.485,
+      "lag": 50.47,
+      "age": 23.44,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2013-07-08",
+      "start": "2013-07-10",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.6611,
+      "sa_best_v": -1.9385,
+      "arcv": 4.834,
+      "w": 0.0626,
+      "arcl": 5.284,
+      "lag": 25.91,
+      "age": 8.61,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2013-08-07",
+      "start": "2013-08-09",
+      "eid": "2013-08-09",
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.1748,
+      "sa_best_v": 2.924,
+      "arcv": 8.906,
+      "w": 0.1912,
+      "arcl": 9.162,
+      "lag": 45.34,
+      "age": 18.33,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Witbank"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2013-09-06",
+      "start": "2013-09-07",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.4898,
+      "sa_best_v": 9.5701,
+      "arcv": 13.984,
+      "w": 0.4579,
+      "arcl": 13.994,
+      "lag": 68.99,
+      "age": 28.92,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1434,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2013-10-05",
+      "start": "2013-10-07",
+      "eid": "2013-10-16",
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.3132,
+      "sa_best_v": 1.5402,
+      "arcv": 7.797,
+      "w": 0.1461,
+      "arcl": 7.802,
+      "lag": 38.95,
+      "age": 16.28,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2013-11-04",
+      "start": "2013-11-05",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.5259,
+      "sa_best_v": 9.9306,
+      "arcv": 13.898,
+      "w": 0.5366,
+      "arcl": 14.741,
+      "lag": 66.72,
+      "age": 27.58,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2013-12-03",
+      "start": "2013-12-05",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.383,
+      "sa_best_v": 0.8424,
+      "arcv": 6.581,
+      "w": 0.2316,
+      "arcl": 9.586,
+      "lag": 32.61,
+      "age": 16.39,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2014-01-02",
+      "start": "2014-01-03",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.3451,
+      "sa_best_v": 8.1229,
+      "arcv": 10.52,
+      "w": 0.8238,
+      "arcl": 18.054,
+      "lag": 51.27,
+      "age": 29.8,
+      "cities": [
+        "Durban",
+        "Johannesburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2014-01-31",
+      "start": "2014-02-02",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.5583,
+      "sa_best_v": -0.9111,
+      "arcv": 4.015,
+      "w": 0.3691,
+      "arcl": 12.083,
+      "lag": 18.85,
+      "age": 19.33,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2014-03-02",
+      "start": "2014-03-03",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.2372,
+      "sa_best_v": 7.0444,
+      "arcv": 9.412,
+      "w": 0.8292,
+      "arcl": 18.362,
+      "lag": 42.8,
+      "age": 32.61,
+      "cities": [
+        "Durban",
+        "Port Elizabeth"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2014-03-31",
+      "start": "2014-04-02",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.3653,
+      "sa_best_v": 1.0186,
+      "arcv": 6.356,
+      "w": 0.299,
+      "arcl": 11.112,
+      "lag": 29.02,
+      "age": 21.36,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2014-04-30",
+      "start": "2014-05-01",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.5344,
+      "sa_best_v": 10.0157,
+      "arcv": 13.391,
+      "w": 0.6431,
+      "arcl": 16.601,
+      "lag": 63.76,
+      "age": 33.4,
+      "cities": [
+        "Durban",
+        "Johannesburg",
+        "Port Elizabeth"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2014-05-29",
+      "start": "2014-05-31",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0676,
+      "sa_best_v": 3.9964,
+      "arcv": 9.732,
+      "w": 0.2321,
+      "arcl": 10.055,
+      "lag": 47.67,
+      "age": 20.72,
+      "cities": [
+        "Durban",
+        "Witbank"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2014-06-27",
+      "start": "2014-06-29",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.666,
+      "sa_best_v": -1.9883,
+      "arcv": 4.792,
+      "w": 0.0613,
+      "arcl": 5.206,
+      "lag": 25.92,
+      "age": 7.62,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg",
+        "Lagoon Beach"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2014-07-27",
+      "start": "2014-07-29",
+      "eid": "2014-07-29",
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.257,
+      "sa_best_v": 2.1019,
+      "arcv": 8.28,
+      "w": 0.159,
+      "arcl": 8.432,
+      "lag": 42.98,
+      "age": 17.35,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg",
+        "Lagoon Beach"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2014-08-25",
+      "start": "2014-08-27",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -1.072,
+      "sa_best_v": -6.0481,
+      "arcv": 0.941,
+      "w": 0.028,
+      "arcl": 3.532,
+      "lag": 4.61,
+      "age": 2.17,
+      "cities": [],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1435,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2014-09-24",
+      "start": "2014-09-26",
+      "eid": "2014-10-05",
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.7403,
+      "sa_best_v": -2.7307,
+      "arcv": 4.183,
+      "w": 0.04,
+      "arcl": 4.189,
+      "lag": 20.53,
+      "age": 10.49,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Malabar",
+        "Port Elizabeth",
+        "Witbank"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1436,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2014-10-24",
+      "start": "2014-10-26",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.2877,
+      "sa_best_v": 1.7953,
+      "arcv": 7.918,
+      "w": 0.168,
+      "arcl": 8.477,
+      "lag": 36.96,
+      "age": 18.35,
+      "cities": [
+        "Durban",
+        "Malabar",
+        "Port Elizabeth"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1436,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2014-11-23",
+      "start": "2014-11-24",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.3237,
+      "sa_best_v": 7.9091,
+      "arcv": 11.891,
+      "w": 0.534,
+      "arcl": 14.886,
+      "lag": 58.04,
+      "age": 28.1,
+      "cities": [],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1436,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2014-12-22",
+      "start": "2014-12-24",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.6425,
+      "sa_best_v": -1.7528,
+      "arcv": 4.026,
+      "w": 0.2249,
+      "arcl": 9.539,
+      "lag": 19.89,
+      "age": 15.36,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Malabar",
+        "Port Elizabeth"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1436,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2015-01-21",
+      "start": "2015-01-23",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0535,
+      "sa_best_v": 5.2072,
+      "arcv": 8.394,
+      "w": 0.6773,
+      "arcl": 16.408,
+      "lag": 39.96,
+      "age": 27.81,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1436,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2015-02-19",
+      "start": "2015-02-21",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.6322,
+      "sa_best_v": -1.6498,
+      "arcv": 3.94,
+      "w": 0.2565,
+      "arcl": 10.045,
+      "lag": 18.11,
+      "age": 16.98,
+      "cities": [
+        "Bloemfontein",
+        "Cape Town",
+        "Durban",
+        "Johannesburg",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1436,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2015-03-21",
+      "start": "2015-03-22",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.418,
+      "sa_best_v": 8.8521,
+      "arcv": 11.535,
+      "w": 0.7701,
+      "arcl": 17.532,
+      "lag": 52.52,
+      "age": 30.68,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1436,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2015-04-19",
+      "start": "2015-04-21",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0459,
+      "sa_best_v": 4.2131,
+      "arcv": 9.369,
+      "w": 0.3298,
+      "arcl": 11.532,
+      "lag": 43.63,
+      "age": 20.84,
+      "cities": [
+        "Durban",
+        "Laudium",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1436,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2015-05-19",
+      "start": "2015-05-20",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 1.0544,
+      "sa_best_v": 15.2155,
+      "arcv": 17.393,
+      "w": 0.8651,
+      "arcl": 19.029,
+      "lag": 84.69,
+      "age": 35.23,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1438,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2016-12-29",
+      "start": "2016-12-31",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -1.0345,
+      "sa_best_v": -5.6728,
+      "arcv": 0.978,
+      "w": 0.0822,
+      "arcl": 6.002,
+      "lag": 4.72,
+      "age": 10.12,
+      "cities": [
+        "Cape Town"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1438,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2017-01-28",
+      "start": "2017-01-30",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.6691,
+      "sa_best_v": -2.019,
+      "arcv": 4.202,
+      "w": 0.1519,
+      "arcl": 8.044,
+      "lag": 19.89,
+      "age": 16.88,
+      "cities": [
+        "Cape Town"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1438,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2017-02-27",
+      "start": "2017-02-28",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.017,
+      "sa_best_v": 4.8423,
+      "arcv": 9.459,
+      "w": 0.4225,
+      "arcl": 13.206,
+      "lag": 43.01,
+      "age": 25.67,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1438,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2017-03-28",
+      "start": "2017-03-30",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.436,
+      "sa_best_v": 0.3115,
+      "arcv": 6.625,
+      "w": 0.1368,
+      "arcl": 7.422,
+      "lag": 29.98,
+      "age": 13.2,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1438,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2017-04-27",
+      "start": "2017-04-28",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.6455,
+      "sa_best_v": 11.1274,
+      "arcv": 14.368,
+      "w": 0.6676,
+      "arcl": 16.274,
+      "lag": 67.69,
+      "age": 27.4,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1438,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2017-05-26",
+      "start": "2017-05-27",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.1862,
+      "sa_best_v": 6.5337,
+      "arcv": 11.509,
+      "w": 0.3606,
+      "arcl": 11.915,
+      "lag": 56.42,
+      "age": 19.67,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1438,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2017-06-24",
+      "start": "2017-06-26",
+      "eid": "2017-06-26",
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.3261,
+      "sa_best_v": 1.4108,
+      "arcv": 7.627,
+      "w": 0.1528,
+      "arcl": 7.77,
+      "lag": 41.95,
+      "age": 13.24,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Witbank"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1438,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2017-07-24",
+      "start": "2017-07-25",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.7976,
+      "sa_best_v": 12.648,
+      "arcv": 15.981,
+      "w": 0.6507,
+      "arcl": 16.26,
+      "lag": 77.01,
+      "age": 29.86,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1438,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2017-08-22",
+      "start": "2017-08-23",
+      "eid": "2017-09-01",
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0485,
+      "sa_best_v": 5.157,
+      "arcv": 10.573,
+      "w": 0.2856,
+      "arcl": 10.87,
+      "lag": 48.98,
+      "age": 21.34,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2017-09-21",
+      "start": "2017-09-22",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.8879,
+      "sa_best_v": 13.5511,
+      "arcv": 16.615,
+      "w": 0.6998,
+      "arcl": 17.339,
+      "lag": 75.31,
+      "age": 34.54,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2017-10-20",
+      "start": "2017-10-22",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.148,
+      "sa_best_v": 3.1921,
+      "arcv": 8.77,
+      "w": 0.2585,
+      "arcl": 10.624,
+      "lag": 40.44,
+      "age": 21.06,
+      "cities": [
+        "Cape Town",
+        "Durban",
+        "Johannesburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2017-11-19",
+      "start": "2017-11-20",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.1292,
+      "sa_best_v": 5.9636,
+      "arcv": 10.653,
+      "w": 0.41,
+      "arcl": 13.521,
+      "lag": 51.46,
+      "age": 28.89,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2017-12-18",
+      "start": "2017-12-20",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.9771,
+      "sa_best_v": -5.099,
+      "arcv": 1.626,
+      "w": 0.0701,
+      "arcl": 5.601,
+      "lag": 7.94,
+      "age": 10.42,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2018-01-18",
+      "start": "2018-01-19",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.4524,
+      "sa_best_v": 9.196,
+      "arcv": 12.454,
+      "w": 0.6642,
+      "arcl": 17.186,
+      "lag": 59.82,
+      "age": 38.75,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2018-02-16",
+      "start": "2018-02-17",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": -0.3771,
+      "sa_best_v": 0.901,
+      "arcv": 6.939,
+      "w": 0.182,
+      "arcl": 8.906,
+      "lag": 31.96,
+      "age": 19.72,
+      "cities": [
+        "Bakoven",
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2018-03-17",
+      "start": "2018-03-19",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.8506,
+      "sa_best_v": -3.8339,
+      "arcv": 3.18,
+      "w": 0.0239,
+      "arcl": 3.194,
+      "lag": 15.49,
+      "age": 3.82,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2018-04-16",
+      "start": "2018-04-18",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.2989,
+      "sa_best_v": 1.6827,
+      "arcv": 7.856,
+      "w": 0.1598,
+      "arcl": 8.122,
+      "lag": 36,
+      "age": 13.88,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2018-05-16",
+      "start": "2018-05-17",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.5943,
+      "sa_best_v": 10.6152,
+      "arcv": 14.187,
+      "w": 0.6074,
+      "arcl": 15.637,
+      "lag": 68.89,
+      "age": 27.67,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2018-06-14",
+      "start": "2018-06-15",
+      "eid": "2018-06-15",
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0669,
+      "sa_best_v": 5.3409,
+      "arcv": 10.61,
+      "w": 0.3106,
+      "arcl": 11.087,
+      "lag": 53.11,
+      "age": 19.66,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2018-07-13",
+      "start": "2018-07-15",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.4592,
+      "sa_best_v": 0.08,
+      "arcv": 6.524,
+      "w": 0.1155,
+      "arcl": 6.738,
+      "lag": 32.4,
+      "age": 12.74,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1439,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2018-08-12",
+      "start": "2018-08-13",
+      "eid": "2018-08-22",
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.878,
+      "sa_best_v": 13.4523,
+      "arcv": 16.369,
+      "w": 0.7269,
+      "arcl": 17.036,
+      "lag": 77.08,
+      "age": 29.81,
+      "cities": [
+        "Durban",
+        "Witbank"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2018-09-10",
+      "start": "2018-09-11",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.2009,
+      "sa_best_v": 6.681,
+      "arcv": 11.512,
+      "w": 0.3854,
+      "arcl": 12.48,
+      "lag": 52.57,
+      "age": 21.94,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2018-10-09",
+      "start": "2018-10-11",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.5417,
+      "sa_best_v": -0.7446,
+      "arcv": 5.519,
+      "w": 0.1449,
+      "arcl": 7.725,
+      "lag": 25.23,
+      "age": 12.39,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2018-11-08",
+      "start": "2018-11-09",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0826,
+      "sa_best_v": 5.4978,
+      "arcv": 10.425,
+      "w": 0.3689,
+      "arcl": 12.548,
+      "lag": 49.69,
+      "age": 24.42,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2018-12-07",
+      "start": "2018-12-09",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.9361,
+      "sa_best_v": -4.6893,
+      "arcv": 2.099,
+      "w": 0.06,
+      "arcl": 5.106,
+      "lag": 10.32,
+      "age": 9.47,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2019-01-06",
+      "start": "2019-01-08",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.6528,
+      "sa_best_v": -1.8561,
+      "arcv": 4.71,
+      "w": 0.0958,
+      "arcl": 6.522,
+      "lag": 23.25,
+      "age": 15.57,
+      "cities": [
+        "Cape Town"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2019-02-05",
+      "start": "2019-02-07",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.355,
+      "sa_best_v": 1.1224,
+      "arcv": 7.254,
+      "w": 0.1666,
+      "arcl": 8.632,
+      "lag": 34.12,
+      "age": 19.87,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2019-03-07",
+      "start": "2019-03-09",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0081,
+      "sa_best_v": 4.5912,
+      "arcv": 9.954,
+      "w": 0.2948,
+      "arcl": 11.437,
+      "lag": 44.88,
+      "age": 24.46,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2019-04-06",
+      "start": "2019-04-07",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.427,
+      "sa_best_v": 8.9423,
+      "arcv": 12.96,
+      "w": 0.5276,
+      "arcl": 15.147,
+      "lag": 58.88,
+      "age": 31.16,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2019-05-05",
+      "start": "2019-05-07",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.2477,
+      "sa_best_v": 2.1952,
+      "arcv": 8.256,
+      "w": 0.1783,
+      "arcl": 8.697,
+      "lag": 38.95,
+      "age": 16.82,
+      "cities": [
+        "Durban",
+        "Witbank"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2019-06-04",
+      "start": "2019-06-05",
+      "eid": "2019-06-05",
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.5012,
+      "sa_best_v": 9.6841,
+      "arcv": 13.501,
+      "w": 0.5634,
+      "arcl": 15.232,
+      "lag": 67.59,
+      "age": 29.35,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2019-07-03",
+      "start": "2019-07-04",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0458,
+      "sa_best_v": 4.2142,
+      "arcv": 9.643,
+      "w": 0.2836,
+      "arcl": 10.679,
+      "lag": 48.55,
+      "age": 20.19,
+      "cities": [
+        "Durban",
+        "Johannesburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1440,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2019-08-01",
+      "start": "2019-08-03",
+      "eid": "2019-08-12",
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.526,
+      "sa_best_v": -0.588,
+      "arcv": 5.808,
+      "w": 0.1234,
+      "arcl": 6.986,
+      "lag": 28.29,
+      "age": 12.48,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2019-08-31",
+      "start": "2019-09-01",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.9116,
+      "sa_best_v": 13.7885,
+      "arcv": 16.473,
+      "w": 0.77,
+      "arcl": 17.456,
+      "lag": 75.87,
+      "age": 29.28,
+      "cities": [
+        "Cape Town",
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2019-09-29",
+      "start": "2019-09-30",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.2475,
+      "sa_best_v": 7.1472,
+      "arcv": 11.733,
+      "w": 0.4278,
+      "arcl": 13.031,
+      "lag": 53.54,
+      "age": 21.65,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2019-10-28",
+      "start": "2019-10-30",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.5198,
+      "sa_best_v": -0.5257,
+      "arcv": 5.706,
+      "w": 0.1501,
+      "arcl": 7.768,
+      "lag": 26.76,
+      "age": 12.7,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2019-11-27",
+      "start": "2019-11-28",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.2176,
+      "sa_best_v": 6.8478,
+      "arcv": 11.493,
+      "w": 0.4176,
+      "arcl": 13.18,
+      "lag": 57,
+      "age": 25.6,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2019-12-26",
+      "start": "2019-12-28",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.7141,
+      "sa_best_v": -2.4687,
+      "arcv": 4.293,
+      "w": 0.0643,
+      "arcl": 5.223,
+      "lag": 21.62,
+      "age": 11.77,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2020-01-25",
+      "start": "2020-01-27",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.2701,
+      "sa_best_v": 1.9707,
+      "arcv": 7.995,
+      "w": 0.1843,
+      "arcl": 8.983,
+      "lag": 38.65,
+      "age": 19.32,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2020-02-24",
+      "start": "2020-02-25",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0473,
+      "sa_best_v": 5.1453,
+      "arcv": 10.402,
+      "w": 0.3127,
+      "arcl": 11.812,
+      "lag": 47.46,
+      "age": 25.17,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2020-03-24",
+      "start": "2020-03-26",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.6325,
+      "sa_best_v": -1.6532,
+      "arcv": 5.14,
+      "w": 0.0592,
+      "arcl": 5.144,
+      "lag": 24.92,
+      "age": 7.38,
+      "cities": [
+        "Cape Town"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2020-04-23",
+      "start": "2020-04-25",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.5013,
+      "sa_best_v": -0.3414,
+      "arcv": 6.237,
+      "w": 0.0938,
+      "arcl": 6.453,
+      "lag": 28.74,
+      "age": 13.29,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2020-05-23",
+      "start": "2020-05-25",
+      "eid": "2020-05-25",
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.2116,
+      "sa_best_v": 2.556,
+      "arcv": 8.35,
+      "w": 0.2224,
+      "arcl": 9.831,
+      "lag": 41.06,
+      "age": 21.77,
+      "cities": [
+        "Durban",
+        "Rustenburg"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2020-06-22",
+      "start": "2020-06-23",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.5462,
+      "sa_best_v": 10.1339,
+      "arcv": 13.672,
+      "w": 0.6136,
+      "arcl": 16.106,
+      "lag": 69.57,
+      "age": 32.72,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1441,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2020-07-21",
+      "start": "2020-07-23",
+      "eid": "2020-08-01",
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0076,
+      "sa_best_v": 4.7477,
+      "arcv": 9.89,
+      "w": 0.3322,
+      "arcl": 11.695,
+      "lag": 48.95,
+      "age": 22.05,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1442,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2020-08-20",
+      "start": "2020-08-21",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 1.4566,
+      "sa_best_v": 19.2381,
+      "arcv": 20.126,
+      "w": 1.1142,
+      "arcl": 21.199,
+      "lag": 93.61,
+      "age": 37.14,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1442,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2020-09-18",
+      "start": "2020-09-19",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.8672,
+      "sa_best_v": 13.3443,
+      "arcv": 16.201,
+      "w": 0.738,
+      "arcl": 17.109,
+      "lag": 73.81,
+      "age": 29.02,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1442,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2020-10-17",
+      "start": "2020-10-18",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.1551,
+      "sa_best_v": 6.2227,
+      "arcv": 11.122,
+      "w": 0.3737,
+      "arcl": 12.129,
+      "lag": 51.71,
+      "age": 20.72,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1442,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2020-11-15",
+      "start": "2020-11-17",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.6018,
+      "sa_best_v": -1.3464,
+      "arcv": 5.096,
+      "w": 0.1159,
+      "arcl": 6.766,
+      "lag": 27.45,
+      "age": 12.34,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1442,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2021-01-13",
+      "start": "2021-01-15",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.4799,
+      "sa_best_v": -0.1266,
+      "arcv": 6.301,
+      "w": 0.1183,
+      "arcl": 6.995,
+      "lag": 34.81,
+      "age": 13,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw"
+      ]
+    },
+    {
+      "hy": 1442,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2021-02-12",
+      "start": "2021-02-13",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0198,
+      "sa_best_v": 4.8701,
+      "arcv": 10.216,
+      "w": 0.2976,
+      "arcl": 11.293,
+      "lag": 47.63,
+      "age": 21.76,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1442,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2021-03-13",
+      "start": "2021-03-15",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.6491,
+      "sa_best_v": -1.819,
+      "arcv": 4.988,
+      "w": 0.0571,
+      "arcl": 4.99,
+      "lag": 24.31,
+      "age": 6.75,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1442,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2021-05-12",
+      "start": "2021-05-14",
+      "eid": "2021-05-14",
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.4042,
+      "sa_best_v": 0.6298,
+      "arcv": 6.749,
+      "w": 0.1687,
+      "arcl": 8.683,
+      "lag": 32.55,
+      "age": 20.5,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1442,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2021-06-11",
+      "start": "2021-06-12",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0044,
+      "sa_best_v": 4.6283,
+      "arcv": 9.572,
+      "w": 0.3661,
+      "arcl": 12.735,
+      "lag": 48.81,
+      "age": 28.5,
+      "cities": [
+        "Durban",
+        "Zeerust"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1442,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2021-07-10",
+      "start": "2021-07-12",
+      "eid": "2021-07-21",
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.6697,
+      "sa_best_v": -2.0253,
+      "arcv": 4.397,
+      "w": 0.1192,
+      "arcl": 7.202,
+      "lag": 22.22,
+      "age": 14.23,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2021-08-09",
+      "start": "2021-08-10",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.2413,
+      "sa_best_v": 7.0855,
+      "arcv": 11.67,
+      "w": 0.4281,
+      "arcl": 13.457,
+      "lag": 55.68,
+      "age": 25.91,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2021-09-07",
+      "start": "2021-09-09",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.3681,
+      "sa_best_v": 0.991,
+      "arcv": 7.016,
+      "w": 0.1841,
+      "arcl": 8.712,
+      "lag": 32.16,
+      "age": 15.09,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2021-10-07",
+      "start": "2021-10-08",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.7476,
+      "sa_best_v": 12.1481,
+      "arcv": 15.542,
+      "w": 0.6396,
+      "arcl": 16.033,
+      "lag": 71.53,
+      "age": 29.07,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2021-11-05",
+      "start": "2021-11-06",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.0089,
+      "sa_best_v": 4.7611,
+      "arcv": 10.036,
+      "w": 0.3095,
+      "arcl": 11.059,
+      "lag": 53.34,
+      "age": 20.05,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2021-12-04",
+      "start": "2021-12-06",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.6408,
+      "sa_best_v": -1.7357,
+      "arcv": 4.979,
+      "w": 0.0718,
+      "arcl": 5.306,
+      "lag": 28.22,
+      "age": 10.03,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2022-01-03",
+      "start": "2022-01-04",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.3075,
+      "sa_best_v": 7.7466,
+      "arcv": 12.296,
+      "w": 0.4341,
+      "arcl": 13.142,
+      "lag": 62.51,
+      "age": 22.48,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2022-02-01",
+      "start": "2022-02-03",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.3777,
+      "sa_best_v": 0.8948,
+      "arcv": 7.159,
+      "w": 0.1449,
+      "arcl": 7.647,
+      "lag": 37.88,
+      "age": 12.08,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2022-03-03",
+      "start": "2022-03-04",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0838,
+      "sa_best_v": 5.5104,
+      "arcv": 10.463,
+      "w": 0.3646,
+      "arcl": 12.34,
+      "lag": 47.39,
+      "age": 23.01,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2022-04-01",
+      "start": "2022-04-03",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.6866,
+      "sa_best_v": -2.1936,
+      "arcv": 4.616,
+      "w": 0.0566,
+      "arcl": 4.913,
+      "lag": 20.77,
+      "age": 9.68,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2022-05-01",
+      "start": "2022-05-03",
+      "eid": "2022-05-03",
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.4992,
+      "sa_best_v": -0.3204,
+      "arcv": 5.823,
+      "w": 0.1646,
+      "arcl": 8.5,
+      "lag": 27.59,
+      "age": 19.15,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2022-05-31",
+      "start": "2022-06-02",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.1494,
+      "sa_best_v": 3.1777,
+      "arcv": 8.21,
+      "w": 0.3508,
+      "arcl": 12.522,
+      "lag": 41.68,
+      "age": 27.88,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1443,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2022-06-30",
+      "start": "2022-07-01",
+      "eid": "2022-07-10",
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.4937,
+      "sa_best_v": 9.6091,
+      "arcv": 13.09,
+      "w": 0.6238,
+      "arcl": 16.727,
+      "lag": 67.02,
+      "age": 36.57,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2022-07-29",
+      "start": "2022-07-31",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.2178,
+      "sa_best_v": 2.4936,
+      "arcv": 8.092,
+      "w": 0.255,
+      "arcl": 10.633,
+      "lag": 39.57,
+      "age": 21.74,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2022-08-28",
+      "start": "2022-08-29",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.5531,
+      "sa_best_v": 10.2026,
+      "arcv": 14.228,
+      "w": 0.5262,
+      "arcl": 15.113,
+      "lag": 65.37,
+      "age": 31.6,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2022-09-26",
+      "start": "2022-09-28",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.2478,
+      "sa_best_v": 2.1937,
+      "arcv": 8.229,
+      "w": 0.1825,
+      "arcl": 8.788,
+      "lag": 37.34,
+      "age": 18.16,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2022-10-26",
+      "start": "2022-10-27",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.6786,
+      "sa_best_v": 11.4583,
+      "arcv": 15.072,
+      "w": 0.5999,
+      "arcl": 15.695,
+      "lag": 78.81,
+      "age": 30.33,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2022-11-24",
+      "start": "2022-11-26",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.0501,
+      "sa_best_v": 4.171,
+      "arcv": 9.762,
+      "w": 0.2563,
+      "arcl": 10.135,
+      "lag": 54.82,
+      "age": 18.64,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2022-12-24",
+      "start": "2022-12-25",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 1.0003,
+      "sa_best_v": 14.6754,
+      "arcv": 17.026,
+      "w": 0.8323,
+      "arcl": 18.159,
+      "lag": 87.56,
+      "age": 30.7,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2023-01-22",
+      "start": "2023-01-23",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.186,
+      "sa_best_v": 6.5317,
+      "arcv": 11.367,
+      "w": 0.3846,
+      "arcl": 12.303,
+      "lag": 55.8,
+      "age": 20.14,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2023-02-20",
+      "start": "2023-02-22",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.5099,
+      "sa_best_v": -0.4275,
+      "arcv": 6.036,
+      "w": 0.1125,
+      "arcl": 6.672,
+      "lag": 30.43,
+      "age": 10.45,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2023-03-22",
+      "start": "2023-03-24",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0756,
+      "sa_best_v": 3.9159,
+      "arcv": 8.814,
+      "w": 0.3739,
+      "arcl": 12.34,
+      "lag": 39.78,
+      "age": 22.88,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2023-04-21",
+      "start": "2023-04-22",
+      "eid": "2023-04-22",
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.3987,
+      "sa_best_v": 8.6585,
+      "arcv": 11.241,
+      "w": 0.7889,
+      "arcl": 18.273,
+      "lag": 53.5,
+      "age": 35.55,
+      "cities": [
+        "Durban",
+        "Pretoria",
+        "Rustenburg"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2023-05-20",
+      "start": "2023-05-22",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.3549,
+      "sa_best_v": 1.1233,
+      "arcv": 6.344,
+      "w": 0.3187,
+      "arcl": 11.717,
+      "lag": 31.84,
+      "age": 23.56,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1444,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2023-06-19",
+      "start": "2023-06-20",
+      "eid": "2023-06-29",
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.3754,
+      "sa_best_v": 8.4257,
+      "arcv": 11.889,
+      "w": 0.627,
+      "arcl": 16.67,
+      "lag": 61.69,
+      "age": 34.78,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2023-07-18",
+      "start": "2023-07-20",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.3161,
+      "sa_best_v": 1.5111,
+      "arcv": 7.207,
+      "w": 0.2388,
+      "arcl": 10.323,
+      "lag": 36.08,
+      "age": 21.04,
+      "cities": [],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2023-08-17",
+      "start": "2023-08-18",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.3178,
+      "sa_best_v": 7.8495,
+      "arcv": 12.539,
+      "w": 0.4098,
+      "arcl": 13.546,
+      "lag": 58.5,
+      "age": 30.17,
+      "cities": [],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2023-09-15",
+      "start": "2023-09-17",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.5641,
+      "sa_best_v": -0.9693,
+      "arcv": 5.653,
+      "w": 0.0868,
+      "arcl": 6.201,
+      "lag": 25.55,
+      "age": 14.33,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2023-10-15",
+      "start": "2023-10-17",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.0189,
+      "sa_best_v": 4.4829,
+      "arcv": 10.14,
+      "w": 0.2452,
+      "arcl": 10.312,
+      "lag": 51.35,
+      "age": 23.06,
+      "cities": [
+        "Durban",
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2023-11-14",
+      "start": "2023-11-15",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.7448,
+      "sa_best_v": 12.1195,
+      "arcv": 15.66,
+      "w": 0.6131,
+      "arcl": 16.073,
+      "lag": 86.72,
+      "age": 31.97,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2023-12-13",
+      "start": "2023-12-15",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.0287,
+      "sa_best_v": 4.3848,
+      "arcv": 9.98,
+      "w": 0.2557,
+      "arcl": 10.237,
+      "lag": 57.87,
+      "age": 18.32,
+      "cities": [
+        "Durban"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2024-01-12",
+      "start": "2024-01-13",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.7286,
+      "sa_best_v": 11.9576,
+      "arcv": 15.016,
+      "w": 0.7009,
+      "arcl": 16.754,
+      "lag": 74.73,
+      "age": 29.1,
+      "cities": [],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2024-03-11",
+      "start": "2024-03-12",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.4584,
+      "sa_best_v": 9.2556,
+      "arcv": 11.616,
+      "w": 0.8306,
+      "arcl": 18.159,
+      "lag": 52.58,
+      "age": 31.44,
+      "cities": [
+        "Pretoria"
+      ],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2024-04-09",
+      "start": "2024-04-11",
+      "eid": "2024-04-11",
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.3214,
+      "sa_best_v": 1.4576,
+      "arcv": 6.362,
+      "w": 0.3729,
+      "arcl": 12.202,
+      "lag": 29.5,
+      "age": 21.59,
+      "cities": [],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2024-05-09",
+      "start": "2024-05-10",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.5379,
+      "sa_best_v": 10.0513,
+      "arcv": 11.623,
+      "w": 0.9808,
+      "arcl": 20.139,
+      "lag": 58.54,
+      "age": 36.16,
+      "cities": [],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1445,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2024-06-07",
+      "start": "2024-06-08",
+      "eid": "2024-06-17",
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0134,
+      "sa_best_v": 4.5379,
+      "arcv": 8.689,
+      "w": 0.504,
+      "arcl": 14.562,
+      "lag": 45.31,
+      "age": 26.75,
+      "cities": [],
+      "src": [
+        "mcw",
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2024-07-06",
+      "start": "2024-07-08",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.5384,
+      "sa_best_v": -0.7118,
+      "arcv": 5.248,
+      "w": 0.1948,
+      "arcl": 9.142,
+      "lag": 26.9,
+      "age": 16.53,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2024-08-05",
+      "start": "2024-08-06",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.27,
+      "sa_best_v": 7.3717,
+      "arcv": 12.135,
+      "w": 0.3971,
+      "arcl": 13.236,
+      "lag": 57.82,
+      "age": 28.5,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2024-09-03",
+      "start": "2024-09-05",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.5886,
+      "sa_best_v": -1.2136,
+      "arcv": 5.472,
+      "w": 0.0766,
+      "arcl": 5.837,
+      "lag": 24.91,
+      "age": 14,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2024-10-03",
+      "start": "2024-10-05",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.1417,
+      "sa_best_v": 3.2551,
+      "arcv": 9.233,
+      "w": 0.1919,
+      "arcl": 9.261,
+      "lag": 45.87,
+      "age": 22.02,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2024-11-02",
+      "start": "2024-11-03",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.3425,
+      "sa_best_v": 8.0972,
+      "arcv": 12.954,
+      "w": 0.3809,
+      "arcl": 12.981,
+      "lag": 69.42,
+      "age": 28.47,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2024-12-01",
+      "start": "2024-12-03",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.4936,
+      "sa_best_v": -0.2637,
+      "arcv": 6.305,
+      "w": 0.0954,
+      "arcl": 6.434,
+      "lag": 36.04,
+      "age": 11.35,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2024-12-31",
+      "start": "2025-01-01",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": -0.0657,
+      "sa_best_v": 4.0149,
+      "arcv": 9.617,
+      "w": 0.2544,
+      "arcl": 10.35,
+      "lag": 54.67,
+      "age": 19.55,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2025-01-29",
+      "start": "2025-01-31",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.7921,
+      "sa_best_v": -3.2486,
+      "arcv": 3.706,
+      "w": 0.0335,
+      "arcl": 3.707,
+      "lag": 19.72,
+      "age": 5.28,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2025-02-28",
+      "start": "2025-03-02",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.5127,
+      "sa_best_v": -0.4546,
+      "arcv": 5.59,
+      "w": 0.1809,
+      "arcl": 8.501,
+      "lag": 25.39,
+      "age": 15.88,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2025-03-30",
+      "start": "2025-03-31",
+      "eid": "2025-03-31",
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.0899,
+      "sa_best_v": 5.5713,
+      "arcv": 8.462,
+      "w": 0.7318,
+      "arcl": 17.028,
+      "lag": 39.03,
+      "age": 29.15,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2025-04-28",
+      "start": "2025-04-30",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.4852,
+      "sa_best_v": -0.1796,
+      "arcv": 4.643,
+      "w": 0.3868,
+      "arcl": 12.359,
+      "lag": 22.6,
+      "age": 20.14,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1446,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2025-05-28",
+      "start": "2025-05-29",
+      "eid": "2025-06-07",
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.8416,
+      "sa_best_v": 13.0881,
+      "arcv": 13.92,
+      "w": 1.1253,
+      "arcl": 21.347,
+      "lag": 72.68,
+      "age": 36.36,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2025-06-26",
+      "start": "2025-06-27",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.4364,
+      "sa_best_v": 9.0365,
+      "arcv": 12.429,
+      "w": 0.6399,
+      "arcl": 16.205,
+      "lag": 64.26,
+      "age": 28.9,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2025-07-25",
+      "start": "2025-07-27",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.1059,
+      "sa_best_v": 3.6132,
+      "arcv": 9.147,
+      "w": 0.2659,
+      "arcl": 10.544,
+      "lag": 44.84,
+      "age": 20.44,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2025-08-24",
+      "start": "2025-08-25",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.7691,
+      "sa_best_v": 12.363,
+      "arcv": 15.905,
+      "w": 0.6127,
+      "arcl": 16.299,
+      "lag": 79.36,
+      "age": 34.27,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2025-09-22",
+      "start": "2025-09-24",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.1412,
+      "sa_best_v": 3.2595,
+      "arcv": 9.227,
+      "w": 0.1936,
+      "arcl": 9.227,
+      "lag": 45.48,
+      "age": 20.8,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2025-10-22",
+      "start": "2025-10-23",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.3484,
+      "sa_best_v": 8.1555,
+      "arcv": 13.021,
+      "w": 0.3795,
+      "arcl": 13.028,
+      "lag": 67.88,
+      "age": 28.67,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2025-11-20",
+      "start": "2025-11-22",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.5621,
+      "sa_best_v": -0.949,
+      "arcv": 5.688,
+      "w": 0.0843,
+      "arcl": 6.14,
+      "lag": 31.7,
+      "age": 10.75,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 7,
+      "hname": "Rajab",
+      "ev": "2025-12-20",
+      "start": "2025-12-22",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.3071,
+      "sa_best_v": 1.6008,
+      "arcv": 7.869,
+      "w": 0.1442,
+      "arcl": 7.984,
+      "lag": 45.25,
+      "age": 16.21,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 8,
+      "hname": "Shaban",
+      "ev": "2026-01-19",
+      "start": "2026-01-21",
+      "eid": null,
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.1951,
+      "sa_best_v": 2.7206,
+      "arcv": 8.502,
+      "w": 0.2245,
+      "arcl": 9.848,
+      "lag": 41.39,
+      "age": 21.17,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 9,
+      "hname": "Ramadan",
+      "ev": "2026-02-18",
+      "start": "2026-02-19",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": -0.0292,
+      "sa_best_v": 4.38,
+      "arcv": 8.616,
+      "w": 0.4891,
+      "arcl": 14.322,
+      "lag": 39.3,
+      "age": 28.76,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 10,
+      "hname": "Shawwal",
+      "ev": "2026-03-19",
+      "start": "2026-03-21",
+      "eid": "2026-03-21",
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.8357,
+      "sa_best_v": -3.6845,
+      "arcv": 2.462,
+      "w": 0.1641,
+      "arcl": 8.189,
+      "lag": 11.12,
+      "age": 14.92,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 11,
+      "hname": "Dhul Qadah",
+      "ev": "2026-04-18",
+      "start": "2026-04-19",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": -0.1044,
+      "sa_best_v": 3.6279,
+      "arcv": 6.805,
+      "w": 0.6792,
+      "arcl": 16.486,
+      "lag": 32.65,
+      "age": 27.94,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1447,
+      "hm": 12,
+      "hname": "Dhul Hijjah",
+      "ev": "2026-05-17",
+      "start": "2026-05-19",
+      "eid": "2026-05-28",
+      "sighted": false,
+      "best_st": "pretoria",
+      "sa_best_q": -0.4772,
+      "sa_best_v": -0.0999,
+      "arcv": 4.758,
+      "w": 0.3808,
+      "arcl": 12.262,
+      "lag": 24.24,
+      "age": 19.45,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1448,
+      "hm": 1,
+      "hname": "Muharram",
+      "ev": "2026-06-16",
+      "start": "2026-06-17",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 1.1893,
+      "sa_best_v": 16.5649,
+      "arcv": 17.223,
+      "w": 1.1597,
+      "arcl": 21.518,
+      "lag": 89.34,
+      "age": 36.49,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1448,
+      "hm": 2,
+      "hname": "Safar",
+      "ev": "2026-07-15",
+      "start": "2026-07-16",
+      "eid": null,
+      "sighted": true,
+      "best_st": "pretoria",
+      "sa_best_q": 0.7838,
+      "sa_best_v": 12.5102,
+      "arcv": 15.576,
+      "w": 0.6994,
+      "arcl": 16.766,
+      "lag": 77.12,
+      "age": 29.82,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1448,
+      "hm": 3,
+      "hname": "Rabi al-Awwal",
+      "ev": "2026-08-13",
+      "start": "2026-08-14",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.1772,
+      "sa_best_v": 6.4435,
+      "arcv": 11.507,
+      "w": 0.3455,
+      "arcl": 11.874,
+      "lag": 58.84,
+      "age": 22.63,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1448,
+      "hm": 4,
+      "hname": "Rabi al-Thani",
+      "ev": "2026-09-11",
+      "start": "2026-09-13",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.48,
+      "sa_best_v": -0.1283,
+      "arcv": 6.407,
+      "w": 0.1008,
+      "arcl": 6.481,
+      "lag": 31.66,
+      "age": 13.13,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1448,
+      "hm": 5,
+      "hname": "Jumada al-Ula",
+      "ev": "2026-10-11",
+      "start": "2026-10-12",
+      "eid": null,
+      "sighted": true,
+      "best_st": "cape_town",
+      "sa_best_q": 0.2809,
+      "sa_best_v": 7.4812,
+      "arcv": 12.437,
+      "w": 0.364,
+      "arcl": 12.534,
+      "lag": 63.39,
+      "age": 25.1,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    },
+    {
+      "hy": 1448,
+      "hm": 6,
+      "hname": "Jumada al-Akhirah",
+      "ev": "2026-11-09",
+      "start": "2026-11-11",
+      "eid": null,
+      "sighted": false,
+      "best_st": "cape_town",
+      "sa_best_q": -0.577,
+      "sa_best_v": -1.0978,
+      "arcv": 5.513,
+      "w": 0.0886,
+      "arcl": 6.233,
+      "lag": 29.89,
+      "age": 10.32,
+      "cities": [],
+      "src": [
+        "wifaq_sa"
+      ]
+    }
+  ]
+}

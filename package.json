@@ -1,0 +1,22 @@
+{
+  "name": "when-is-eid",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Empirical naked-eye crescent probability and global moonsighting jurisdiction explorer",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:data": "node scripts/build_empirical_model.mjs && python scripts/fit_probability_model.py && node scripts/prepare_geo_data.mjs"
+  },
+  "dependencies": {
+    "astronomy-engine": "^2.1.19",
+    "leaflet": "^1.9.4",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

@@ -1,0 +1,1795 @@
+{
+  "zones": {
+    "local_sighting": {
+      "label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "defaultRule": "Requires verified physical crescent sighting within national or shared regional horizon."
+    },
+    "follow_saudi": {
+      "label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "defaultRule": "Follows Saudi Supreme Court declarations (often aligned with Umm al-Qura criterion).",
+      "hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    "follow_turkey_diyanet": {
+      "label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "defaultRule": "Istanbul 2016 Unified Calendar: moon altitude > 5° and elongation > 8° at sunset anywhere on Earth.",
+      "hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    "regional_criteria": {
+      "label": "Regional / Astronomical Criteria",
+      "color": "#f59e0b",
+      "defaultRule": "Adopts regional governmental criteria (e.g., MABIMS 3° altitude / 6.4° elongation in SE Asia, or lag rules)."
+    },
+    "split_communities": {
+      "label": "Mixed / Split Communities",
+      "color": "#ec4899",
+      "defaultRule": "Different Muslim councils/mosques follow either local sighting, Saudi announcements, or calculation."
+    }
+  },
+  "countries": [
+    {
+      "iso": "242",
+      "name": "Fiji",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Fiji Muslim League",
+      "rule_summary": "Local South Pacific sighting.",
+      "center": [
+        -17.7,
+        178
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "834",
+      "name": "Tanzania",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "BAKWATA / Zanzibar Mufti",
+      "rule_summary": "Local East African physical sighting.",
+      "center": [
+        -6.3,
+        34.9
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "732",
+      "name": "W. Sahara",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Regional Local Sighting",
+      "rule_summary": "Local western-horizon sighting.",
+      "center": [
+        24.2,
+        -13
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "124",
+      "name": "Canada",
+      "zone": "split_communities",
+      "zone_label": "Mixed / Split Communities",
+      "color": "#ec4899",
+      "authority": "ISNA Canada vs Toronto Hilal Committee",
+      "rule_summary": "Split: ISNA follows global calculation; Toronto Hilal Committee requires local/regional sighting.",
+      "center": [
+        56.1,
+        -106.3
+      ],
+      "zoom": 3,
+      "follows_hub": null
+    },
+    {
+      "iso": "840",
+      "name": "United States of America",
+      "zone": "split_communities",
+      "zone_label": "Mixed / Split Communities",
+      "color": "#ec4899",
+      "authority": "FCNA/ISNA (ECFR) vs Chicago/Central Hilal",
+      "rule_summary": "Split: ISNA/FCNA uses global 5°/8° calculation; Hilal committees require North American sighting.",
+      "center": [
+        38.5,
+        -96
+      ],
+      "zoom": 4,
+      "follows_hub": null
+    },
+    {
+      "iso": "398",
+      "name": "Kazakhstan",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "SAMK",
+      "rule_summary": "Follows Saudi / Turkic consensus.",
+      "center": [
+        48,
+        66.9
+      ],
+      "zoom": 4,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "860",
+      "name": "Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Muslim Board of Uzbekistan",
+      "rule_summary": "Follows Saudi / Central Asian consensus.",
+      "center": [
+        41.4,
+        64.6
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "360",
+      "name": "Indonesia",
+      "zone": "regional_criteria",
+      "zone_label": "Regional / Astronomical Criteria",
+      "color": "#f59e0b",
+      "authority": "Kementerian Agama (MABIMS Neo-Criterion)",
+      "rule_summary": "MABIMS criterion: sunset moon altitude ≥ 3° & elongation ≥ 6.4° plus physical sighting.",
+      "center": [
+        -2.5,
+        118
+      ],
+      "zoom": 4,
+      "follows_hub": null
+    },
+    {
+      "iso": "152",
+      "name": "Chile",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Centro Islámico de Chile",
+      "rule_summary": "Local sighting on Pacific western horizon.",
+      "center": [
+        -33.4,
+        -70.6
+      ],
+      "zoom": 4,
+      "follows_hub": null
+    },
+    {
+      "iso": "706",
+      "name": "Somalia",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Ministry of Religious Affairs",
+      "rule_summary": "Generally follows Saudi Arabia.",
+      "center": [
+        5.1,
+        46.2
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "404",
+      "name": "Kenya",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Chief Kadhi of Kenya",
+      "rule_summary": "National/East African coastal physical sighting.",
+      "center": [
+        -0.2,
+        37.9
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "729",
+      "name": "Sudan",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Sudan Fiqh Council",
+      "rule_summary": "Follows Saudi / Red Sea sighting.",
+      "center": [
+        15.5,
+        30.2
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "643",
+      "name": "Russia",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Mufti Council of Russia",
+      "rule_summary": "Follows Saudi / Turkey consensus (Dagestan local).",
+      "center": [
+        55.7,
+        37.6
+      ],
+      "zoom": 4,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "578",
+      "name": "Norway",
+      "zone": "split_communities",
+      "zone_label": "Mixed / Split Communities",
+      "color": "#ec4899",
+      "authority": "Islamic Council Norway",
+      "rule_summary": "Mixed local/European/Muslim-country announcements.",
+      "center": [
+        60.5,
+        8.5
+      ],
+      "zoom": 4,
+      "follows_hub": null
+    },
+    {
+      "iso": "710",
+      "name": "South Africa",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "UUCSA / MJC / COSSA (Maankykers)",
+      "rule_summary": "Strict local naked-eye sighting across Western Cape, Gauteng, KZN & Eastern Cape stations.",
+      "center": [
+        -29,
+        24.5
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "426",
+      "name": "Lesotho",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Follows South Africa (UUCSA/MJC)",
+      "rule_summary": "Shares Southern African horizon and UUCSA/MJC announcements.",
+      "center": [
+        -29.6,
+        28.2
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "South Africa (UUCSA)",
+        "lat": -29,
+        "lon": 24.5
+      }
+    },
+    {
+      "iso": "068",
+      "name": "Bolivia",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Bolivian Islamic Center",
+      "rule_summary": "Follows Saudi Arabia.",
+      "center": [
+        -16.3,
+        -63.6
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "170",
+      "name": "Colombia",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Follows Chile / Regional Sighting",
+      "rule_summary": "Adopts South American Pacific sighting (Chile).",
+      "center": [
+        4.6,
+        -74.1
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Santiago, Chile",
+        "lat": -33.45,
+        "lon": -70.67
+      }
+    },
+    {
+      "iso": "328",
+      "name": "Guyana",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "CIOG",
+      "rule_summary": "Local & Caribbean sighting.",
+      "center": [
+        4.9,
+        -58.9
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "740",
+      "name": "Suriname",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Local Sighting",
+      "rule_summary": "Local & Caribbean sighting.",
+      "center": [
+        3.9,
+        -56
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "250",
+      "name": "France",
+      "zone": "split_communities",
+      "zone_label": "Mixed / Split Communities",
+      "color": "#ec4899",
+      "authority": "CFCM (Calculation) vs GMP (Sighting)",
+      "rule_summary": "Split: CFCM uses 5°/8° calculation; Grand Mosque of Paris uses sighting.",
+      "center": [
+        46.2,
+        2.2
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "716",
+      "name": "Zimbabwe",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Zimbabwe Hilal Committee / SA Matla",
+      "rule_summary": "Local sighting and Southern African regional horizon.",
+      "center": [
+        -19,
+        29.1
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "072",
+      "name": "Botswana",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Botswana Muslim Association / Follows SA",
+      "rule_summary": "Local sighting / shares Southern African matla with South Africa.",
+      "center": [
+        -22.3,
+        24.7
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Pretoria, South Africa",
+        "lat": -25.78,
+        "lon": 28.11
+      }
+    },
+    {
+      "iso": "516",
+      "name": "Namibia",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Namibia Islamic Judicial Council / Follows SA",
+      "rule_summary": "Local sighting / shares Southern African matla with South Africa.",
+      "center": [
+        -22.6,
+        17.1
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Cape Town / Pretoria",
+        "lat": -29,
+        "lon": 24.5
+      }
+    },
+    {
+      "iso": "686",
+      "name": "Senegal",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "CONACOC",
+      "rule_summary": "National physical crescent sighting.",
+      "center": [
+        14.5,
+        -14.4
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "466",
+      "name": "Mali",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "High Islamic Council of Mali",
+      "rule_summary": "Follows Saudi / West African announcements.",
+      "center": [
+        17.6,
+        -4
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "478",
+      "name": "Mauritania",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "National Crescent Commission",
+      "rule_summary": "Follows Saudi / regional reports.",
+      "center": [
+        21,
+        -10.9
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "562",
+      "name": "Niger",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Islamic Council of Niger",
+      "rule_summary": "Local physical sighting.",
+      "center": [
+        17.6,
+        8.1
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "566",
+      "name": "Nigeria",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "NSCIA (Sultan of Sokoto)",
+      "rule_summary": "Official Nigerian moonsighting reports.",
+      "center": [
+        9.1,
+        8.7
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "768",
+      "name": "Togo",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Union Musulmane du Togo",
+      "rule_summary": "Follows Saudi Arabia.",
+      "center": [
+        8.6,
+        0.8
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "288",
+      "name": "Ghana",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Office of the National Chief Imam",
+      "rule_summary": "Local physical sighting.",
+      "center": [
+        7.9,
+        -1
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "854",
+      "name": "Burkina Faso",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "FAIB",
+      "rule_summary": "Follows Saudi Arabia.",
+      "center": [
+        12.2,
+        -1.6
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "894",
+      "name": "Zambia",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Zambia Hilal Committee",
+      "rule_summary": "Local sighting (Lusaka/Copperbelt) & regional sharing.",
+      "center": [
+        -13.1,
+        27.8
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "454",
+      "name": "Malawi",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Muslim Association of Malawi",
+      "rule_summary": "Local physical sighting.",
+      "center": [
+        -13.2,
+        34.3
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "508",
+      "name": "Mozambique",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Conselho Islâmico de Moçambique",
+      "rule_summary": "Local coastal & regional Southern African sighting.",
+      "center": [
+        -18.7,
+        35.5
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "748",
+      "name": "eSwatini",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Follows South Africa (UUCSA)",
+      "rule_summary": "Shares Southern African horizon and UUCSA announcements.",
+      "center": [
+        -26.5,
+        31.5
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "South Africa (UUCSA)",
+        "lat": -29,
+        "lon": 24.5
+      }
+    },
+    {
+      "iso": "024",
+      "name": "Angola",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "Angolan Islamic Community",
+      "rule_summary": "Follows Turkey / ECFR calculation per MCW listing.",
+      "center": [
+        -11.2,
+        17.9
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "376",
+      "name": "Israel",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Local Arab Muslim Councils",
+      "rule_summary": "Generally follows Saudi / Jerusalem Mufti.",
+      "center": [
+        31.5,
+        34.8
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "422",
+      "name": "Lebanon",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Dar al-Fatwa",
+      "rule_summary": "Follows Saudi Arabia (Shia follow local sighting).",
+      "center": [
+        33.9,
+        35.8
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "450",
+      "name": "Madagascar",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Local Sighting",
+      "rule_summary": "Local island physical sighting.",
+      "center": [
+        -18.8,
+        46.9
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "275",
+      "name": "Palestine",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Grand Mufti of Jerusalem",
+      "rule_summary": "Follows Saudi / regional announcements.",
+      "center": [
+        31.9,
+        35.2
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "788",
+      "name": "Tunisia",
+      "zone": "regional_criteria",
+      "zone_label": "Regional / Astronomical Criteria",
+      "color": "#f59e0b",
+      "authority": "Mufti of the Republic",
+      "rule_summary": "National astronomical lag/age criteria + observation.",
+      "center": [
+        33.9,
+        9.5
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "012",
+      "name": "Algeria",
+      "zone": "regional_criteria",
+      "zone_label": "Regional / Astronomical Criteria",
+      "color": "#f59e0b",
+      "authority": "Ministry of Religious Affairs",
+      "rule_summary": "National committee combining local sighting & astronomical feasibility.",
+      "center": [
+        28,
+        1.7
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "400",
+      "name": "Jordan",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Jordanian Ifta Department",
+      "rule_summary": "Official local/regional sighting committee.",
+      "center": [
+        31.2,
+        36.5
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "784",
+      "name": "United Arab Emirates",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "UAE Moon-Sighting Committee",
+      "rule_summary": "Local committee generally aligning with Saudi/Gulf announcements.",
+      "center": [
+        23.4,
+        53.8
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "634",
+      "name": "Qatar",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Ministry of Endowments (Awqaf)",
+      "rule_summary": "Gulf/Saudi alignment.",
+      "center": [
+        25.3,
+        51.2
+      ],
+      "zoom": 8,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "414",
+      "name": "Kuwait",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Kuwait Crescent Committee",
+      "rule_summary": "Gulf/Saudi alignment.",
+      "center": [
+        29.3,
+        47.5
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "368",
+      "name": "Iraq",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Sunni Endowment (Saudi) / Shia Marja (Local)",
+      "rule_summary": "Sunni Endowment aligns with Saudi; Shia community follows local sighting.",
+      "center": [
+        33.2,
+        43.7
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "512",
+      "name": "Oman",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Ministry of Endowments & Religious Affairs",
+      "rule_summary": "Strict local sighting vetted by astronomical impossibility checks.",
+      "center": [
+        21.5,
+        55.9
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "764",
+      "name": "Thailand",
+      "zone": "regional_criteria",
+      "zone_label": "Regional / Astronomical Criteria",
+      "color": "#f59e0b",
+      "authority": "Chularatchamontri (Sheikhul Islam)",
+      "rule_summary": "Official national sighting announcement.",
+      "center": [
+        15.8,
+        100.9
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "356",
+      "name": "India",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Imarat-e-Shariah / Markazi Ruyat-e-Hilal",
+      "rule_summary": "Regional physical sighting committees (some Kerala groups follow calculation).",
+      "center": [
+        21.1,
+        78.9
+      ],
+      "zoom": 4,
+      "follows_hub": null
+    },
+    {
+      "iso": "050",
+      "name": "Bangladesh",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "National Moon Sighting Committee",
+      "rule_summary": "Official physical sighting within Bangladesh.",
+      "center": [
+        23.7,
+        90.3
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "586",
+      "name": "Pakistan",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Central Ruet-e-Hilal Committee",
+      "rule_summary": "Official national physical moonsighting.",
+      "center": [
+        30.3,
+        69.3
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "004",
+      "name": "Afghanistan",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Supreme Court / Aligns with Saudi",
+      "rule_summary": "Frequently follows Saudi Arabia or regional reports.",
+      "center": [
+        33.9,
+        67.7
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "762",
+      "name": "Tajikistan",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Council of Ulema",
+      "rule_summary": "Follows Saudi / Central Asian consensus.",
+      "center": [
+        38.9,
+        71.3
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "417",
+      "name": "Kyrgyzstan",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Spiritual Administration",
+      "rule_summary": "Follows Saudi / Central Asian consensus.",
+      "center": [
+        41.2,
+        74.8
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "795",
+      "name": "Turkmenistan",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Muftiate",
+      "rule_summary": "Follows Saudi Arabia.",
+      "center": [
+        39,
+        59.6
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "364",
+      "name": "Iran",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Office of the Supreme Leader Istehlal",
+      "rule_summary": "National optical & naked-eye crescent committees.",
+      "center": [
+        32.4,
+        53.7
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "760",
+      "name": "Syria",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Syrian Sharia Courts",
+      "rule_summary": "Follows Saudi / Levant announcements.",
+      "center": [
+        34.8,
+        39
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "752",
+      "name": "Sweden",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Swedish Islamic Councils",
+      "rule_summary": "Majority follow Saudi Arabia or ECFR.",
+      "center": [
+        59.3,
+        18.1
+      ],
+      "zoom": 4,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "616",
+      "name": "Poland",
+      "zone": "split_communities",
+      "zone_label": "Mixed / Split Communities",
+      "color": "#ec4899",
+      "authority": "Muslim Religious Union",
+      "rule_summary": "Calculation / European coordination.",
+      "center": [
+        51.9,
+        19.1
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "040",
+      "name": "Austria",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "IGGÖ",
+      "rule_summary": "Follows Saudi / Turkey Diyanet.",
+      "center": [
+        47.5,
+        14.5
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "348",
+      "name": "Hungary",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Hungarian Islamic Community",
+      "rule_summary": "Follows Saudi Arabia.",
+      "center": [
+        47.2,
+        19.5
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "642",
+      "name": "Romania",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Muftiate of Romania",
+      "rule_summary": "Follows Saudi / Turkey Diyanet.",
+      "center": [
+        45.9,
+        25
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "276",
+      "name": "Germany",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "DITIB / KRM / ECFR",
+      "rule_summary": "Majority Turkish-German councils follow Turkey Diyanet global calculation.",
+      "center": [
+        51.2,
+        10.4
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "100",
+      "name": "Bulgaria",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Chief Mufti of Bulgaria",
+      "rule_summary": "Follows Saudi / Turkey Diyanet.",
+      "center": [
+        42.7,
+        25.5
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "792",
+      "name": "Turkey",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "Diyanet (Presidency of Religious Affairs)",
+      "rule_summary": "2016 Istanbul Unified Calendar: moon altitude > 5° & elongation > 8° at sunset anywhere on Earth.",
+      "center": [
+        39,
+        35.2
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "008",
+      "name": "Albania",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Muslim Community of Albania",
+      "rule_summary": "Follows Saudi / Turkey Diyanet.",
+      "center": [
+        41.1,
+        20.2
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "191",
+      "name": "Croatia",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "Mesihat of Croatia",
+      "rule_summary": "Follows Turkey Diyanet global calculation.",
+      "center": [
+        45.1,
+        15.2
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "756",
+      "name": "Switzerland",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "FIDS",
+      "rule_summary": "Follows Saudi / ECFR.",
+      "center": [
+        46.8,
+        8.2
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "442",
+      "name": "Luxembourg",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "Shoura Luxembourg",
+      "rule_summary": "Follows ECFR / Turkey calculation.",
+      "center": [
+        49.8,
+        6.1
+      ],
+      "zoom": 8,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "056",
+      "name": "Belgium",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "EMB",
+      "rule_summary": "Follows Saudi Arabia / ECFR.",
+      "center": [
+        50.8,
+        4.3
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "528",
+      "name": "Netherlands",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Turkish (Diyanet) & Moroccan/Saudi councils",
+      "rule_summary": "Follows Saudi/Morocco or Turkey Diyanet.",
+      "center": [
+        52.1,
+        5.3
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "724",
+      "name": "Spain",
+      "zone": "split_communities",
+      "zone_label": "Mixed / Split Communities",
+      "color": "#ec4899",
+      "authority": "CIE / UCIDE",
+      "rule_summary": "Mixed local/Moroccan sighting and European calculation.",
+      "center": [
+        40.4,
+        -3.7
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "372",
+      "name": "Ireland",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "ICCI / ECFR",
+      "rule_summary": "ECFR global calculation (with local-sighting minority).",
+      "center": [
+        53.4,
+        -8.2
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "554",
+      "name": "New Zealand",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "FIANZ Hilal Committee",
+      "rule_summary": "Local sighting or nearby Australian sighting.",
+      "center": [
+        -41.3,
+        174.7
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "036",
+      "name": "Australia",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "ANIC / Moonsighting Australia",
+      "rule_summary": "Majority local sighting (some communities follow Saudi or Turkey).",
+      "center": [
+        -25.3,
+        133.8
+      ],
+      "zoom": 4,
+      "follows_hub": null
+    },
+    {
+      "iso": "144",
+      "name": "Sri Lanka",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Colombo Grand Mosque",
+      "rule_summary": "Official national physical sighting.",
+      "center": [
+        7.9,
+        80.7
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "156",
+      "name": "China",
+      "zone": "regional_criteria",
+      "zone_label": "Regional / Astronomical Criteria",
+      "color": "#f59e0b",
+      "authority": "Islamic Association of China",
+      "rule_summary": "Local sighting or regional Malaysian/East Asian alignment.",
+      "center": [
+        35.8,
+        104.2
+      ],
+      "zoom": 4,
+      "follows_hub": null
+    },
+    {
+      "iso": "158",
+      "name": "Taiwan",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Chinese Muslim Association",
+      "rule_summary": "Follows Saudi Arabia.",
+      "center": [
+        23.7,
+        121
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "380",
+      "name": "Italy",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "UCOII",
+      "rule_summary": "Follows Saudi / ECFR.",
+      "center": [
+        41.9,
+        12.6
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "208",
+      "name": "Denmark",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Danish Islamic Councils",
+      "rule_summary": "Majority follow Saudi Arabia or Turkey.",
+      "center": [
+        55.7,
+        12.6
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "826",
+      "name": "United Kingdom",
+      "zone": "split_communities",
+      "zone_label": "Mixed / Split Communities",
+      "color": "#ec4899",
+      "authority": "Wifaqul Ulama / New Crescent Society vs Saudi Followers",
+      "rule_summary": "Split: UK/Morocco local-sighting mosques vs Saudi-following mosques (often 1 day apart).",
+      "center": [
+        53.5,
+        -2
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "031",
+      "name": "Azerbaijan",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Caucasus Muslims Board",
+      "rule_summary": "Aligns with Saudi / regional announcements.",
+      "center": [
+        40.1,
+        47.6
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "608",
+      "name": "Philippines",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "NCMF",
+      "rule_summary": "Local/Saudi alignment.",
+      "center": [
+        12.9,
+        121.8
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "458",
+      "name": "Malaysia",
+      "zone": "regional_criteria",
+      "zone_label": "Regional / Astronomical Criteria",
+      "color": "#f59e0b",
+      "authority": "JAKIM (MABIMS Neo-Criterion)",
+      "rule_summary": "MABIMS criterion: sunset moon altitude ≥ 3° & elongation ≥ 6.4° plus rukyah.",
+      "center": [
+        4.2,
+        101.9
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "096",
+      "name": "Brunei",
+      "zone": "regional_criteria",
+      "zone_label": "Regional / Astronomical Criteria",
+      "color": "#f59e0b",
+      "authority": "MORA Brunei (MABIMS)",
+      "rule_summary": "MABIMS criterion: 3° altitude & 6.4° elongation + local sighting.",
+      "center": [
+        4.5,
+        114.7
+      ],
+      "zoom": 7,
+      "follows_hub": null
+    },
+    {
+      "iso": "705",
+      "name": "Slovenia",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "Islamic Community in Slovenia",
+      "rule_summary": "Follows Turkey Diyanet global calculation.",
+      "center": [
+        46.1,
+        14.9
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "246",
+      "name": "Finland",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Islamic Society of Finland",
+      "rule_summary": "Follows Saudi Arabia.",
+      "center": [
+        60.2,
+        24.9
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "392",
+      "name": "Japan",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Japan Islamic Trust",
+      "rule_summary": "Follows Saudi / Malaysia.",
+      "center": [
+        36.2,
+        138.3
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "887",
+      "name": "Yemen",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Local Sighting",
+      "rule_summary": "Physical crescent sighting.",
+      "center": [
+        15.5,
+        48.5
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "682",
+      "name": "Saudi Arabia",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Supreme Court of Saudi Arabia",
+      "rule_summary": "Official Saudi sighting testimonies (traditionally aligns with Umm al-Qura calendar).",
+      "center": [
+        23.9,
+        45.1
+      ],
+      "zoom": 5,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "504",
+      "name": "Morocco",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Ministry of Habous & Islamic Affairs",
+      "rule_summary": "Nationwide physical sighting network (270+ observation posts).",
+      "center": [
+        31.8,
+        -7.1
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "818",
+      "name": "Egypt",
+      "zone": "regional_criteria",
+      "zone_label": "Regional / Astronomical Criteria",
+      "color": "#f59e0b",
+      "authority": "Dar al-Ifta al-Misriyyah",
+      "rule_summary": "Conjunction before sunset & moonset ≥ 5 minutes after sunset, corroborated by observation posts.",
+      "center": [
+        26.8,
+        30.8
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "434",
+      "name": "Libya",
+      "zone": "regional_criteria",
+      "zone_label": "Regional / Astronomical Criteria",
+      "color": "#f59e0b",
+      "authority": "Dar al-Ifta Libya",
+      "rule_summary": "Official national sighting & visibility criterion.",
+      "center": [
+        26.3,
+        17.2
+      ],
+      "zoom": 5,
+      "follows_hub": null
+    },
+    {
+      "iso": "262",
+      "name": "Djibouti",
+      "zone": "follow_saudi",
+      "zone_label": "Follows Saudi Arabia",
+      "color": "#38bdf8",
+      "authority": "Ministry of Islamic Affairs",
+      "rule_summary": "Follows Saudi Arabia.",
+      "center": [
+        11.8,
+        42.6
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Makkah, Saudi Arabia",
+        "lat": 21.4225,
+        "lon": 39.8262
+      }
+    },
+    {
+      "iso": "800",
+      "name": "Uganda",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "Uganda Muslim Supreme Council",
+      "rule_summary": "Local/East African sighting.",
+      "center": [
+        1.4,
+        32.3
+      ],
+      "zoom": 6,
+      "follows_hub": null
+    },
+    {
+      "iso": "070",
+      "name": "Bosnia and Herz.",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "Islamic Community in Bosnia & Herzegovina",
+      "rule_summary": "Follows Turkey Diyanet / ECFR global calculation.",
+      "center": [
+        43.9,
+        17.7
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "807",
+      "name": "Macedonia",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "Islamic Religious Community",
+      "rule_summary": "Follows Turkey Diyanet global calculation.",
+      "center": [
+        41.6,
+        21.7
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "688",
+      "name": "Serbia",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "Islamic Community of Serbia",
+      "rule_summary": "Follows Turkey Diyanet global calculation.",
+      "center": [
+        44,
+        21
+      ],
+      "zoom": 6,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "499",
+      "name": "Montenegro",
+      "zone": "follow_turkey_diyanet",
+      "zone_label": "Follows Turkey / ECFR",
+      "color": "#a855f7",
+      "authority": "Islamic Community of Montenegro",
+      "rule_summary": "Follows Turkey Diyanet global calculation.",
+      "center": [
+        42.7,
+        19.4
+      ],
+      "zoom": 7,
+      "follows_hub": {
+        "name": "Ankara, Turkey",
+        "lat": 39.9334,
+        "lon": 32.8597
+      }
+    },
+    {
+      "iso": "780",
+      "name": "Trinidad and Tobago",
+      "zone": "local_sighting",
+      "zone_label": "Local / Regional Sighting",
+      "color": "#10b981",
+      "authority": "ASJA Moon Sighting Committee",
+      "rule_summary": "Local Caribbean sighting.",
+      "center": [
+        10.7,
+        -61.2
+      ],
+      "zoom": 8,
+      "follows_hub": null
+    }
+  ]
+}

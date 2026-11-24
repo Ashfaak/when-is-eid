@@ -1,0 +1,773 @@
+{
+  "exported": "2026-11-18T07:25:04Z",
+  "sa_len_overrides_count": 93,
+  "sa_date_overrides_count": 44,
+  "date_overrides": [
+    {
+      "id": "2022-06-29",
+      "data": {
+        "day": 29,
+        "g": "2022-06-30",
+        "month": 10,
+        "year": 1443
+      }
+    },
+    {
+      "id": "2022-08-27",
+      "data": {
+        "day": 29,
+        "g": "2022-08-28",
+        "month": 0,
+        "year": 1444
+      }
+    },
+    {
+      "id": "2022-10-25",
+      "data": {
+        "day": 29,
+        "g": "2022-10-26",
+        "month": 2,
+        "year": 1444
+      }
+    },
+    {
+      "id": "2022-12-23",
+      "data": {
+        "day": 29,
+        "g": "2022-12-24",
+        "month": 4,
+        "year": 1444
+      }
+    },
+    {
+      "id": "2023-04-20",
+      "data": {
+        "day": 29,
+        "g": "2023-04-21",
+        "month": 8,
+        "year": 1444
+      }
+    },
+    {
+      "id": "2023-08-16",
+      "data": {
+        "day": 29,
+        "g": "2023-08-17",
+        "month": 0,
+        "year": 1445
+      }
+    },
+    {
+      "id": "2024-03-10",
+      "data": {
+        "day": 29,
+        "g": "2024-03-11",
+        "month": 7,
+        "year": 1445
+      }
+    },
+    {
+      "id": "2024-05-08",
+      "data": {
+        "day": 29,
+        "g": "2024-05-09",
+        "month": 9,
+        "year": 1445
+      }
+    },
+    {
+      "id": "2024-06-06",
+      "data": {
+        "day": 29,
+        "g": "2024-06-07",
+        "month": 10,
+        "year": 1445
+      }
+    },
+    {
+      "id": "2024-08-04",
+      "data": {
+        "day": 29,
+        "g": "2024-08-05",
+        "month": 0,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2024-09-03",
+      "data": {
+        "day": 29,
+        "g": "2024-09-03",
+        "month": 1,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2024-10-03",
+      "data": {
+        "day": 29,
+        "g": "2024-10-03",
+        "month": 2,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2024-11-01",
+      "data": {
+        "day": 29,
+        "g": "2024-11-02",
+        "month": 3,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2024-12-01",
+      "data": {
+        "day": 30,
+        "g": "2024-12-02",
+        "month": 4,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2025-01-29",
+      "data": {
+        "day": 30,
+        "g": "2025-01-30",
+        "month": 6,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2025-02-28",
+      "data": {
+        "day": 29,
+        "g": "2025-02-28",
+        "month": 7,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2025-03-29",
+      "data": {
+        "day": 29,
+        "g": "2025-03-30",
+        "month": 8,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2025-04-28",
+      "data": {
+        "day": 30,
+        "g": "2025-04-29",
+        "month": 9,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2025-05-27",
+      "data": {
+        "day": 29,
+        "g": "2025-05-28",
+        "month": 10,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2025-06-25",
+      "data": {
+        "day": 29,
+        "g": "2025-06-26",
+        "month": 11,
+        "year": 1446
+      }
+    },
+    {
+      "id": "2025-07-25",
+      "data": {
+        "day": 30,
+        "g": "2025-07-26",
+        "month": 0,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2025-08-23",
+      "data": {
+        "day": 29,
+        "g": "2025-08-24",
+        "month": 1,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2025-09-22",
+      "data": {
+        "day": 30,
+        "g": "2025-09-23",
+        "month": 2,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2025-10-21",
+      "data": {
+        "day": 29,
+        "g": "2025-10-22",
+        "month": 3,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2025-11-20",
+      "data": {
+        "day": 30,
+        "g": "2025-11-21",
+        "month": 4,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2025-12-20",
+      "data": {
+        "day": 30,
+        "g": "2025-12-21",
+        "month": 5,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2026-01-19",
+      "data": {
+        "day": 30,
+        "g": "2026-01-20",
+        "month": 6,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2026-02-17",
+      "data": {
+        "day": 29,
+        "g": "2026-02-18",
+        "month": 7,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2026-03-19",
+      "data": {
+        "day": 30,
+        "g": "2026-03-20",
+        "month": 8,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2026-04-17",
+      "data": {
+        "day": 29,
+        "g": "2026-04-18",
+        "month": 9,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2026-06-15",
+      "data": {
+        "day": 29,
+        "g": "2026-06-16",
+        "month": 11,
+        "year": 1447
+      }
+    },
+    {
+      "id": "2026-08-13",
+      "data": {
+        "day": 29,
+        "g": "2026-08-13",
+        "month": 1,
+        "year": 1448
+      }
+    },
+    {
+      "id": "2026-09-11",
+      "data": {
+        "day": 30,
+        "g": "2026-09-12",
+        "month": 2,
+        "year": 1448
+      }
+    },
+    {
+      "id": "2026-10-10",
+      "data": {
+        "day": 28,
+        "g": "2026-10-10",
+        "month": 3,
+        "year": 1448
+      }
+    },
+    {
+      "id": "2026-11-09",
+      "data": {
+        "day": 29,
+        "g": "2026-11-09",
+        "month": 4,
+        "year": 1448
+      }
+    },
+    {
+      "id": "2027-02-06",
+      "data": {
+        "day": 30,
+        "g": "2027-02-08",
+        "month": 7,
+        "year": 1448
+      }
+    },
+    {
+      "id": "2027-03-08",
+      "data": {
+        "day": 29,
+        "g": "2027-03-09",
+        "month": 8,
+        "year": 1448
+      }
+    },
+    {
+      "id": "2027-04-07",
+      "data": {
+        "day": 28,
+        "g": "2027-04-07",
+        "month": 9,
+        "year": 1448
+      }
+    },
+    {
+      "id": "2027-05-06",
+      "data": {
+        "day": 30,
+        "g": "2027-05-08",
+        "month": 10,
+        "year": 1448
+      }
+    },
+    {
+      "id": "2027-07-04",
+      "data": {
+        "day": 28,
+        "g": "2027-07-04",
+        "month": 0,
+        "year": 1449
+      }
+    },
+    {
+      "id": "2027-08-02",
+      "data": {
+        "day": 28,
+        "g": "2027-08-02",
+        "month": 1,
+        "year": 1449
+      }
+    },
+    {
+      "id": "2027-09-30",
+      "data": {
+        "day": 29,
+        "g": "2027-09-30",
+        "month": 3,
+        "year": 1449
+      }
+    },
+    {
+      "id": "2027-10-29",
+      "data": {
+        "day": 29,
+        "g": "2027-10-30",
+        "month": 4,
+        "year": 1449
+      }
+    },
+    {
+      "id": "zaz_2026-07-14",
+      "data": {
+        "day": 29,
+        "g": "2026-07-15",
+        "month": 0,
+        "year": 1448
+      }
+    }
+  ],
+  "sa_reports": [
+    {
+      "by": "Haneef Tayob",
+      "cond": "unknown",
+      "d": "2026-11-09",
+      "id": "mw9h1laud01",
+      "lat": -25.7797,
+      "loc": "Laudium",
+      "lon": 28.109,
+      "m": "2026-11-09",
+      "note": "",
+      "rg": "za",
+      "tm": "",
+      "ts": 1794249600001,
+      "vis": "none",
+      "_collection_doc": "email-reports"
+    },
+    {
+      "by": "Haroon Ismail",
+      "cond": "unknown",
+      "d": "2026-11-09",
+      "id": "mw9h1azaa02",
+      "lat": -26.1708,
+      "loc": "Azaadville",
+      "lon": 27.7488,
+      "m": "2026-11-09",
+      "note": "",
+      "rg": "za",
+      "tm": "",
+      "ts": 1794249600002,
+      "vis": "none",
+      "_collection_doc": "email-reports"
+    },
+    {
+      "by": "SAMSA",
+      "cond": "unknown",
+      "d": "2026-11-09",
+      "id": "mw9h1hara03",
+      "lat": -17.8292,
+      "loc": "Harare",
+      "lon": 31.0522,
+      "m": "2026-11-09",
+      "note": "",
+      "rg": "za",
+      "tm": "",
+      "ts": 1794249600003,
+      "vis": "none",
+      "_collection_doc": "email-reports"
+    },
+    {
+      "by": "Haneef Tayob",
+      "cond": "clear",
+      "d": "2026-11-10",
+      "id": "mw10laud03",
+      "lat": -25.7797,
+      "loc": "Laudium",
+      "lon": 28.109,
+      "m": "2026-11-09",
+      "note": "Seen 20 minutes after sunset.",
+      "rg": "za",
+      "tm": "",
+      "ts": 1794300000002,
+      "vis": "naked",
+      "_collection_doc": "email-reports"
+    },
+    {
+      "by": "Tasneem Kharbai",
+      "cond": "unknown",
+      "d": "2026-11-10",
+      "id": "mw10cpt07",
+      "lat": -33.9249,
+      "loc": "Cape Town",
+      "lon": 18.4241,
+      "m": "2026-11-09",
+      "note": "",
+      "rg": "za",
+      "tm": "",
+      "ts": 1794300000006,
+      "vis": "naked",
+      "_collection_doc": "email-reports"
+    },
+    {
+      "by": "ucsa",
+      "cond": "clear",
+      "d": "2026-11-10",
+      "id": "mw10beira10",
+      "lat": -19.8436,
+      "loc": "Beira",
+      "lon": 34.8389,
+      "m": "2026-11-09",
+      "note": "low",
+      "rg": "za",
+      "tm": "18:55",
+      "ts": 1794300000030,
+      "vis": "naked",
+      "_collection_doc": "email-reports"
+    },
+    {
+      "by": "NMC",
+      "cond": "unknown",
+      "d": "2026-11-09",
+      "id": "mw9lilo05",
+      "lat": -13.9626,
+      "loc": "Lilongwe",
+      "lon": 33.7741,
+      "m": "2026-11-09",
+      "note": "",
+      "rg": "za",
+      "tm": "",
+      "ts": 1794249600005,
+      "vis": "none",
+      "_collection_doc": "email-reports"
+    },
+    {
+      "by": "Zambia National Hilaal Committee",
+      "cond": "unknown",
+      "d": "2026-11-09",
+      "id": "mw9lusa06",
+      "lat": -15.3875,
+      "loc": "Lusaka",
+      "lon": 28.3228,
+      "m": "2026-11-09",
+      "note": "",
+      "rg": "za",
+      "tm": "",
+      "ts": 1794249600006,
+      "vis": "none",
+      "_collection_doc": "email-reports"
+    },
+    {
+      "by": "Haneef Tayob",
+      "d": "2026-11-10",
+      "id": "g-laudium-10nov",
+      "img": "gallery/laudium-10nov-2026-haneef.jpg",
+      "loc": "Laudium",
+      "m": "2026-11-09",
+      "rg": "za",
+      "th": "gallery/laudium-10nov-2026-haneef_t.jpg",
+      "vis": "naked",
+      "_collection_doc": "gallery"
+    },
+    {
+      "by": "Ashraf Dockrat",
+      "cond": "cloudy",
+      "id": "mvgcisor5cnv",
+      "lat": -25.7797,
+      "loc": "Laudium",
+      "lon": 28.109,
+      "m": "2026-10-10",
+      "note": "",
+      "tm": "",
+      "ts": 1792480353723,
+      "vis": "none",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "Haroon Ismail",
+      "cond": "cloudy",
+      "id": "mvgckjae8mny",
+      "lat": -26.1708,
+      "loc": "Azaadville",
+      "lon": 27.7488,
+      "m": "2026-10-10",
+      "note": "",
+      "tm": "",
+      "ts": 1792480434854,
+      "vis": "none",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "UUCSA",
+      "cond": "cloudy",
+      "id": "mvgclb158jy5",
+      "lat": -33.9139,
+      "loc": "Gqeberha (Port Elizabeth)",
+      "lon": 25.5823,
+      "m": "2026-10-10",
+      "note": "",
+      "tm": "",
+      "ts": 1792480470809,
+      "vis": "naked",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "UUCSA",
+      "cond": "cloudy",
+      "id": "mvgclxrocdi9",
+      "lat": -23.0436,
+      "loc": "Makhado (Louis Trichardt)",
+      "lon": 29.9047,
+      "m": "2026-10-10",
+      "note": "",
+      "tm": "",
+      "ts": 1792480500276,
+      "vis": "naked",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "UUCSA",
+      "cond": "cloudy",
+      "id": "mvgcmeiks5vh",
+      "lat": -25.545,
+      "loc": "Zeerust",
+      "lon": 26.0778,
+      "m": "2026-10-10",
+      "note": "",
+      "tm": "",
+      "ts": 1792480521980,
+      "vis": "naked",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "Juned Patel",
+      "cond": "clear",
+      "id": "mvgcn08o9dgh",
+      "lat": -15.4154,
+      "loc": "Lusaka",
+      "lon": 28.2784,
+      "m": "2026-10-10",
+      "note": "",
+      "tm": "",
+      "ts": 1792480550136,
+      "vis": "naked",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "SAMSA",
+      "cond": "unknown",
+      "id": "mvgcxl0qdzot",
+      "lat": -17.8262,
+      "loc": "Harare",
+      "lon": 31.0497,
+      "m": "2026-10-10",
+      "note": "",
+      "tm": "",
+      "ts": 1792481043626,
+      "vis": "naked",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "Haneef Tayob",
+      "cond": "unknown",
+      "id": "mvgdda01j617",
+      "lat": -25.7797,
+      "loc": "Laudium",
+      "lon": 28.109,
+      "m": "2026-09-11",
+      "note": "",
+      "tm": "",
+      "ts": 1792481775841,
+      "vis": "none",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "2 People",
+      "cond": "clear",
+      "d": "2024-12-31",
+      "id": "mvkrb6tj2why",
+      "lat": -33.9241,
+      "loc": "Gordons Bay",
+      "lon": 18.4215,
+      "m": "2024-12-31",
+      "note": "accepted but doesn't seem credible",
+      "tm": "",
+      "ts": 1792747057735,
+      "vis": "naked",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "Haneef Tayob",
+      "cond": "clear",
+      "d": "2023-12-13",
+      "id": "mvks8xvzb281",
+      "lat": -25.7797,
+      "loc": "Laudium",
+      "lon": 28.109,
+      "m": "2023-12-13",
+      "note": "",
+      "tm": "",
+      "ts": 1792748632463,
+      "vis": "insuff",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "Haneef Tayob",
+      "cond": "clear",
+      "d": "2026-04-18",
+      "id": "mvksdonv4cd7",
+      "lat": -25.7797,
+      "loc": "Laudium",
+      "lon": 28.109,
+      "m": "2026-04-17",
+      "note": "",
+      "tm": "",
+      "ts": 1792748853787,
+      "vis": "optical",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    },
+    {
+      "by": "unknown",
+      "cond": "clear",
+      "d": "2026-04-18",
+      "id": "mvksenqen4w0",
+      "lat": -26.206,
+      "loc": "Benomi",
+      "lon": 28.0321,
+      "m": "2026-04-17",
+      "note": "",
+      "tm": "",
+      "ts": 1792748899238,
+      "vis": "naked",
+      "_collection_doc": "u_8D7oFafrrJskLt9ZFPnPlw"
+    }
+  ],
+  "sightmod_stations": [
+    {
+      "by": "Haneef Tayob",
+      "cityId": "b47",
+      "credit": "JUNED PATEL",
+      "ds": "2026-10-11",
+      "lat": -15.415388,
+      "lon": 28.278412,
+      "name": "Lusaka",
+      "nt": false,
+      "off": 2,
+      "tm": "18:00",
+      "url": "/_blob/8c5bf8c04049f5f767f1e152f643f548",
+      "id": "cres-2026-10-10"
+    },
+    {
+      "ids": {
+        "mvhy0m4vvu4b": true,
+        "mvhy145lsot4": true,
+        "mvkraoriywj1": true
+      },
+      "id": "ex"
+    },
+    {
+      "ac": 276.3,
+      "by": "Haneef Tayob",
+      "cityId": "b11",
+      "fov": 69,
+      "hz": 12,
+      "lat": -25.77966,
+      "lon": 28.109,
+      "name": "Laudium - Masjidus Salaam Minaret",
+      "off": 2,
+      "place": "",
+      "rot": -0.4,
+      "row": 62.6,
+      "url": "/_blob/9f094d46b8b37c22dbaa32b4eb1d731c",
+      "id": "hz-pmvjnz2oa"
+    },
+    {
+      "ac": 298,
+      "by": "Haneef Tayob",
+      "cityId": "b1",
+      "fov": 162,
+      "hz": 12,
+      "lat": -26.205994,
+      "lon": 28.032063,
+      "name": "Randburg Northcliff Tower",
+      "off": 2,
+      "place": "Randburg Northcliff Tower",
+      "rot": -0.4,
+      "row": 62.2,
+      "url": "/_blob/c478523a3748eafb671c987a3849ffef",
+      "id": "hz-pmvjobict"
+    }
+  ]
+}

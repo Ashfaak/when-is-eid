@@ -1,0 +1,4403 @@
+[
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "December 27, 2008 (Saturday) at 12:22 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "January 26, 2009 (Monday) at 7:55 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "February 25, 2009 (Wednesday) at 1:35 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "March 26, 2009 (Thursday) at 16:06 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "April 25 (Saturday) at 3:22 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "Sunday, May 24, 2009 at 12:11 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "July 22, 2009 (Wednesday) at 2:34 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "August 20, 2009 (Thursday) at 10:01 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "Septmeber 18, 2009 (Friday) at 18:44 UT",
+    "decision_evening": "2009-09-19",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2009-09-20",
+    "eid_date_gregorian": "2009-09-20",
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was sighted this evening from many locations in S. Africa. I observed it in Durban at about 18:",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "October 18, 2009 (Sunday) at 5:33 UT",
+    "decision_evening": "2009-10-18",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2009-10-20",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal for Zul-Qa'dah was not sighted this evening (Sunday, Oct 18) in S. Africa. Not Seen: Dr. Ab",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1430,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "November 16, 2009 (Monday) at 19:14 UT",
+    "decision_evening": "2009-11-17",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2009-11-18",
+    "eid_date_gregorian": "2009-11-27",
+    "observer_cities": [
+      "Bakoven",
+      "Cape Town",
+      "Durban",
+      "Signal Hill"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: The Dhul Hijjah Hilaal was sighted by naked eye from Signal Hill and Bakoven in Cape Town this"
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "December 27, 2008 (Saturday) at 12:22 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "15 January 2010 (Friday) at 7:11 UT",
+    "decision_evening": "2010-01-15",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2010-01-17",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was not sighted this evening, Friday, 15 January 2010 in South Africa. Not Seen: Dr. Abdurr",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "14 February 2010 (Sunday) at 2:51 UT",
+    "decision_evening": "2010-02-14",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2010-02-16",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: No sighting report on Sunday,Feb 14, from anywhere i South Africa. Not Seen: Dr. Abdurrazak Ebrahim (M",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "15 March 2010 (Monday) at 21:01 UT",
+    "decision_evening": "2010-03-16",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2010-03-18",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The crescent moon was not sighted this evening in S. Africa, the 4th straight month with no sighting o",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "14 April 2010 (Wednesday) at 12:29 UT",
+    "decision_evening": "2010-04-15",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2010-04-17",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was not sighted in S. Africa this evening, the 5th straight month on non-sighting. Quite un",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "14 May 2010 (Friday) at 1:04 UT",
+    "decision_evening": "2010-05-15",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2010-05-16",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was sighted this evening in several locations of South Africa; an easy sighting. Seen: Dr. Abdu",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "12 June 2010 (Saturday) at 11:14 UT",
+    "decision_evening": "2010-06-13",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2010-06-14",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal for Rajab was sighted in Johannesburg this evening, June 13 (Sunday). Durban was overcast. Seen",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "11 July 2010 (Sunday) at 19:40 UT",
+    "decision_evening": "2010-07-12",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2010-07-13",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Bakoven",
+      "Cape Town",
+      "Durban",
+      "Signal Hill",
+      "Three Anchor Bay"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: The Shabaan 1431 AH Hilaal was seen by naked-eye this Monday evening [12 July 2010 and the end",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "August 10, 2010 (Tuesday) at 3:08 UT",
+    "decision_evening": "2010-08-10",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2010-08-12",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal for Ramadhan was not sighted this evening in S. Africa. Thursday will be the 1st. Ramadhan ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "September 8, 2010 (Wednesday) at 10:30 UT",
+    "decision_evening": "2010-09-09",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2010-09-10",
+    "eid_date_gregorian": "2010-09-10",
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Pietermaritzburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: On Sep 9, the Hilaal was sighted in many locations in S. Africa this evening. An easy sighting. Seen: Dr. ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "7 October 2010 (Thursday) at 18:44 UT",
+    "decision_evening": "2010-10-08",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2010-10-09",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg",
+      "Signal Hill"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: Today (Friday, 08 October 2010, the Hilaal was sighted this evening in several locations in S. Africa. Eas",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1431,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "November 6, 2010 (Saturday) at 4:52 UT",
+    "decision_evening": "2010-11-06",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2010-11-08",
+    "eid_date_gregorian": "2010-11-17",
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was not sighted this evening in Durban, S. Africa. Monday will be the 1st. Not Seen: Dr. Ab"
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "January 4, 2011 (Tuesday) at 9:03 UT",
+    "decision_evening": null,
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: The Safar Hilaal was not seen in Cape Town this Tuesday evening [04/01/2011 and the end of"
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "Thursday February 3 at 2:31 UT",
+    "decision_evening": "2011-02-03",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2011-02-05",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: The Hilaal was not sighted in Cape Town this Thursday evening, the 3rd February 2011 (corr",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "Friday, March 4, 2011 at 20:46 UT",
+    "decision_evening": "2011-03-05",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2011-03-07",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: The Hilaal was not sighted in Cape Town. The official first day of Rabi-ul Thani will corr",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "April 3, 2011 (Sunday) at 14:32 UT",
+    "decision_evening": "2011-04-04",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2011-04-06",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was not sighted this evening, Monday, April 4 in S. Africa, although it was a +25 hour moon",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "May 3, 2011 (Tuesday) at 6:51 UT",
+    "decision_evening": "2011-05-04",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2011-05-06",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Cape Town reported: Contrary to expectations, the Hilaal was not sighted on May 4th evening in S. Africa. Weather was c",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "June 1, 2011 (Wednesday) at 21:02 UT",
+    "decision_evening": "2011-06-03",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2011-06-04",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was sighted in many locations in S. Africa this evening, June 3, 2011. It was very clear.",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "July 1, 2011 (Friday) at 8:54 UT",
+    "decision_evening": "2011-07-02",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2011-07-03",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was sighted this evening in many places. An easy sighting. Allahuma-Baarik-Lanaa-Fee-Rajaba-Wa-",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "July 30, 2011 (Saturday) at 18:40 UT",
+    "decision_evening": "2011-07-31",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2011-08-01",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was sighted in many places in S. Africa on July 31, Sunday. Ramadaan Mubaruk to all. Allah Most",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "August 29, 2011 (Monday) at 3:04 UT",
+    "decision_evening": "2011-08-29",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2011-08-31",
+    "eid_date_gregorian": "2011-08-31",
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen (Clouds): Ammar Tahir (MCW member) from Cape Town reported: Today, Monday 29th August 2011, I, Ammar Tahir, together with 3 other Muslim brothers have g"
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "September 27, 2011 (Tuesday) at 11:09 UT",
+    "decision_evening": "2011-09-28",
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen in Johannesburg: Rashid Motala (MCW member) from Durban reported: Today, on Wednesday, September 28, there were sightings of the Hilaal in several places ar"
+  },
+  {
+    "hijri_year": 1432,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "October 26, 2011 (Wednesday) at 19:56 UT",
+    "decision_evening": "2011-10-27",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2011-10-28",
+    "eid_date_gregorian": "2011-11-06",
+    "observer_cities": [
+      "Cape Town",
+      "Johannesburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from South Africa reported: The Hilaal was sighted this evening in the Cape Town. Eid-ul-Adha will be Sunday, 6th November. May ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "November 25, 2011 (Friday) at 6:10 UT",
+    "decision_evening": "2011-11-25",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2011-11-27",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was not sighted this evening, Friday, Nov 25; A very young moon. Sunday will be the 1st Muh",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "December 24, 2011 (Saturday) at 18:06 UT",
+    "decision_evening": "2011-12-25",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2011-12-27",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was not sighted in S. Africa this evening, Dec 25, Sunday. We are counting 30 days for Muha",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "January 23, 2012 (Monday) at 7:39 UT",
+    "decision_evening": "2012-01-24",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2012-01-26",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal for Rabi-ul-Awwal has been sighted this evening (Tuesday, January 24) - reports from the North ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "February 21, 2012 (Tuesday) at 22:35 UT",
+    "decision_evening": "2012-02-22",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2012-02-24",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: No sighting of the Hilaal this evening, Johannesburg, Cape Town, Durban, all negative.",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "March 22, 2012 (Thursday) at 14:37 UT",
+    "decision_evening": "2012-03-23",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2012-03-25",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was not sighted this evening (March 23) in S. Africa. 30 days would be completed for the cu",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "April 21, 2012 (Saturday) at 7:18 UT",
+    "decision_evening": "2012-04-22",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2012-04-23",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg",
+      "Rustenburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: The Hilaal was sighted by naked eye in Johannesburg and Rustenburg. The first day of Rabiul Th",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "May 20, 2012 (Sunday) at 23:47 UT",
+    "decision_evening": "2012-05-21",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2012-05-23",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: The Hilaal was not sighted in S. Africa this evening, Monday, May 21, 2012. Wednesday will be the 1st ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "June 19, 2012 (Tuesday) at 15:02 UT",
+    "decision_evening": "2012-06-20",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2012-06-21",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Signal Hill"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Dr. Abdurrazak Ebrahim (MCW member) from Signal Hill reported: The Hilaal for Shabaan was sighted from Signal Hill at 18h19 this evening (Wednesday, 20/6/2",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "July 19, 2012 (Thursday) at 4:24 UT",
+    "decision_evening": "2012-07-19",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2012-07-21",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Ammar Tahir (MCW member) from Cape Town reported: I just returned from trying to sight the Ramadhan Hilaal by the beach front on July 19. There were 4 ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "August 17, 2012 (Friday) at 15:54 UT",
+    "decision_evening": "2012-08-18",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2012-08-19",
+    "eid_date_gregorian": "2012-08-19",
+    "observer_cities": [
+      "Cape Town"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: The Shawwaal Hilaal was easily visible to the naked eye this Sat. evening (end of 29th Ramadaa",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "September 16, 2012 (Sunday) at 2:11 UT",
+    "decision_evening": "2012-09-16",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2012-09-18",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: The Dhul Qada Hilaal was not sighted by naked-eye this Sunday evening (end of 29th Shawaal",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1433,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "October 15, 2012 (Monday) at 12:02 UT",
+    "decision_evening": "2012-10-16",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2012-10-17",
+    "eid_date_gregorian": "2012-10-26",
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: On Tuesday 16th October 2012, the Hilaal was sighted in S. Africa (in the Gauteng Province). Zul-Hijjah 14",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "Tuesday November 13, 2012 at 22:08 UT",
+    "decision_evening": "2012-11-14",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2012-11-15",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: The Muharrum Hilaal was sighted per naked-eye from Cape Town this evening (19h45), Wednesday, ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "December 13, 2012 (Thursday) at 8:41 UT",
+    "decision_evening": "2012-12-13",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2012-12-15",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: On Thursday, 13th December 2012, the Hilaal was NOT sighted in South Africa. Safar 1434 will commence ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "January 11, 2013 (Friday) at 19:43 UT",
+    "decision_evening": "2013-01-12",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2013-01-14",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: On Saturday 12th January 2013, the Hilaal was NOT sighted in South Africa. Rabi-ul-Awwal 1434 will com",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "February 10, 2013 (Sunday) at 7:20 UT",
+    "decision_evening": "2013-02-11",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2013-02-13",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: On Monday 11th February 2013, the Hilaal was NOT sighted in South Africa. Rabi-us-Thaani 1434 will com",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "March 11, 2013 (Monday) at 19:51 UT",
+    "decision_evening": "2013-03-12",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2013-03-14",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: On Tuesday 12th March 2013, the Hilaal was NOT sighted in South Africa. Jumad-al-Ula 1434 will commenc",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "April 10, 2013 (Wednesday) at 9:20 UT",
+    "decision_evening": "2013-04-11",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2013-04-13",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: On Thursday 11th April 2013, the Hilaal was NOT sighted in South Africa. Jumad-as-Thaani 1434 will com",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "May 10, 2013 (Friday) at 00:28 UT",
+    "decision_evening": "2013-05-11",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2013-05-12",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: On the evening of Saturday 11th May 2013, the Hilaal was sighted in South Africa. The 1st Rajab 1434 corre",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "June 8, 2013 (Saturday) at 15:56 UT",
+    "decision_evening": "2013-06-09",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2013-06-10",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: On the evening of Sunday 9th June 2013, the Hilaal was sighted in Johannesburg (Waterval) and Cape Town. T",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "July 8, 2013 (Monday) at 7:14 UT",
+    "decision_evening": "2013-07-08",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2013-07-10",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: On Monday, July 8, negative sighting in Southern Africa (from all areas south of the equat",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "August 6, 2013 (Tuesday) at 21:51 UT",
+    "decision_evening": "2013-08-07",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2013-08-09",
+    "eid_date_gregorian": "2013-08-09",
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Witbank"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Shakil Vayani (MCW member) from Witbank reported: At 6.15pm 7th August 2013, in Witbank, South Africa, the Moon has NOT been sighted. Not Seen: Dr. Abd",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "September 5, 2013 (Thursday) at 11:36 UT",
+    "decision_evening": "2013-09-06",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2013-09-07",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Dr. Abdurrazak Ebrahim (MCW member) from Cape Town reported: The Hilaal was easily seen by naked-eye in the Cape Town western sky this Friday evening, 06 S",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1434,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "October 5, 2013 (Saturday) at 0:35 UT",
+    "decision_evening": "2013-10-05",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2013-10-07",
+    "eid_date_gregorian": "2013-10-16",
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: On the evening of Saturday 5th October 2013, the Hilaal was NOT sighted in South Africa. The 1st Zul H",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "Sunday November 3, 2013 at 12:50 UT",
+    "decision_evening": "2013-11-04",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2013-11-05",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: On the evening of Monday 4th November 2013, the Hilaal was sighted in South Africa. The 1st Muharram 1435 ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "Tuesday, December 3, 2013 at 0:22 UT",
+    "decision_evening": "2013-12-03",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2013-12-05",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: DATE OF SIGHTING EFFORT: Tuesday, 3 December 2013 LOCATION OF SIGHTING: All South Africa SKY CONDITION",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "Wednesday January 1, 2014 at 11:14 UT",
+    "decision_evening": "2014-01-02",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2014-01-03",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Johannesburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: SEEN OR NOT SEEN: Seen Naked eye DATE OF SIGHTING EFFORT: Thursday, 2 January 2014 LOCATION OF SIGHTING: S",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "Thursday, January 30, 2014 at 21:38 UT",
+    "decision_evening": "2014-01-31",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2014-02-02",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: DATE OF SIGHTING EFFORT: Friday, 31 January 2014 LOCATION OF SIGHTING: All Major Centres, South Africa",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "Saturday March 1, 2014 at 8:00 UT",
+    "decision_evening": "2014-03-02",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2014-03-03",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Port Elizabeth"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: DATE OF SIGHTING EFFORT: Sunday, 02 March 2014 LOCATION OF SIGHTING: Port Elizabeth, South Africa SKY COND",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "Sunday March 30, 2014 at 18:44 UT",
+    "decision_evening": "2014-03-31",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2014-04-02",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: DATE OF SIGHTING EFFORT: Monday, 31 March 2014 LOCATION OF SIGHTING: Different locations in South Afri",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "Tuesday April 29, 2014 at 6:14 UT",
+    "decision_evening": "2014-04-30",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2014-05-01",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Johannesburg",
+      "Port Elizabeth"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: Rashid Motala (MCW member) from Durban reported: DATE OF SIGHTING EFFORT: Wednesday, 30 April 2014 LOCATION OF SIGHTING: Johannesburg, Port Elizabeth, many",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "Wednesday May 28, 2014 at 18:40 UT",
+    "decision_evening": "2014-05-29",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2014-05-31",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Witbank"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Rashid Motala (MCW member) from Durban reported: SEEN OR NOT SEEN: Not Seen DATE OF SIGHTING EFFORT: Thursday, 29 May 2014 SKY CONDITIONS: Cloudy TIME ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "Friday June 27, 2014 at 8:08 UT",
+    "decision_evening": "2014-06-27",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2014-06-29",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg",
+      "Lagoon Beach"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Abdullah Salie (MCW member) from Cape Town reported: DATE OF SIGHTING EFFORT: Friday, 27 June 2014 LOCATION OF SIGHTING: Lagoon Beach, Western Cape, So",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "Saturday July 26, 2014 at 22:42 UT",
+    "decision_evening": "2014-07-27",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2014-07-29",
+    "eid_date_gregorian": "2014-07-29",
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg",
+      "Lagoon Beach"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: Dr. Husain Sayanvala (MCW member) from Johannesburg reported: DATE OF SIGHTING EFFORT: Sunday 27 July 2014 LOCATION OF SIGHTING: Johannesburg, Gauteng,",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "Monday August 25, 2014 at 14:13 UT",
+    "decision_evening": "2014-08-25",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2014-08-27",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen:",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1435,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "Wednesday September 24, 2014 at 6:14 UT",
+    "decision_evening": "2014-09-24",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2014-09-26",
+    "eid_date_gregorian": "2014-10-05",
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Malabar",
+      "Port Elizabeth",
+      "Witbank"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: M. Choonara (MCW member) from Malabar, Port Elizabeth reported: Myself and 8 other Muslim males adults tried to sight it but couldn't. Age of moon appr",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "October 23, 2014 (Thursday) at 21:56 UT",
+    "decision_evening": "2014-10-24",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2014-10-26",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Malabar",
+      "Port Elizabeth"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr. Muhammad Choonara from Malabar, Port Elizabeth reported: On Friday, October 24, myself and 2 other Muslim male adults tried to sight the",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "November 22, 2014 (Saturday) at 12:32 UT",
+    "decision_evening": "2014-11-23",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2014-11-24",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen:",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "December 22, 2014 (Monday) at 1:36 UT",
+    "decision_evening": "2014-12-22",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2014-12-24",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Malabar",
+      "Port Elizabeth"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr. Rashid Motala from Durban reported: On Monday 22nd December 2014, the Hilaal was NOT sighted in South Africa. Rabi-ul-Awwal 1436 will co",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "January 20, 2015 (Tuesday) at 13:14 UT",
+    "decision_evening": "2015-01-21",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2015-01-23",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr. Rashid Motala from Durban reported: On Wednesday 21st January 2015, the Hilaal was NOT sighted in South Africa. Rabi-us-Thaani 1436 will",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "Febraury 18, 2015 (Wednesday) at 23:47 UT",
+    "decision_evening": null,
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2015-02-21",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Bloemfontein",
+      "Cape Town",
+      "Durban",
+      "Johannesburg",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Dr. Abdurrazak Ebrahim from Cape Town reported: The 1436 H Jamadal Ula Hilaal was not sighted in Southern Africa on this evening of 19 Febru",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "March 20, 2015 (Friday) at 9:36 UT",
+    "decision_evening": "2015-03-21",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2015-03-22",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr. Rashid Motala from Durban reported: On the evening of Saturday 21st March 2015, the Hilaal was sighted in South Africa. Jumad-as-Thaani 1436",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "April 18, 2015 (Saturday) at 18:56 UT",
+    "decision_evening": "2015-04-19",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2015-04-21",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Laudium",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Molvi Ashraf Dockrat from Pretoria reported: On April 19, the Hilal was not sighted at Masjid Darus Salaam Laudium Pretoria. UUCSA (United U",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "May 18, 2015 (Monday) at 4:13 UT",
+    "decision_evening": "2015-05-19",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2015-05-20",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Molvi Ashraf Dockrat from Pretoria reported: The hilal of Shabaan 1436 has been sighted under clear conditions from Pretoria South Africa. We aw"
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "June 16, 2015 (Tuesday) at 14:05 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "July 16, 2015 (Thursday) at 1:24 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "August 14, 2015 (Friday) at 14:53 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1436,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "September 13, 2015 (Sunday) at 6:41 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "October 1, 2016 (Saturday) at 00:12UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "October 30, 2016 (Sunday) at 17:38 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "November 29, 2016 (Tuesday) at 12:18 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "December 29, 2016 (Thursday) at 6:53 UT",
+    "decision_evening": "2016-12-29",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2016-12-31",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Dr Abdurrazak Ebrahim from Cape Town reported: Hilaal not sighted in South Africa December 29. The 1st of Rabi �2� will correspond with Satu",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "January 28, 2017 (Saturday) at 0:06 UT",
+    "decision_evening": "2017-01-28",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2017-01-30",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Dr Abdurrazak Ebrahim from Cape Town reported: On January 28 2017 Hilal was not sighted in South Africa. The 1st of Jamadal OOla corresponds",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "February 26, 2017 (Sunday) at 14:58 UT",
+    "decision_evening": "2017-02-27",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2017-02-28",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Dr Abdurrazak Ebrahim from Cape Town reported: Hilaal not sighted in South Africa. The 1st of Jamadi �2� will correspond with Wednesday (1/M",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "March 28, 2017 (Tuesday) at 2:57 UT",
+    "decision_evening": "2017-03-28",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2017-03-30",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Tuesday 28th March 2017, the Hilaal was NOT sighted in South Africa. Therefore Raja",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "April 26, 2017 (Wednesday) at 12:15 UT",
+    "decision_evening": "2017-04-27",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2017-04-28",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Thursday 27th April 2017, the Hilaal WAS sighted in South Africa (many locations). Ther",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "Thursday May 25, 2017 at 19:44 UT",
+    "decision_evening": "2017-05-26",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2017-05-27",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Friday 26th May 2017, the Hilaal WAS sighted in South Africa (many locations). Therefor",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "Saturday June 24, 2017 at 2:31 UT",
+    "decision_evening": "2017-06-24",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2017-06-26",
+    "eid_date_gregorian": "2017-06-26",
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Witbank"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Shakil Vayani from Witbank reported: Today, June 24, moon was not sighted in South Africa. No one in South Africa reported any sighting e",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "July 23, 2017 (Sunday) at 9:45 UT",
+    "decision_evening": "2017-07-24",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2017-07-25",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Dr Abdurrazak Ebrahim from Cape Town reported: The Dhul Qada Hilaal was sighted per naked-eye this Monday evening (24/7/17) from Cape Town. Seen",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1438,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "Monday August 21, 2017 at 18:30 UT",
+    "decision_evening": "2017-08-22",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2017-08-23",
+    "eid_date_gregorian": "2017-09-01",
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Tuesday 22nd August 2017, the Hilaal WAS sighted in South Africa, at many locations. Th",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "September 20, 2017 (Wednesday) at 5:30 UT",
+    "decision_evening": "2017-09-20",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2017-09-22",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Tuesday 20th September 2017, the Hilaal was NOT sighted in South Africa. Therefore ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "October 19, 2017 (Thursday) at 19:12 UT",
+    "decision_evening": "2017-10-20",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2017-10-22",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban",
+      "Johannesburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Friday 20th October 2017, the Hilaal was NOT sighted in South Africa. Therefore Saf",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "November 18, 2017 (Saturday) at 11:42 UT",
+    "decision_evening": "2017-11-19",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2017-11-20",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Sunday 19th November 2017, the Hilaal WAS sighted in South Africa. Therefore Rabi-ul-Aw",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "December 18, 2017 (Monday) at 6:30 UT",
+    "decision_evening": "2017-12-18",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2017-12-20",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Monday 18th December 2017, the Hilaal was NOT sighted in South Africa. Therefore Ra",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "January 17, 2018 (Wednesday) at 2:17 UT",
+    "decision_evening": "2018-01-17",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2018-01-19",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Wednesday 17th January 2018, the Hilaal was NOT sighted in South Africa. Therefore ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "February 15, 2018 (Thursday) at 21:05 UT",
+    "decision_evening": "2018-02-16",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2018-02-17",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Bakoven",
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Friday 16th February 2018, the Hilaal was sighted in South Africa. Sighting point was B",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "March 17, 2018 (Saturday) at 13:12 UT",
+    "decision_evening": "2018-03-17",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2018-03-19",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Saturday 17th March 2018, the Hilaal was NOT sighted in South Africa. Therefore Raj",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "April 16, 2018 (Monday) at 1:57 UT",
+    "decision_evening": "2018-04-16",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2018-04-18",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Monday 16th April 2018, the Hilaal was NOT sighted in South Africa. Therefore Sha'b",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "May 15, 2018 (Tuesday) at 11:48 UT",
+    "decision_evening": "2018-05-16",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2018-05-17",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Wednesday 16th May 2018, the Hilaal WAS sighted in South Africa (in many locations). Th",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "Wednesday June 13, 2018 at 19:43 UT",
+    "decision_evening": "2018-06-14",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2018-06-15",
+    "eid_date_gregorian": "2018-06-15",
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Thursday 14th June 2018, the Hilaal WAS sighted in South Africa (in many locations). Th",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "July 13, 2018 (Friday) at 2:48 UT",
+    "decision_evening": "2018-07-13",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2018-07-15",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Friday 13th July 2018, the Hilaal was NOT sighted in South Africa. Therefore Zul-Qa",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1439,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "August 11, 2018 (Saturday) at 9:58 UT",
+    "decision_evening": "2018-08-12",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2018-08-13",
+    "eid_date_gregorian": "2018-08-22",
+    "observer_cities": [
+      "Durban",
+      "Witbank"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Shakil Vayani from Witbank reported: Moon for Dhul-Hijjah was sighted in Witbank as per attached picture at exactly 6pm on Sunday 12th August",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "September 9, 2018 (Sunday) at 18:01 UT",
+    "decision_evening": "2018-09-10",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2018-09-11",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Monday 10th September 2018, the Hilaal WAS sighted in South Africa. Therefore Muharram ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "October 9, 2018 (Tuesday) at 3:46 UT",
+    "decision_evening": "2018-10-09",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2018-10-11",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Tuesday 9th October 2018, the Hilaal was NOT sighted in South Africa. Therefore Saf",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "November 7, 2018 (Wednesday) at 16:02 UT",
+    "decision_evening": "2018-11-08",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2018-11-09",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Thursday 8th November 2018, the Hilaal WAS sighted in South Africa. Therefore Rabi-ul-A",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "December 7, 2018 (Friday) at 7:20 UT",
+    "decision_evening": "2018-12-07",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2018-12-09",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Friday 7th December 2018, the Hilaal was NOT sighted in South Africa. Therefore Rab",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "January 6, 2019 (Sunday) at 1:28 UT",
+    "decision_evening": "2019-01-06",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2019-01-08",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Dr Abdurrazak Ebrahim,Secretary, Crescent Observer�s Society of South Africa from Cape Town reported: The Hilaal for Jamadal Ula 1440 H was ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "February 4, 2019 (Monday) at 21:03 UT",
+    "decision_evening": "2019-02-05",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2019-02-07",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Dr Abdurrazak Ebrahim,Secretary, Crescent Observer�s Society of South Africa from Cape Town reported: On the evening of Tuesday 5th February",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "March 6, 2019 (Wednesday) at 16:04 UT",
+    "decision_evening": "2019-03-07",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2019-03-09",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Thursday 7th March 2019, the Hilaal was NOT sighted in South Africa. Therefore Raja",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": null,
+    "decision_evening": "2019-04-06",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2019-04-07",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Saturday 6th April 2019, the Hilaal WAS sighted in South Africa. Therefore Sha'baan 144",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "May 4, 2019 (Saturday) at 22:47 UT",
+    "decision_evening": "2019-05-05",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2019-05-07",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Witbank"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Shakil Vayani from Witbank reported: The Crescent Moon for Ramadan 1440 was NOT SEEN today Sunday 29th Sha'ban 1440 (5th May, 2019). The ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "June 3, 2019 (Monday) at 10:03 UT",
+    "decision_evening": "2019-06-04",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2019-06-05",
+    "eid_date_gregorian": "2019-06-05",
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Tuesday 4th June 2019, the Hilaal WAS sighted in South Africa. Therefore Shawwaal 1440 ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "July 2, 2019 (Tuesday) at 19:16 UT",
+    "decision_evening": "2019-07-03",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2019-07-04",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Johannesburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Wednesday 3rd July 2019, the Hilaal WAS sighted in South Africa (in the Johannesburg ar",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1440,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "August 1, 2019 (Thursday) at 3:13 UT",
+    "decision_evening": "2019-08-01",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2019-08-03",
+    "eid_date_gregorian": "2019-08-12",
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Thursday 1st August 2019, the Hilaal was NOT sighted in South Africa. Therefore Zul",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "August 30, 2019 (Friday) at 10:37 UT",
+    "decision_evening": "2019-08-31",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2019-09-01",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town",
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Saturday 31st August 2019, the Hilaal WAS sighted in South Africa. Therefore Muharram 1",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "September 28, 2019 (Saturday) at 18:26 UT",
+    "decision_evening": "2019-09-29",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2019-09-30",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Sunday 29 September 2019, the Hilaal WAS sighted in South Africa in several locations. ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "October 28, 2019 (Monday) at 3:38 UT",
+    "decision_evening": "2019-10-28",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2019-10-30",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Monday 28 October 2019, the Hilaal was NOT sighted in South Africa. Therefore Rabi-",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "November 26, 2019 (Tuesday) at 15:06 UT",
+    "decision_evening": "2019-11-27",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2019-11-28",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Wednesday 27 November 2019, the Hilaal WAS sighted in South Africa. Therefore Rabi-us-T",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "December 26, 2019 (Thursday) at 5:13 UT",
+    "decision_evening": "2019-12-26",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2019-12-28",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Thursday 26 December 2019, the Hilaal was NOT sighted in South Africa. Therefore Ju",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "January 24, 2020 (Friday) at 21:42 UT",
+    "decision_evening": "2020-01-25",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2020-01-27",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Saturday 25 January 2020, the Hilaal was NOT sighted in South Africa. Therefore Jum",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "February 23, 2020 (Sunday) at 15:32 UT",
+    "decision_evening": "2020-02-24",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2020-02-25",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: n the evening of Monday 24 February 2020, the Hilaal WAS sighted in South Africa. Therefore Rajab 1441 wi",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "March 24, 2020 (Tuesday) at 9:28 UT",
+    "decision_evening": "2020-03-25",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2020-03-26",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Cape Town"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Dr Abdurrazak Ebrahim,Secretary, Crescent Observer�s Society of South Africa from Cape Town reported: On Tuesday (29th Rajab 1441 / 24 March",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "April 23, 2020 (Thursday) at 2:26 UT",
+    "decision_evening": "2020-04-23",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2020-04-25",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Thursday 23 April 2020, the Hilaal was Not sighted in South Africa. Therefore Ramad",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "May 22, 2020 (Friday) at 17:38 UT",
+    "decision_evening": "2020-05-23",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2020-05-25",
+    "eid_date_gregorian": "2020-05-25",
+    "observer_cities": [
+      "Durban",
+      "Rustenburg"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Tehseen Raza Hamdani from Rustenburg reported: On May 23, in Rustenburg, and major parts of South Africa, the crescent was not seen tonight.",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "June 21, 2020 (Sunday) at 6:41 UT",
+    "decision_evening": "2020-06-22",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2020-06-23",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Rashid Motala from Durban reported: On the evening of Monday 22 June 2020, the Hilaal WAS sighted in South Africa. Therefore Zul Qa'dah 1441 wil",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1441,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "July 20, 2020 (Monday) at 17:33 UT",
+    "decision_evening": "2020-07-21",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2020-07-23",
+    "eid_date_gregorian": "2020-08-01",
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Rashid Motala from Durban reported: On the evening of Tuesday 21 July 2020, the Hilaal was NOT sighted in South Africa. Therefore Zul Hijjah",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "August 19, 2020 (Wednesday) at 2:42 UT",
+    "decision_evening": "2020-08-20",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2020-08-21",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Wifaq _ Muharram 1442 Calendar Size: 243 KB Download | MCW: Wifaq: Wifaq _ Muharram 1442 Calendar Size: 243 KB Download | MCW: South Africa: Seen: MCW member Rashid Motala from Durban reported: On the evening of Thursday 20 August 2020, the",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "September 17, 2020 (Thursday) at 11:00 UT",
+    "decision_evening": "2020-09-18",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2020-09-19",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Seen: MCW member Rashid Motala from Durban reported: On the evening of Friday, 18 September 2020, the Hilaal WAS sighted in South Africa. Therefore Safar 1442 wi",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "October 16, 2020 (Friday) at 19:31 UT",
+    "decision_evening": "2020-10-17",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2020-10-18",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Calendar rabi ul awwal 1442 Download | MCW: Wifaq: Calendar rabi ul awwal 1442 Download | MCW: South Africa: Seen: MCW member Rashid Motala from Durban reported: On the evening of Saturday 17 October 2020, the Hilaal WAS sig",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "November 15, 2020 (Sunday) at 5:07 UT",
+    "decision_evening": "2020-11-15",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2020-11-17",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Calendar rabi ul akhir 1442 DOWNLOAD | MCW: Wifaq: Calendar rabi ul akhir 1442 DOWNLOAD | MCW: South Africa: Not Seen: MCW member Rashid Motala from Durban reported: On the evening of Sunday 15 November 2020, the Hilaal was "
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "December 14, 2020 (Monday) at 16:17 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: "
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "January 13, 2021 (Wednesday) at 5:00 UT",
+    "decision_evening": "2021-01-13",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2021-01-15",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "MCW: MCW: South Africa: Not Seen: MCW member Rashid Motala from Durban reported: On the evening of Wednesday 13 January 2021, the Hilaal was NOT sighted in South Africa. Therefore Jumad",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "February 11, 2021 (Thursday) at 19:08 UT",
+    "decision_evening": "2021-02-12",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2021-02-13",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: rajab 1442 - final (s) DOWNLOAD | MCW: Wifaq: rajab 1442 - final (s) DOWNLOAD | MCW: South Africa: Seen: MCW member Rashid Motala from Durban reported: On the evening of Friday 12 February 2021, the Hilaal WAS sighted i",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "March 13, 2021 (Saturday) at 10:21 UT",
+    "decision_evening": "2021-03-13",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2021-03-15",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Shabaan 1442 Calendar DOWNLOAD | MCW: Wifaq: Shabaan 1442 Calendar DOWNLOAD | MCW: South Africa: Not Seen: MCW member Rashid Motala from Durban reported: On the evening of Saturday 13 March 2021, the Hilaal was NOT sig"
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "April 12, 2021 (Monday) at 2:31 UT",
+    "decision_evening": null,
+    "sighted_on_29th": null,
+    "prev_month_days": null,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Calendar ramadhaan 1442 DOWNLOAD | MCW: Wifaq: Calendar ramadhaan 1442 DOWNLOAD"
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "May 11, 2021 (Tuesday) at 19:00 UT",
+    "decision_evening": "2021-05-12",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2021-05-14",
+    "eid_date_gregorian": "2021-05-14",
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: calendar shawwaal 1442 DOWNLOAD | MCW: Wifaq: calendar shawwaal 1442 DOWNLOAD | MCW: South Africa: Not Seen: MCW member Rashid Motala from Durban reported: On the evening of Wednesday 12 May 2021, the Hilaal was NOT sig",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "June 10, 2021 (Thursday) at 10:53 UT",
+    "decision_evening": "2021-06-11",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2021-06-12",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Zeerust"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Calendar Zhul Qa'dah 1442 s DOWNLOAD | MCW: Wifaq: Calendar Zhul Qa'dah 1442 s DOWNLOAD | MCW: South Africa: Seen: MCW member Rashid Motala from Durban reported: On the evening of Friday 11 June 2021, the Hilaal WAS sighted ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1442,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "July 10, 2021 (Saturday) at 1:16 UT",
+    "decision_evening": "2021-07-10",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2021-07-12",
+    "eid_date_gregorian": "2021-07-21",
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Calendar Zhul hijjah 1442 final DOWNLOAD | MCW: Wifaq: Calendar Zhul hijjah 1442 final DOWNLOAD | MCW: South Africa: Not Seen: MCW member Rashid Motala from Durban reported: On the evening of Saturday 10 July 2021, the Hilaal wa",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "August 8, 2021 (Sunday) at 13:50 UT",
+    "decision_evening": "2021-08-09",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2021-08-10",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Muharram calendar 1443 DOWNLOAD | MCW: Wifaq: Muharram calendar 1443 DOWNLOAD | MCW: South Africa: Seen: MCW member Rashid Motala from Durban reported: On the evening of Monday 09 August 2021, the Hilaal WAS sighted in ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "September 7, 2021 (Tuesday) at 0:52 UT",
+    "decision_evening": "2021-09-07",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2021-09-09",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Calendar Safar 1443 DOWNLOAD | MCW: Wifaq: Calendar Safar 1443 DOWNLOAD | MCW: South Africa: Not Seen: MCW member Keeka, Mohamed Iqbal from Pretoia reported: Due to no confirmed moonsighting in South Africa, the 1st ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "October 6, 2021 (Wednesday) at 11:05 UT",
+    "decision_evening": "2021-10-07",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2021-10-08",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: rabi ul awwal calendar 1443 1 DOWNLOAD | MCW: Wifaq: rabi ul awwal calendar 1443 1 DOWNLOAD | MCW: South Africa: Seen: MCW member Rashid Motala from Durban reported: Notification from the Soofie Darbar (Riverside, Durban) has ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "November 4, 2021 (Thursday) at 21:15 UT",
+    "decision_evening": "2021-11-05",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2021-11-06",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: rabi ul aakhir calendar 1443 DOWNLOAD | MCW: Wifaq: rabi ul aakhir calendar 1443 DOWNLOAD | MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Friday 5 November 2021, the Hilaal WAS s",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "December 4, 2021 (Saturday) at 7:43 UT",
+    "decision_evening": "2021-12-04",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2021-12-06",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Jumaadul Ula calendar 1443 DOWNLOAD | MCW: Wifaq: Jumaadul Ula calendar 1443 DOWNLOAD | MCW: South Africa: Not Seen: MCW member Rashid Motala from Durban reported: On the evening of Saturday 4 December 2021, the Hilaal was ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "January 2, 2022 (Sunday) at 18:33 UT",
+    "decision_evening": "2022-01-03",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2022-01-04",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Jumaadal Aakhirah calendar 1443 DOWNLOAD | MCW: Wifaq: Jumaadal Aakhirah calendar 1443 DOWNLOAD | MCW: South Africa: Seen: MCW member Mr Rashid Motala from Durban reported: On the evening of Monday 3 January 2022, the Hilaal was",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "February 1, 2022 (Tuesday) at 5:46 UT",
+    "decision_evening": "2022-02-01",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2022-02-03",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Rajab calendar 1443 DOWNLOAD | MCW: Wifaq: Rajab calendar 1443 DOWNLOAD | MCW: South Africa: Not Seen: MCW member Rashid Motala from Durban reported: On the evening of Tuesday, February 1, 2022, the Hilaal was NOT si",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "March 2, 2022 (Wednesday) at 17:35 UT",
+    "decision_evening": "2022-03-03",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2022-03-04",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Alhamdulillah, Laylatul Bara’ah (The night of 15 Sha’baan) will correspond to Thursday night (17 March 2022) Shabaan Calendar 1443 DOWNLOAD | MCW: Wifaq: Alhamdulillah, Laylatul Bara’ah (The night of 15 Sha’baan) will correspond to Thursday night (17 March 2022) Shabaan Calendar 1443 DOWNLOAD | MCW: South Africa: Seen: MCW me",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "Friday, April 1, 2022 at 6:24 UT",
+    "decision_evening": "2022-04-01",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2022-04-03",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Ramadhaan in South Africa to be on Sunday (3 April 2022). The firs | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Ramadhaan in South Africa to be on Sunday (3 April 2022). T",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "Saturday, April 30, 2022 at 20:28 UT",
+    "decision_evening": "2022-05-01",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2022-05-03",
+    "eid_date_gregorian": "2022-05-03",
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Shawwāl in South Africa to be on Tuesday (3 May 2022). Eid ul Fitr | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Shawwāl in South Africa to be on Tuesday (3 May 2022). Eid ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "May 30, 2022 (Monday) at 11:30 UT",
+    "decision_evening": "2022-05-31",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2022-06-02",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Zhul Qa’dah in South Africa to be on Thursday (2 June 2022). | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Zhul Qa’dah in South Africa to be on Thursday (2 June 2022)",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1443,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "June 29, 2022 (Wednesday) at 2:52 UT",
+    "decision_evening": "2022-06-30",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2022-07-01",
+    "eid_date_gregorian": "2022-07-10",
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Zhul Hijjah 1443 in South Africa will be on Friday (1 July 2022). Eid ul Adha will  | MCW: Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Zhul Hijjah 1443 in South Africa will be on Friday (1 July 2022). Eid ul Adh",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "July 28, 2022 (Thursday) at 17:55 UT",
+    "decision_evening": "2022-07-29",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2022-07-31",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Muharram 1444 in South Africa to be on Sunday (31 July 2022). Aash | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Muharram 1444 in South Africa to be on Sunday (31 July 2022",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "August 27, 2022 (Saturday) at 8:17 UT",
+    "decision_evening": "2022-08-28",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2022-08-29",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Safar 1444 in South Africa will be on Monday (29 August 2022). Jazaakallaahu Khaira | MCW: Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Safar 1444 in South Africa will be on Monday (29 August 2022). Jazaakallaahu",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "September 25, 2022 (Sunday) at 21:54 UT",
+    "decision_evening": "2022-09-26",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2022-09-28",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Rabi ul Awwal 1444 in South Africa to be on Wednesday (28 Septembe | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Rabi ul Awwal 1444 in South Africa to be on Wednesday (28 S",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "October 25, 2022 (Tuesday) at 10:49 UT",
+    "decision_evening": "2022-10-26",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2022-10-27",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Rabi ul Aakhir 1444 in South Africa will be on Thursday (27 October 2022). Jazaakal | MCW: Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Rabi ul Aakhir 1444 in South Africa will be on Thursday (27 October 2022). J",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "November 23, 2022 (Wednesday) at 22:57 UT",
+    "decision_evening": "2022-11-24",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2022-11-26",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Jumaadal Ula 1444 in South Africa to be on Saturday (26 November 2 | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Jumaadal Ula 1444 in South Africa to be on Saturday (26 Nov",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "December 23, 2022 (Friday) at 10:17 UT",
+    "decision_evening": "2022-12-24",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2022-12-25",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Jumaadal Aakhirah 1444 in South Africa will be on Sunday (25 December 2022). Jazaak | MCW: Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Jumaadal Aakhirah 1444 in South Africa will be on Sunday (25 December 2022).",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "January 21, 2023 (Saturday) at 20:53 UT",
+    "decision_evening": "2023-01-22",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2023-01-23",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Rajab 1444 in South Africa will be on Monday (23 January 2023). Jazaakallaahu Khair | MCW: Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Rajab 1444 in South Africa will be on Monday (23 January 2023). Jazaakallaah",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "February 20, 2023 (Monday) at 7:06 UT",
+    "decision_evening": "2023-02-20",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2023-02-22",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Sha’baan 1444 in South Africa to be on Wednesday (22 February 2023 | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Sha’baan 1444 in South Africa to be on Wednesday (22 Februa",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "March 21, 2023 (Tuesday) at 17:23 UT",
+    "decision_evening": "2023-03-22",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2023-03-24",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Ramadhaan 1444 in South Africa to be on Friday (24 March 2023). Th | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Ramadhaan 1444 in South Africa to be on Friday (24 March 20",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "April 20, 2023 (Thursday) at 4:12 UT",
+    "decision_evening": "2023-04-21",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2023-04-22",
+    "eid_date_gregorian": "2023-04-22",
+    "observer_cities": [
+      "Durban",
+      "Pretoria",
+      "Rustenburg"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement Subsequent to confirming reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Shawwaal 1444 in South Africa will be on Saturday (22 April 202 | MCW: Wifaq: Hilāl Announcement Subsequent to confirming reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Shawwaal 1444 in South Africa will be on Saturday (22 Ap",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "May 19, 2023 (Friday) at 15:53 UT",
+    "decision_evening": "2023-05-20",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2023-05-22",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Zhul Qa’dah 1444 in South Africa to be on Monday (22 May 2023). Ja | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Zhul Qa’dah 1444 in South Africa to be on Monday (22 May 20",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1444,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "June 18, 2023 (Sunday) at 4:37 UT",
+    "decision_evening": "2023-06-19",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2023-06-20",
+    "eid_date_gregorian": "2023-06-29",
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Zhul Hijjah 1444 in South Africa will be on Tuesday (20 June 2023). Eid ul Adha wil | MCW: Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Zhul Hijjah 1444 in South Africa will be on Tuesday (20 June 2023). Eid ul A",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": "July 17, 2023 (Monday) at 18:32 UT",
+    "decision_evening": "2023-07-18",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2023-07-20",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Muharram 1445 in South Africa to be on Thursday (20 July 2023). Aa | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Muharram 1445 in South Africa to be on Thursday (20 July 20",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": "August 16, 2023 (Wednesday) at 9:38 UT",
+    "decision_evening": "2023-08-17",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2023-08-18",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Safar 1445 in South Africa to be on Friday (18 August 2023). Jazaak | MCW: Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Safar 1445 in South Africa to be on Friday (18 August 2023).",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": "September 15, 2023 (Friday) at 01:39 UT",
+    "decision_evening": "2023-09-15",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2023-09-17",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Rabi ul Awwal 1445 in South Africa to be on Sunday (17 September 2 | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Rabi ul Awwal 1445 in South Africa to be on Sunday (17 Sept",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": "October 14, 2023 (Saturday) at 17:55 UT",
+    "decision_evening": "2023-10-15",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2023-10-17",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban",
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being no confirmed reports of moonsighting, Wifaqul Ulama SA has determined the first of Rabi ul Aakhir 1445 in South Africa to be on Tuesday (17 October 2 | MCW: Wifaq: Hilāl Announcement There being no confirmed reports of moonsighting, Wifaqul Ulama SA has determined the first of Rabi ul Aakhir 1445 in South Africa to be on Tuesday (17 Oc",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": "November 13, 2023 (Monday) at 9:27 UT",
+    "decision_evening": "2023-11-14",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2023-11-15",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Jumaadal Ula 1445 in South Africa to be on Wednesday (15 November 2 | MCW: Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Jumaadal Ula 1445 in South Africa to be on Wednesday (15 Nov",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": "December 12, 2023 (Tuesday) at 23:32 UT",
+    "decision_evening": "2023-12-13",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2023-12-15",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Durban"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being no confirmed reports of moonsighting, Wifaqul Ulama SA has determined the first of Jumaadal Aakhirah 1445 in South Africa to be on Friday (15 Decembe | MCW: Wifaq: Hilāl Announcement There being no confirmed reports of moonsighting, Wifaqul Ulama SA has determined the first of Jumaadal Aakhirah 1445 in South Africa to be on Friday (15 ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": "January 11, 2024 (Thursday) at 11:57 UT",
+    "decision_evening": "2024-01-12",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2024-01-13",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Rajab 1445 in South Africa to be on Saturday (13 January 2024). Jaz | MCW: Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Rajab 1445 in South Africa to be on Saturday (13 January 202"
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": "February 9, 2024 (Friday) at 22:59 UT",
+    "decision_evening": null,
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": null,
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Sha'ban 1445 NS DOWNLOAD | MCW: Wifaq: Sha'ban 1445 NS DOWNLOAD"
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": "March 10, 2024 (Sunday) at 9:00 UT",
+    "decision_evening": "2024-03-11",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2024-03-12",
+    "eid_date_gregorian": null,
+    "observer_cities": [
+      "Pretoria"
+    ],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Ramadhaan 1445 in South Africa to be on Tuesday (12 March 2024). Th | MCW: Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Ramadhaan 1445 in South Africa to be on Tuesday (12 March 20",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": "April 8, 2024 (Monday) at 18:21 UT",
+    "decision_evening": "2024-04-09",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2024-04-11",
+    "eid_date_gregorian": "2024-04-11",
+    "observer_cities": [],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the 1st of Shawwaal 1445 in South Africa to be on Thursday (11 April 2024). Eid | MCW: Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the 1st of Shawwaal 1445 in South Africa to be on Thursday (11 April 202",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": "May 8, 2024 (Wednesday) at 3:22 UT",
+    "decision_evening": "2024-05-09",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2024-05-10",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the 1st of Zhul Qa’dah 1445 in South Africa to be on Friday (10 May 2024). Jazaa | MCW: Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the 1st of Zhul Qa’dah 1445 in South Africa to be on Friday (10 May 2024)",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1445,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": "June 6, 2024 (Thursday) at 12:38 UT",
+    "decision_evening": "2024-06-07",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2024-06-08",
+    "eid_date_gregorian": "2024-06-17",
+    "observer_cities": [],
+    "sources": [
+      "mcw",
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Zhul Hijjah 1445 in South Africa will be on Saturday (8 June 2024). Eid ul Adha wil | MCW: Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Zhul Hijjah 1445 in South Africa will be on Saturday (8 June 2024). Eid ul A",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": null,
+    "decision_evening": "2024-07-06",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2024-07-08",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Muharram 1446 in South Africa to be on Monday (8 July 2024). Aashu",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": null,
+    "decision_evening": "2024-08-05",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2024-08-06",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Safar 1446 in South Africa will be on Tuesday (06 August 2024). Jazaakallaahu Khair",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": null,
+    "decision_evening": "2024-09-03",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2024-09-05",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Rabi ul Awwal 1446 in South Africa to be on Thursday (5 September ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": null,
+    "decision_evening": "2024-10-03",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2024-10-05",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the first of Rabi ul Aakhir 1446 in South Africa will be on Saturday (5 Oc",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": null,
+    "decision_evening": "2024-11-02",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2024-11-03",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Jumaadal Ula 1446 in South Africa will be on Sunday (3 November 2024). Jazaakallaah",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": null,
+    "decision_evening": "2024-12-01",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2024-12-03",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Jumaadal Aakhirah 1446 in South Africa will be on Tuesday (3 De",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": null,
+    "decision_evening": "2024-12-31",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2025-01-01",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Rajab 1446 in South Africa will be on Wednesday (1 January 2025). Jazaakallaahu Kha",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": null,
+    "decision_evening": "2025-01-29",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2025-01-31",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Sha’baan 1446 in South Africa will be on Friday (31 January 2025). Jazaakallaahu k",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": null,
+    "decision_evening": "2025-02-28",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2025-03-02",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Ramadhaan 1446 in South Africa to be on Sunday (2 March 2025). The",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": null,
+    "decision_evening": "2025-03-30",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2025-03-31",
+    "eid_date_gregorian": "2025-03-31",
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement Subsequent to confirming reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Shawwāl 1446 in South Africa will be on Monday (31 March 2025).",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": null,
+    "decision_evening": "2025-04-28",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2025-04-30",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the 1st of Zhul Qa’dah 1446 in South Africa to be on Wednesday (30 April 2025).",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1446,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": null,
+    "decision_evening": "2025-05-28",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2025-05-29",
+    "eid_date_gregorian": "2025-06-07",
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Zhul Hijjah 1446 in South Africa will be on Thursday (29 May 2025). Eid ul Adha wil",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": null,
+    "decision_evening": "2025-06-26",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2025-06-27",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the first of Muharram 1447 in South Africa to be on Friday (27 June 2025). Aashu",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": null,
+    "decision_evening": "2025-07-25",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2025-07-27",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Safar 1447 in South Africa will be on Sunday (27 July 2025). Jazaakallaahu Khaira",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": null,
+    "decision_evening": "2025-08-24",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2025-08-25",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Rabi ul Awwal 1447 in South Africa will be on Monday (25 August 2025). Jazākallāhu ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": null,
+    "decision_evening": "2025-09-22",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2025-09-24",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Rabi ul Aakhir 1447 in South Africa will be on Wednesday (24 September 2025). Jazā",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": null,
+    "decision_evening": "2025-10-22",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2025-10-23",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Jumaadal Ula 1447 in South Africa will be on Thursday (23 October 2025). Jazākallāh",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": null,
+    "decision_evening": "2025-11-20",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2025-11-22",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Jumaadal Aakhirah 1447 in South Africa will be on Saturday (22 November 2025). Jaz",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 7,
+    "hijri_month_name": "Rajab",
+    "conjunction_utc": null,
+    "decision_evening": "2025-12-20",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2025-12-22",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Rajab 1447 in South Africa will be on Monday (22 December 2025). Jazākallāhu Khair",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 8,
+    "hijri_month_name": "Shaban",
+    "conjunction_utc": null,
+    "decision_evening": "2026-01-19",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2026-01-21",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Sha’baan 1447 in South Africa will be on Wednesday (21 January 2026). Jazākallāhu ",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 9,
+    "hijri_month_name": "Ramadan",
+    "conjunction_utc": null,
+    "decision_evening": "2026-02-18",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2026-02-19",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Ramadhaan 1447 in South Africa will be on Thursday (19 February 2026). Jazākallāhu ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 10,
+    "hijri_month_name": "Shawwal",
+    "conjunction_utc": null,
+    "decision_evening": "2026-03-19",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2026-03-21",
+    "eid_date_gregorian": "2026-03-21",
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the 1st of Shawwaal 1447 in South Africa to be on Saturday (21 March 2026). Eid",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 11,
+    "hijri_month_name": "Dhul Qadah",
+    "conjunction_utc": null,
+    "decision_evening": "2026-04-18",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2026-04-19",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Notwithstanding our earlier communication of no sighting tonight, we have now received and verified reports of the moon being sighted in Gauteng. Accordingly, the 1st of Zhul Qa’da",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1447,
+    "hijri_month_num": 12,
+    "hijri_month_name": "Dhul Hijjah",
+    "conjunction_utc": null,
+    "decision_evening": "2026-05-17",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2026-05-19",
+    "eid_date_gregorian": "2026-05-28",
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the 1st of Zhul Hijjah 1447 in South Africa to be on Tuesday (19 May 2026). Eid",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1448,
+    "hijri_month_num": 1,
+    "hijri_month_name": "Muharram",
+    "conjunction_utc": null,
+    "decision_evening": "2026-06-16",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2026-06-17",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Muharram 1448 in South Africa will be on Wednesday (17 June 2026). Aashura (10th Mu",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1448,
+    "hijri_month_num": 2,
+    "hijri_month_name": "Safar",
+    "conjunction_utc": null,
+    "decision_evening": "2026-07-15",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2026-07-16",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Safar 1448 in South Africa will be on Thursday (16 July 2026). Jazākallāhu Khaira",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1448,
+    "hijri_month_num": 3,
+    "hijri_month_name": "Rabi al-Awwal",
+    "conjunction_utc": null,
+    "decision_evening": "2026-08-13",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2026-08-14",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Rabi ul Awwal 1448 in South Africa will be on Friday (14 August 2026). Jazākallāhu ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1448,
+    "hijri_month_num": 4,
+    "hijri_month_name": "Rabi al-Thani",
+    "conjunction_utc": null,
+    "decision_evening": "2026-09-11",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2026-09-13",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the 1st of Rabi ul Aakhir 1448 in South Africa to be on Sunday (13 September 20",
+    "verified_month_days": 29
+  },
+  {
+    "hijri_year": 1448,
+    "hijri_month_num": 5,
+    "hijri_month_name": "Jumada al-Ula",
+    "conjunction_utc": null,
+    "decision_evening": "2026-10-11",
+    "sighted_on_29th": true,
+    "prev_month_days": 29,
+    "first_of_month_gregorian": "2026-10-12",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Subsequent to confirmed reports of Moonsighting, Wifaqul Ulama SA has determined that the 1st of Jumaadal Ula 1448 in South Africa will be on Monday (12 October 2026). Jazākallāhu ",
+    "verified_month_days": 30
+  },
+  {
+    "hijri_year": 1448,
+    "hijri_month_num": 6,
+    "hijri_month_name": "Jumada al-Akhirah",
+    "conjunction_utc": null,
+    "decision_evening": "2026-11-09",
+    "sighted_on_29th": false,
+    "prev_month_days": 30,
+    "first_of_month_gregorian": "2026-11-11",
+    "eid_date_gregorian": null,
+    "observer_cities": [],
+    "sources": [
+      "wifaq_sa"
+    ],
+    "cross_source_conflict": false,
+    "conflict_note": "",
+    "raw_notes": "Wifaq: Hilāl Announcement There being NO confirmed reports of Moonsighting, Wifaqul Ulama SA has determined the 1st of Jumaadal Aakhirah 1448 in South Africa to be on Wednesday (11 Novemb"
+  }
+]

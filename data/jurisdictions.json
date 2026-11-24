@@ -1,0 +1,725 @@
+{
+  "source": "Compiled Global Moonsighting Jurisdictions Table",
+  "extracted_at": "2026-11-24T22:31:34.409448+00:00",
+  "zone_definitions": [
+    {
+      "zone": "follow_saudi",
+      "label": "Follows Saudi Arabia",
+      "description": "Adopts Saudi Supreme Court announcements (often aligning with Umm al-Qura calendar)."
+    },
+    {
+      "zone": "follow_turkey_diyanet",
+      "label": "Follows Turkey / ECFR Global Calculation",
+      "description": "2016 Istanbul Unified Calendar: moon altitude > 5° and elongation > 8° at local sunset anywhere on Earth."
+    },
+    {
+      "zone": "local_sighting",
+      "label": "Local / Regional Physical Sighting",
+      "description": "Requires verified physical crescent sighting within national or shared regional horizon (e.g., South Africa UUCSA/COSSA, Morocco, Pakistan, India)."
+    },
+    {
+      "zone": "regional_or_custom",
+      "label": "National Criteria / Mixed Sub-Communities",
+      "description": "Uses custom astronomical rules (e.g., MABIMS 3°/6.4° in SE Asia, Egypt moonset >= 5m after sunset) or has split local/follower communities (UK, USA, Canada)."
+    }
+  ],
+  "count": 116,
+  "entries": [
+    {
+      "raw_label": "Saudi Arabia Afghanistan Albania Algeria Armenia Austria Azerbaijan Bahrian Belgium Bolivia Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Afghanistan Albania Algeria Armenia Austria Azerbaijan Bahrian Belgium Bolivia Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Albania Algeria Armenia Austria Azerbaijan Bahrian Belgium Bolivia Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Algeria Armenia Austria Azerbaijan Bahrian Belgium Bolivia Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Armenia Austria Azerbaijan Bahrian Belgium Bolivia Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Austria Azerbaijan Bahrian Belgium Bolivia Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Azerbaijan Bahrian Belgium Bolivia Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Bahrian Belgium Bolivia Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Belgium Bolivia Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Bolivia Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Bulgaria Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Burkina Faso Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Chechnia Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Denmark Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Finland Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Georgia Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Hungary Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Iceland Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Iraq (Sunnis) Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Italy Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Japan Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Kazakhstan Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Kuwait Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Kyrgizstan Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Lebanon Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Mauritania Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Palestine Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Philippines Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Qatar Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Romania Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Russia Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Singapore Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Sudan Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Sweden Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Switzerland Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Syria Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Taiwan Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Tajikistan Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Tatarstan Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Togo Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Turkmenistan U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "U.A.E. Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Uzbekistan",
+      "zone": "follow_saudi",
+      "zone_heading": "Countries that follow Saudi Arabia",
+      "zone_description": "Follow Saudi Arabia Supreme Court announcements"
+    },
+    {
+      "raw_label": "Turkey (European Council for Fatwa & Research) Altitude >5�, elongation>8� anywhere in the world. Algeria Angola Bosnia and Hercegovina Croatia France (CFCM - French Council of Muslims) Germany Ireland Kosovo Luxembourg Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Algeria Angola Bosnia and Hercegovina Croatia France (CFCM - French Council of Muslims) Germany Ireland Kosovo Luxembourg Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Angola Bosnia and Hercegovina Croatia France (CFCM - French Council of Muslims) Germany Ireland Kosovo Luxembourg Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Bosnia and Hercegovina Croatia France (CFCM - French Council of Muslims) Germany Ireland Kosovo Luxembourg Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Croatia France (CFCM - French Council of Muslims) Germany Ireland Kosovo Luxembourg Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "France (CFCM - French Council of Muslims) Germany Ireland Kosovo Luxembourg Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Germany Ireland Kosovo Luxembourg Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Ireland Kosovo Luxembourg Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Kosovo Luxembourg Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Luxembourg Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Macedonia Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Montenegro Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Serbia Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Slovania Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Tunisia USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "USA & Canada Follow Fiqh Council of North America (FCNA) and Islamic Society of North America (ISNA).",
+      "zone": "follow_turkey_diyanet",
+      "zone_heading": "Countries that follow Turkey",
+      "zone_description": "Turkey Diyanet / ECFR 2016 global calculation (altitude > 5°, elongation > 8° anywhere)"
+    },
+    {
+      "raw_label": "Australia Bangladesh Barbados Bermuda Brunei Chile Colombia-Follow Chile sighting Dagestan Fiji Islands Ghana Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Bangladesh Barbados Bermuda Brunei Chile Colombia-Follow Chile sighting Dagestan Fiji Islands Ghana Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Barbados Bermuda Brunei Chile Colombia-Follow Chile sighting Dagestan Fiji Islands Ghana Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Bermuda Brunei Chile Colombia-Follow Chile sighting Dagestan Fiji Islands Ghana Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Brunei Chile Colombia-Follow Chile sighting Dagestan Fiji Islands Ghana Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Chile Colombia-Follow Chile sighting Dagestan Fiji Islands Ghana Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Colombia-Follow Chile sighting Dagestan Fiji Islands Ghana Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Dagestan Fiji Islands Ghana Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Fiji Islands Ghana Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Ghana Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Guyana India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "India Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Iran Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Iraq (Shi'as) Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Jordan Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Kenya Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Madagascer Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Malawi Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Mauritius Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Morocco Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Mozambique Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Namibia New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "New Zealand Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Niger Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Nigeria Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Oman Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Pakistan Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Panama Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Senegal South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "South Africa Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Sri Lanka Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Suriname Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Tanzania Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Trinidad & Tobago UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "UK USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "USA (Some groups) Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Yemen Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Zambia Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Zimbabwe",
+      "zone": "local_sighting",
+      "zone_heading": "Countries that follow Local Sighting",
+      "zone_description": "Physical crescent sighting within national/regional horizon"
+    },
+    {
+      "raw_label": "Canada-TorontoHilalCommittee China (Malaysia Announcement) Egypt-Moon Born before sunset moonset 5 min. after sunset France-UOIF-Union of the Islamic Organizations of France India - Hijri Committee of India Indonesia-Official Announcement Libya (Official Announcement) Malaysia-Official Announcement New Zealand (Local Sighting or follow Australia) Nigeria (Official Announcement) Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "China (Malaysia Announcement) Egypt-Moon Born before sunset moonset 5 min. after sunset France-UOIF-Union of the Islamic Organizations of France India - Hijri Committee of India Indonesia-Official Announcement Libya (Official Announcement) Malaysia-Official Announcement New Zealand (Local Sighting or follow Australia) Nigeria (Official Announcement) Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "Egypt-Moon Born before sunset moonset 5 min. after sunset France-UOIF-Union of the Islamic Organizations of France India - Hijri Committee of India Indonesia-Official Announcement Libya (Official Announcement) Malaysia-Official Announcement New Zealand (Local Sighting or follow Australia) Nigeria (Official Announcement) Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "France-UOIF-Union of the Islamic Organizations of France India - Hijri Committee of India Indonesia-Official Announcement Libya (Official Announcement) Malaysia-Official Announcement New Zealand (Local Sighting or follow Australia) Nigeria (Official Announcement) Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "India - Hijri Committee of India Indonesia-Official Announcement Libya (Official Announcement) Malaysia-Official Announcement New Zealand (Local Sighting or follow Australia) Nigeria (Official Announcement) Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "Indonesia-Official Announcement Libya (Official Announcement) Malaysia-Official Announcement New Zealand (Local Sighting or follow Australia) Nigeria (Official Announcement) Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "Libya (Official Announcement) Malaysia-Official Announcement New Zealand (Local Sighting or follow Australia) Nigeria (Official Announcement) Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "Malaysia-Official Announcement New Zealand (Local Sighting or follow Australia) Nigeria (Official Announcement) Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "New Zealand (Local Sighting or follow Australia) Nigeria (Official Announcement) Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "Nigeria (Official Announcement) Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "Norway (Islamic Council of Norway - follow annoncement from any Muslim country Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "Poland (Calculation) Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "Spain (Union of Islamic Communities of Spain (ucide.org), Islamic Commission of Spain) Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "Thailand (Official Announcement) Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "Tunisia (Criteria of age, or sunset-moonset lag) UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "UK [Coordinated by Major Islamic Centres and Mosques of London] UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "UK [Wifaaqul ulama), (Ahle Sunnat Wal Jamaat], OR (Sighting from countries east of UK) USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    },
+    {
+      "raw_label": "USA [Houston Hilal Committee, Chicago Hilal Committee, Shi'as]",
+      "zone": "regional_or_custom",
+      "zone_heading": "Countries that follow their own criteria",
+      "zone_description": "Country-specific calculation, official board, or mixed sub-community criteria"
+    }
+  ]
+}
