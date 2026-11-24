@@ -80,8 +80,8 @@ export function renderEmpiricalScatter(container, historicalObs, currentMetrics,
     svg.appendChild(
       mk('polygon', {
         points: ptsTop.concat(ptsBot).join(' '),
-        fill: 'rgba(242, 169, 0, 0.16)',
-        stroke: 'rgba(242, 169, 0, 0.38)',
+        fill: 'rgba(217, 167, 66, 0.16)',
+        stroke: 'rgba(217, 167, 66, 0.42)',
         'stroke-width': '0.8',
       })
     );
@@ -127,9 +127,9 @@ export function renderEmpiricalScatter(container, historicalObs, currentMetrics,
       cx,
       cy,
       r: isAnalog ? '4.2' : '2.7',
-      fill: obs.sighted ? '#10b981' : '#d92b2b',
+      fill: obs.sighted ? '#14965a' : '#c93b3b',
       'fill-opacity': isAnalog ? '0.96' : '0.68',
-      stroke: isAnalog ? '#f2a900' : 'rgba(6,9,19,0.75)',
+      stroke: isAnalog ? '#f2cb6b' : 'rgba(6,12,26,0.75)',
       'stroke-width': isAnalog ? '1.3' : '0.6',
       style: 'cursor:pointer',
     });

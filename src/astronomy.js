@@ -9,6 +9,21 @@ const RAD2DEG = 180 / Math.PI;
 const AU_KM = 149597870.7;
 const MOON_RADIUS_KM = 1737.4;
 
+export const HIJRI_MONTH_SHORT = {
+  1: 'Muh',
+  2: 'Saf',
+  3: 'Rab I',
+  4: 'Rab II',
+  5: 'Jum I',
+  6: 'Jum II',
+  7: 'Raj',
+  8: 'Shab',
+  9: 'Ram',
+  10: 'Shaw',
+  11: 'D.Qad',
+  12: 'D.Hij',
+};
+
 export const SA_ANCHOR_STATIONS = [
   { id: 'cape_town', name: 'Signal Hill (Cape Town)', region: 'Western Cape', lat: -33.9178, lon: 18.4028, elevation_m: 340 },
   { id: 'pretoria', name: 'Laudium (Pretoria)', region: 'Gauteng', lat: -25.77966, lon: 28.109, elevation_m: 1380 },
@@ -264,16 +279,21 @@ export function findEmpiricalAnalogs(targetQ, historicalObs, windowQ = 0.08) {
 /**
  * Dynamically generate Islamic events (Ramadan, Eid al-Fitr, Eid al-Adha)
  * centered around `refDate` using exact astronomical lunations anchored to
- * 1447 Shawwal (lunation 17374 = 2026-03-19T01:24Z).
+ * 1447 Shawwal (lunation 17374 = 2026-03-19T01:24Z), plus past-year historic sightings.
  */
-export function buildIslamicEvents(refDate = new Date()) {
+export function buildIslamicEvents(refDate = new Date(), historicalObs = []) {
   const SYNODIC_MS = 29.530588853 * 86400 * 1000;
   const ANCHOR_LUNATION = 1447 * 12 + 10; // 1447 Shawwal
   const ANCHOR_CONJ_MS = Date.UTC(2026, 2, 19, 1, 24, 5);
 
+  const obsByKey = new Map();
+  for (const o of historicalObs || []) {
+    obsByKey.set(`${o.hy}-${o.hm}`, o);
+  }
+
   const approxLunationsSinceAnchor = Math.round((refDate.getTime() - ANCHOR_CONJ_MS) / SYNODIC_MS);
   const currentHijriYear = Math.floor((ANCHOR_LUNATION + approxLunationsSinceAnchor) / 12);
-  const startYear = Math.max(1447, currentHijriYear - 1);
+  const startYear = Math.max(1429, currentHijriYear - 2);
   const endYear = currentHijriYear + 3;
 
   const defs = [];
@@ -282,7 +302,7 @@ export function buildIslamicEvents(refDate = new Date()) {
       id: `${hy}-rmd`,
       hijriYear: hy,
       monthNum: 9,
-      label: `Ramadan ${hy} AH (1st Ramadan)`,
+      baseLabel: `Ramadan ${hy} AH`,
       shortLabel: `Ramadan ${hy}`,
       eidType: 'ramadan',
     });
@@ -290,36 +310,45 @@ export function buildIslamicEvents(refDate = new Date()) {
       id: `${hy}-shw`,
       hijriYear: hy,
       monthNum: 10,
-      label: hy === 1447 ? `Eid al-Fitr ${hy} AH (Historical Verification)` : `Eid al-Fitr ${hy} AH (1st Shawwal)`,
+      baseLabel: `Eid al-Fitr ${hy} AH`,
       shortLabel: `Eid al-Fitr ${hy}`,
       eidType: 'fitr',
-      verifiedSaEid: hy === 1447 ? '2026-03-21' : undefined,
     });
     defs.push({
       id: `${hy}-zhj`,
       hijriYear: hy,
       monthNum: 12,
-      label: `Eid al-Adha ${hy} AH (10th Dhul Hijjah)`,
+      baseLabel: `Eid al-Adha ${hy} AH`,
       shortLabel: `Eid al-Adha ${hy}`,
       eidType: 'adha',
     });
   }
 
-  const events = defs.map((ev) => {
+  const todayIso = refDate.toISOString().slice(0, 10);
+  const allEvents = defs.map((ev) => {
     const lunIdx = ev.hijriYear * 12 + ev.monthNum;
     const approxMs = ANCHOR_CONJ_MS + (lunIdx - ANCHOR_LUNATION) * SYNODIC_MS;
     const conj = Astronomy.SearchMoonPhase(0, new Date(approxMs - 5 * 86400 * 1000), 10);
     const conjDateIso = conj.date.toISOString().slice(0, 10);
-    // First candidate sighting evening (29th evening in Old World / SA):
-    // if conjunction occurs after ~06:00 UT, sunset that same day is <10h old globally, so primary sighting evening is +1 day
+    const obs = obsByKey.get(`${ev.hijriYear}-${ev.monthNum}`);
+
     const conjHourUt = conj.date.getUTCHours() + conj.date.getUTCMinutes() / 60;
-    const evening1 = conjHourUt >= 6 ? addDaysIso(conjDateIso, 1) : conjDateIso;
+    const evening1 = obs?.ev || (conjHourUt >= 6 ? addDaysIso(conjDateIso, 1) : conjDateIso);
     const evening2 = addDaysIso(evening1, 1);
-    const offsetDays = ev.eidType === 'adha' ? 9 : 0; // 10th Dhul Hijjah = 1st + 9 days
+    const offsetDays = ev.eidType === 'adha' ? 9 : 0;
     const day1Date = addDaysIso(evening1, 1 + offsetDays);
     const day2Date = addDaysIso(evening1, 2 + offsetDays);
+    const isHistoric = day2Date < todayIso;
+    const monthTag = new Date(day1Date + 'T00:00:00Z').toLocaleDateString('en-US', {
+      month: 'short',
+      year: 'numeric',
+      timeZone: 'UTC',
+    });
+    const historicSaDate = obs ? (ev.eidType === 'adha' ? obs.eid : obs.start) : null;
+
     return {
       ...ev,
+      label: isHistoric ? `${ev.baseLabel} (${monthTag})` : `${ev.baseLabel} (${monthTag})`,
       conjunctionUtc: conj.date.toISOString(),
       evening1,
       evening2,
@@ -327,13 +356,22 @@ export function buildIslamicEvents(refDate = new Date()) {
       day2Date,
       monthStart1: addDaysIso(evening1, 1),
       monthStart2: addDaysIso(evening1, 2),
+      isHistoric,
+      historicSaDate,
+      historicSighted: obs ? obs.sighted : null,
     };
   });
 
-  // Pick the next upcoming Eid relative to `refDate`
-  const todayIso = refDate.toISOString().slice(0, 10);
-  const nextEid = events.find((e) => e.eidType !== 'ramadan' && e.day2Date >= todayIso) || events[0];
-  return { events, defaultEventId: nextEid.id };
+  const upcoming = allEvents.filter((e) => !e.isHistoric);
+  const pastAll = allEvents.filter((e) => e.isHistoric);
+  // Show at least the last 3 historic sightings, or all within the past ~395 days
+  const oneYearAgoMs = refDate.getTime() - 395 * 86400 * 1000;
+  const pastYear = pastAll.filter((e) => new Date(e.day2Date + 'T00:00:00Z').getTime() >= oneYearAgoMs);
+  const historicEvents = pastYear.length >= 3 ? pastYear : pastAll.slice(-3);
+
+  const events = [...historicEvents, ...upcoming];
+  const nextEid = upcoming.find((e) => e.eidType !== 'ramadan') || upcoming[0] || events[0];
+  return { events, historicEvents, upcomingEvents: upcoming, defaultEventId: nextEid.id };
 }
 
 /**

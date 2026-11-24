@@ -12,13 +12,17 @@ import {
   findEmpiricalAnalogs,
   formatTimeInOffset,
   formatUtcTime,
+  HIJRI_MONTH_SHORT,
   predictNakedEyeProb,
   yallopZoneLabel,
 } from './astronomy.js';
 import { EidMapController } from './map.js';
 import { renderEmpiricalScatter } from './scatter.js';
 
-const { events, defaultEventId } = buildIslamicEvents(new Date());
+const { events, historicEvents, upcomingEvents, defaultEventId } = buildIslamicEvents(
+  new Date(),
+  empiricalData.historical_observations
+);
 
 const state = {
   eventId: defaultEventId,
@@ -49,10 +53,15 @@ const dom = {
   btnEv1: document.getElementById('btn-ev1'),
   btnEv2: document.getElementById('btn-ev2'),
   btnMethodology: document.getElementById('btn-methodology'),
+  btnAcknowledgements: document.getElementById('btn-acknowledgements'),
   modal: document.getElementById('methodology-modal'),
   modalCloseBtn: document.getElementById('modal-close-btn'),
   modalCloseBg: document.getElementById('modal-close-bg'),
   methodologyBody: document.getElementById('methodology-body'),
+  ackModal: document.getElementById('acknowledgements-modal'),
+  ackCloseBtn: document.getElementById('ack-close-btn'),
+  ackCloseBg: document.getElementById('ack-close-bg'),
+  ackBody: document.getElementById('acknowledgements-body'),
   heroEyebrow: document.getElementById('hero-eyebrow'),
   heroTitle: document.getElementById('hero-title'),
   jurisdictionBadge: document.getElementById('jurisdiction-badge'),
@@ -78,14 +87,35 @@ const dom = {
   mapLegend: document.getElementById('map-legend'),
 };
 
-// Populate event dropdown
-for (const ev of events) {
-  const opt = document.createElement('option');
-  opt.value = ev.id;
-  opt.textContent = ev.label;
-  if (ev.id === state.eventId) opt.selected = true;
-  dom.eventSelect.appendChild(opt);
+// Populate grouped event dropdown: Upcoming Events + Past Year Historic Sightings
+function populateEventDropdown() {
+  dom.eventSelect.innerHTML = '';
+  const upcomingGroup = document.createElement('optgroup');
+  upcomingGroup.label = 'Upcoming Ramadan & Eid';
+  for (const ev of upcomingEvents) {
+    const opt = document.createElement('option');
+    opt.value = ev.id;
+    opt.textContent = ev.label;
+    if (ev.id === state.eventId) opt.selected = true;
+    upcomingGroup.appendChild(opt);
+  }
+  dom.eventSelect.appendChild(upcomingGroup);
+
+  if (historicEvents.length) {
+    const histGroup = document.createElement('optgroup');
+    histGroup.label = 'Past Year — Historic Sightings';
+    for (const ev of historicEvents) {
+      const opt = document.createElement('option');
+      opt.value = ev.id;
+      opt.textContent = ev.label;
+      if (ev.id === state.eventId) opt.selected = true;
+      histGroup.appendChild(opt);
+    }
+    dom.eventSelect.appendChild(histGroup);
+  }
 }
+
+populateEventDropdown();
 
 const mapCtrl = new EidMapController({
   containerId: 'map',
@@ -113,7 +143,7 @@ const mapCtrl = new EidMapController({
 });
 
 function getCurrentEvent() {
-  return events.find((e) => e.id === state.eventId) || events[2];
+  return events.find((e) => e.id === state.eventId) || upcomingEvents[0] || events[0];
 }
 
 function getZoneLabel(zone) {
@@ -217,10 +247,10 @@ function renderLegend() {
 
   const zoneHtml = state.showJurisdictions
     ? `<div class="zone-legend-grid">
-         <div class="zone-dot-item"><span class="zone-dot" style="background:#10b981"></span>Local Sighting</div>
+         <div class="zone-dot-item"><span class="zone-dot" style="background:#14965a"></span>Local Sighting</div>
          <div class="zone-dot-item"><span class="zone-dot" style="background:#38bdf8"></span>Follows Saudi</div>
          <div class="zone-dot-item"><span class="zone-dot" style="background:#a855f7"></span>Turkey / ECFR</div>
-         <div class="zone-dot-item"><span class="zone-dot" style="background:#f59e0b"></span>Regional Criteria</div>
+         <div class="zone-dot-item"><span class="zone-dot" style="background:#d9a742"></span>Regional Criteria</div>
          <div class="zone-dot-item"><span class="zone-dot" style="background:#ec4899"></span>Split Communities</div>
        </div>`
     : '';
@@ -233,9 +263,15 @@ function renderAll() {
   const sel = state.selection;
   const activeEvening = state.eveningIdx === 0 ? ev.evening1 : ev.evening2;
 
-  // 1. Next Eid Probability Card
+  // 1. Next / Historic Eid Probability Card
   const result = computeEidDayProbabilities(ev, sel, empiricalData.model);
-  dom.heroEyebrow.textContent = ev.eidType === 'ramadan' ? 'UPCOMING RAMADAN' : ev.verifiedSaEid ? 'HISTORICAL VERIFICATION' : 'NEXT RELEVANT EID';
+  if (ev.isHistoric) {
+    dom.heroEyebrow.textContent = 'HISTORIC SIGHTING';
+  } else if (ev.eidType === 'ramadan') {
+    dom.heroEyebrow.textContent = 'UPCOMING RAMADAN';
+  } else {
+    dom.heroEyebrow.textContent = 'NEXT RELEVANT EID';
+  }
   dom.heroTitle.textContent = ev.shortLabel;
 
   const zone = sel.zone || 'local_sighting';
@@ -247,9 +283,10 @@ function renderAll() {
   for (const day of result.days) {
     const pct = day.probability * 100;
     const isLikely = pct >= 50;
-    const barColor = pct >= 70 ? '#10b981' : pct >= 30 ? '#f59e0b' : '#64748b';
+    const barColor = pct >= 70 ? '#14965a' : pct >= 30 ? '#d9a742' : '#64748b';
+    const isOfficialSa = (sel.iso === '710' || sel.country === 'South Africa') && ev.historicSaDate === day.dateIso;
     const row = document.createElement('div');
-    row.className = `eid-day-row ${isLikely ? 'likely' : ''}`;
+    row.className = `eid-day-row ${isLikely || isOfficialSa ? 'likely' : ''}`;
     row.innerHTML = `
       <div class="eid-day-top">
         <span class="eid-date">${day.displayDate}</span>
@@ -258,7 +295,7 @@ function renderAll() {
       <div class="eid-bar-track">
         <div class="eid-bar-fill" style="width:${pct.toFixed(1)}%;background:${barColor}"></div>
       </div>
-      <div class="eid-sub">${day.label}${ev.verifiedSaEid === day.dateIso ? ' · Verified SA Official Date ✓' : ''}</div>
+      <div class="eid-sub">${day.label}${isOfficialSa ? ' · Official SA Date ✓' : ''}</div>
     `;
     dom.eidDaysContainer.appendChild(row);
   }
@@ -283,10 +320,11 @@ function renderAll() {
 
   dom.analogList.innerHTML = '';
   for (const a of analogsInfo.analogs.slice(0, 8)) {
+    const shortMonth = HIJRI_MONTH_SHORT[a.hm] || a.hname;
     const chip = document.createElement('span');
     chip.className = `analog-chip ${a.sighted ? 'yes' : 'no'}`;
     chip.title = `${a.hname} ${a.hy} AH (${a.ev}) — W=${a.w.toFixed(2)}', ARCV=${a.arcv.toFixed(1)}°, q=${a.sa_best_q.toFixed(2)}`;
-    chip.textContent = `${a.hname.slice(0, 4)} ${a.hy} ${a.sighted ? '✓' : '✕'}`;
+    chip.textContent = `${shortMonth} ${a.hy} ${a.sighted ? '✓' : '✕'}`;
     dom.analogList.appendChild(chip);
   }
 
@@ -318,7 +356,7 @@ function renderAll() {
   dom.stationsList.innerHTML = '';
   const stationRows = saStations
     .map((st) => {
-      const m = evaluateStationSafe(activeEvening, st);
+      const m = evaluateCrescent(activeEvening, st.lat, st.lon, st.elevation_m || 0);
       const { stationProb: p } = predictNakedEyeProb(m, empiricalData.model);
       return { st, m, p };
     })
@@ -328,7 +366,7 @@ function renderAll() {
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.className = `station-row ${sel.name === st.name ? 'active' : ''}`;
-    const pctColor = p >= 0.7 ? '#34d399' : p >= 0.3 ? '#fbbf24' : '#94a3b8';
+    const pctColor = p >= 0.7 ? '#34d399' : p >= 0.3 ? '#f2cb6b' : '#9fb0cb';
     btn.innerHTML = `
       <div>
         <div class="station-name">${st.name}</div>
@@ -368,10 +406,6 @@ function renderAll() {
   renderLegend();
 }
 
-function evaluateStationSafe(dateIso, st) {
-  return evaluateCrescent(dateIso, st.lat, st.lon, st.elevation_m || 0);
-}
-
 function renderMethodologyModal() {
   const cv = empiricalData.model.cv_metrics;
   const binsHtml = empiricalData.calibration_bins
@@ -386,7 +420,7 @@ function renderMethodologyModal() {
     .join('');
 
   dom.methodologyBody.innerHTML = `
-    <p><strong>Empirical Calibration:</strong> Calibrated on <strong>${cv.n_samples}</strong> verified South African 29th-evening decisions (1429–1448 AH / 2008–2026) compiled from <em>Wifaqul Ulama SA</em>, <em>HilalWatchZA</em>, and <em>MCW South Africa</em> reports under COSSA/UUCSA naked-eye rules (${cv.n_sighted} sighted, ${cv.n_not_sighted} not sighted; 0 cross-source conflicts).</p>
+    <p><strong>Empirical Calibration:</strong> Calibrated on <strong>${cv.n_samples}</strong> historic South African 29th-evening decisions (1429–1448 AH / 2008–2026) compiled under COSSA/UUCSA naked-eye rules (${cv.n_sighted} sighted, ${cv.n_not_sighted} not sighted; 0 cross-source conflicts).</p>
     <ul>
       <li><strong>5-Fold Cross-Validation:</strong> ROC-AUC = <code>${cv.roc_auc}</code> · Accuracy = <code>${(cv.accuracy * 100).toFixed(1)}%</code> · Brier Score = <code>${cv.brier_score}</code></li>
       <li><strong>50% National Sighting Threshold:</strong> <code>q = ${cv.q50_midpoint}</code> (with hard Danjon limit <code>ARCL ≥ 6.4°</code> and <code>lag &gt; 0 min</code>)</li>
@@ -397,7 +431,30 @@ function renderMethodologyModal() {
       <tbody>${binsHtml}</tbody>
     </table>
     <h3>How It Works</h3>
-    <p><strong>whenIsEid</strong> computes continuous topocentric probabilities in the browser via <code>astronomy-engine</code> at viewport resolution, pairs every forecast with historical South African analogs at the same visibility size, and maps global moonsighting jurisdictions.</p>
+    <p><strong>When is Eid</strong> computes continuous topocentric probabilities in the browser via <code>astronomy-engine</code> at viewport resolution, pairs every forecast with historical South African analogs at the same visibility size, and maps global moonsighting jurisdictions.</p>
+  `;
+}
+
+function renderAcknowledgementsModal() {
+  dom.ackBody.innerHTML = `
+    <p><strong>When is Eid</strong> builds upon decades of dedicated physical crescent observation, community broadcasting, and open astronomical science:</p>
+    <h3>South African Sighting Bodies &amp; Archives</h3>
+    <ul>
+      <li><a href="https://www.cossa.co.za/" target="_blank" rel="noopener noreferrer">Crescent Observers Society of South Africa (COSSA)</a> — Cape Town <em>maankykers</em> since 1952/1953, naked-eye protocols, and Western Cape vantage points (Signal Hill, Three Anchor Bay, Bakoven, Stellenbosch, Gordon's Bay, Grabouw).</li>
+      <li><a href="https://wifaq.org.za/" target="_blank" rel="noopener noreferrer">Wifaqul Ulama South Africa</a> — Official monthly Hilāl announcements and South African Islamic calendars (2020–present).</li>
+      <li><a href="https://hilalwatch.org.za/" target="_blank" rel="noopener noreferrer">HilalWatchZA</a> — South African month-length overrides, horizon profiles, and GPS-tagged sighting reports.</li>
+      <li><a href="https://mjc.org.za/" target="_blank" rel="noopener noreferrer">Muslim Judicial Council (MJC)</a> &amp; United Ulama Council of South Africa (UUCSA) — National Hilaal adjudication and community consensus.</li>
+      <li><a href="https://jamiat.org.za/" target="_blank" rel="noopener noreferrer">Jamiatul Ulama KwaZulu-Natal</a> &amp; <a href="https://vocfm.co.za/" target="_blank" rel="noopener noreferrer">Voice of the Cape (VOC)</a> — Regional coordination and live 29th-evening broadcasts.</li>
+    </ul>
+    <h3>Global Sighting Reports &amp; Jurisdiction Data</h3>
+    <ul>
+      <li><a href="https://www.moonsighting.com/" target="_blank" rel="noopener noreferrer">Moonsighting.com / Moonsighting Committee Worldwide (MCW)</a> — Founded by Syed Khalid Shaukat; South African observer archive reports (1429–1445 AH) by Rashid Motala, Dr. Abdurrazak Ebrahim, Abdullah Salie, Mohamed Iqbal Keeka, Shakil Vayani, and Tehseen Raza Hamdani, plus global country jurisdiction classifications.</li>
+    </ul>
+    <h3>Astronomical Models &amp; Open-Source Libraries</h3>
+    <ul>
+      <li>B. D. Yallop (1997, <em>HMNAO Technical Note No. 69</em>), M. Sh. Odeh (2004/2006, <em>ICOP</em>), and J. A. R. Caldwell &amp; C. D. Laney (2001, <em>SAAO Cape Town</em>).</li>
+      <li><a href="https://github.com/cosinekitty/astronomy" target="_blank" rel="noopener noreferrer">astronomy-engine</a> · <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a> · <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> · <a href="https://github.com/topojson/world-atlas" target="_blank" rel="noopener noreferrer">world-atlas</a>.</li>
+    </ul>
   `;
 }
 
@@ -483,6 +540,13 @@ dom.btnMethodology.addEventListener('click', () => {
 });
 dom.modalCloseBtn.addEventListener('click', () => dom.modal.classList.add('hidden'));
 dom.modalCloseBg.addEventListener('click', () => dom.modal.classList.add('hidden'));
+
+dom.btnAcknowledgements.addEventListener('click', () => {
+  renderAcknowledgementsModal();
+  dom.ackModal.classList.remove('hidden');
+});
+dom.ackCloseBtn.addEventListener('click', () => dom.ackModal.classList.add('hidden'));
+dom.ackCloseBg.addEventListener('click', () => dom.ackModal.classList.add('hidden'));
 
 // Initial boot
 dom.searchInput.value = 'South Africa';
