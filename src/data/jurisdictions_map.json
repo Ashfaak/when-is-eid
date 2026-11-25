@@ -16,11 +16,11 @@
       }
     },
     "follow_turkey_diyanet": {
-      "label": "Follows Turkey / ECFR",
+      "label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "defaultRule": "Istanbul 2016 Unified Calendar: moon altitude > 5° and elongation > 8° at sunset anywhere on Earth.",
       "hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -240,7 +240,7 @@
       "zone_label": "Follows Saudi Arabia",
       "color": "#38bdf8",
       "authority": "Mufti Council of Russia",
-      "rule_summary": "Follows Saudi / Turkey consensus (Dagestan local).",
+      "rule_summary": "Follows Saudi / Türkiye consensus (Dagestan local).",
       "center": [
         55.7,
         37.6
@@ -641,17 +641,17 @@
       "iso": "024",
       "name": "Angola",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "Angolan Islamic Community",
-      "rule_summary": "Follows Turkey / ECFR calculation per MCW listing.",
+      "rule_summary": "Follows Türkiye / ECFR calculation per MCW listing.",
       "center": [
         -11.2,
         17.9
       ],
       "zoom": 5,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -1075,7 +1075,7 @@
       "zone_label": "Follows Saudi Arabia",
       "color": "#38bdf8",
       "authority": "IGGÖ",
-      "rule_summary": "Follows Saudi / Turkey Diyanet.",
+      "rule_summary": "Follows Saudi / Türkiye Diyanet.",
       "center": [
         47.5,
         14.5
@@ -1113,7 +1113,7 @@
       "zone_label": "Follows Saudi Arabia",
       "color": "#38bdf8",
       "authority": "Muftiate of Romania",
-      "rule_summary": "Follows Saudi / Turkey Diyanet.",
+      "rule_summary": "Follows Saudi / Türkiye Diyanet.",
       "center": [
         45.9,
         25
@@ -1129,17 +1129,17 @@
       "iso": "276",
       "name": "Germany",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "DITIB / KRM / ECFR",
-      "rule_summary": "Majority Turkish-German councils follow Turkey Diyanet global calculation.",
+      "rule_summary": "Majority Turkish-German councils follow Türkiye Diyanet global calculation.",
       "center": [
         51.2,
         10.4
       ],
       "zoom": 5,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -1151,7 +1151,7 @@
       "zone_label": "Follows Saudi Arabia",
       "color": "#38bdf8",
       "authority": "Chief Mufti of Bulgaria",
-      "rule_summary": "Follows Saudi / Turkey Diyanet.",
+      "rule_summary": "Follows Saudi / Türkiye Diyanet.",
       "center": [
         42.7,
         25.5
@@ -1165,9 +1165,9 @@
     },
     {
       "iso": "792",
-      "name": "Turkey",
+      "name": "Türkiye",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "Diyanet (Presidency of Religious Affairs)",
       "rule_summary": "2016 Istanbul Unified Calendar: moon altitude > 5° & elongation > 8° at sunset anywhere on Earth.",
@@ -1177,7 +1177,7 @@
       ],
       "zoom": 5,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -1189,7 +1189,7 @@
       "zone_label": "Follows Saudi Arabia",
       "color": "#38bdf8",
       "authority": "Muslim Community of Albania",
-      "rule_summary": "Follows Saudi / Turkey Diyanet.",
+      "rule_summary": "Follows Saudi / Türkiye Diyanet.",
       "center": [
         41.1,
         20.2
@@ -1205,17 +1205,17 @@
       "iso": "191",
       "name": "Croatia",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "Mesihat of Croatia",
-      "rule_summary": "Follows Turkey Diyanet global calculation.",
+      "rule_summary": "Follows Türkiye Diyanet global calculation.",
       "center": [
         45.1,
         15.2
       ],
       "zoom": 6,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -1243,17 +1243,17 @@
       "iso": "442",
       "name": "Luxembourg",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "Shoura Luxembourg",
-      "rule_summary": "Follows ECFR / Turkey calculation.",
+      "rule_summary": "Follows ECFR / Türkiye calculation.",
       "center": [
         49.8,
         6.1
       ],
       "zoom": 8,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -1284,7 +1284,7 @@
       "zone_label": "Follows Saudi Arabia",
       "color": "#38bdf8",
       "authority": "Turkish (Diyanet) & Moroccan/Saudi councils",
-      "rule_summary": "Follows Saudi/Morocco or Turkey Diyanet.",
+      "rule_summary": "Follows Saudi/Morocco or Türkiye Diyanet.",
       "center": [
         52.1,
         5.3
@@ -1315,7 +1315,7 @@
       "iso": "372",
       "name": "Ireland",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "ICCI / ECFR",
       "rule_summary": "ECFR global calculation (with local-sighting minority).",
@@ -1325,7 +1325,7 @@
       ],
       "zoom": 6,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -1352,7 +1352,7 @@
       "zone_label": "Local / Regional Sighting",
       "color": "#10b981",
       "authority": "ANIC / Moonsighting Australia",
-      "rule_summary": "Majority local sighting (some communities follow Saudi or Turkey).",
+      "rule_summary": "Majority local sighting (some communities follow Saudi or Türkiye).",
       "center": [
         -25.3,
         133.8
@@ -1435,7 +1435,7 @@
       "zone_label": "Follows Saudi Arabia",
       "color": "#38bdf8",
       "authority": "Danish Islamic Councils",
-      "rule_summary": "Majority follow Saudi Arabia or Turkey.",
+      "rule_summary": "Majority follow Saudi Arabia or Türkiye.",
       "center": [
         55.7,
         12.6
@@ -1534,17 +1534,17 @@
       "iso": "705",
       "name": "Slovenia",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "Islamic Community in Slovenia",
-      "rule_summary": "Follows Turkey Diyanet global calculation.",
+      "rule_summary": "Follows Türkiye Diyanet global calculation.",
       "center": [
         46.1,
         14.9
       ],
       "zoom": 7,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -1704,17 +1704,17 @@
       "iso": "070",
       "name": "Bosnia and Herz.",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "Islamic Community in Bosnia & Herzegovina",
-      "rule_summary": "Follows Turkey Diyanet / ECFR global calculation.",
+      "rule_summary": "Follows Türkiye Diyanet / ECFR global calculation.",
       "center": [
         43.9,
         17.7
       ],
       "zoom": 7,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -1723,17 +1723,17 @@
       "iso": "807",
       "name": "Macedonia",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "Islamic Religious Community",
-      "rule_summary": "Follows Turkey Diyanet global calculation.",
+      "rule_summary": "Follows Türkiye Diyanet global calculation.",
       "center": [
         41.6,
         21.7
       ],
       "zoom": 7,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -1742,17 +1742,17 @@
       "iso": "688",
       "name": "Serbia",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "Islamic Community of Serbia",
-      "rule_summary": "Follows Turkey Diyanet global calculation.",
+      "rule_summary": "Follows Türkiye Diyanet global calculation.",
       "center": [
         44,
         21
       ],
       "zoom": 6,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }
@@ -1761,17 +1761,17 @@
       "iso": "499",
       "name": "Montenegro",
       "zone": "follow_turkey_diyanet",
-      "zone_label": "Follows Turkey / ECFR",
+      "zone_label": "Follows Türkiye / ECFR",
       "color": "#a855f7",
       "authority": "Islamic Community of Montenegro",
-      "rule_summary": "Follows Turkey Diyanet global calculation.",
+      "rule_summary": "Follows Türkiye Diyanet global calculation.",
       "center": [
         42.7,
         19.4
       ],
       "zoom": 7,
       "follows_hub": {
-        "name": "Ankara, Turkey",
+        "name": "Ankara, Türkiye",
         "lat": 39.9334,
         "lon": 32.8597
       }

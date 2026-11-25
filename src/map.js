@@ -1,57 +1,68 @@
 /**
- * Interactive Leaflet map for whenIsEid:
+ * Interactive Leaflet map for When is Eid:
  * - Adaptive continuous non-quantized empirical probability surface (Canvas)
- * - Toggleable comparison vs Yallop 2° quantized A-D bands
+ * - High-resolution 8-level (3-bit) discrete Flat Bands contour mode (no gradient)
  * - Global moonsighting jurisdiction zones (world-atlas TopoJSON) + follower arcs
  * - South African 17 observation stations & HilalWatchZA GPS sighting pins
+ * - Dedicated HistoryMapController for inspecting past South African 29th evenings
  */
 import L from 'leaflet';
 import { feature as topoFeature } from 'topojson-client';
 import worldAtlas from 'world-atlas/countries-110m.json';
-import { classifyYallopZone, evaluateCrescent, predictNakedEyeProb } from './astronomy.js';
+import { evaluateCrescent, getEveningGridEvaluator, predictNakedEyeProb } from './astronomy.js';
+
+export const FLAT_BANDS = [
+  { min: 0.95, max: 1.01, label: '95–100%', color: '#34d399', rgba: [52, 211, 153, 175] },
+  { min: 0.85, max: 0.95, label: '85–95%', color: '#10b981', rgba: [16, 185, 129, 168] },
+  { min: 0.70, max: 0.85, label: '70–85%', color: '#1ca39b', rgba: [28, 163, 155, 162] },
+  { min: 0.50, max: 0.70, label: '50–70%', color: '#84cc16', rgba: [132, 204, 22, 156] },
+  { min: 0.30, max: 0.50, label: '30–50%', color: '#eab308', rgba: [234, 179, 8, 154] },
+  { min: 0.15, max: 0.30, label: '15–30%', color: '#d97706', rgba: [217, 119, 6, 150] },
+  { min: 0.05, max: 0.15, label: '5–15%', color: '#c93b3b', rgba: [201, 59, 59, 145] },
+  { min: 0.01, max: 0.05, label: '1–5%', color: '#991b1b', rgba: [153, 27, 27, 132] },
+];
 
 function probToRgba(p) {
   if (p <= 0.005) return [0, 0, 0, 0];
-  // Smooth multi-stop ramp: rose/amber -> gold -> cyan -> emerald
   const alpha = Math.round(38 + Math.min(1, p * 1.15) * 128);
   let r, g, b;
   if (p < 0.25) {
     const t = p / 0.25;
-    r = Math.round(244 + (245 - 244) * t);
-    g = Math.round(63 + (158 - 63) * t);
-    b = Math.round(94 + (11 - 94) * t);
+    r = Math.round(201 + (217 - 201) * t);
+    g = Math.round(59 + (167 - 59) * t);
+    b = Math.round(59 + (66 - 59) * t);
   } else if (p < 0.5) {
     const t = (p - 0.25) / 0.25;
-    r = Math.round(245 + (234 - 245) * t);
-    g = Math.round(158 + (179 - 158) * t);
-    b = Math.round(11 + (8 - 11) * t);
+    r = Math.round(217 + (242 - 217) * t);
+    g = Math.round(167 + (203 - 167) * t);
+    b = Math.round(66 + (107 - 66) * t);
   } else if (p < 0.75) {
     const t = (p - 0.5) / 0.25;
-    r = Math.round(234 + (6 - 234) * t);
-    g = Math.round(179 + (182 - 179) * t);
-    b = Math.round(8 + (212 - 8) * t);
+    r = Math.round(242 + (28 - 242) * t);
+    g = Math.round(203 + (163 - 203) * t);
+    b = Math.round(107 + (155 - 107) * t);
   } else {
     const t = (p - 0.75) / 0.25;
-    r = Math.round(6 + (16 - 6) * t);
-    g = Math.round(182 + (185 - 182) * t);
-    b = Math.round(212 + (129 - 212) * t);
+    r = Math.round(28 + (20 - 28) * t);
+    g = Math.round(163 + (150 - 163) * t);
+    b = Math.round(155 + (90 - 155) * t);
   }
   return [r, g, b, alpha];
 }
 
-function zoneToQuantizedRgba(zone) {
-  switch (zone) {
-    case 'A':
-      return [0, 128, 0, 145];
-    case 'B':
-      return [0, 213, 204, 145];
-    case 'C':
-      return [120, 120, 130, 140];
-    case 'D':
-      return [255, 0, 0, 140];
-    default:
-      return [0, 0, 0, 0];
+function probToFlatBandRgba(p) {
+  if (p < 0.01) return [0, 0, 0, 0];
+  for (const band of FLAT_BANDS) {
+    if (p >= band.min) return band.rgba;
   }
+  return [0, 0, 0, 0];
+}
+
+function addDarkOsmTiles(map) {
+  return L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 19,
+  }).addTo(map);
 }
 
 class VisibilityCanvasLayer extends L.Layer {
@@ -59,7 +70,7 @@ class VisibilityCanvasLayer extends L.Layer {
     super();
     this.dateIso = options.dateIso;
     this.modelParams = options.modelParams;
-    this.mode = options.mode || 'continuous'; // 'continuous' | 'quantized'
+    this.mode = options.mode || 'continuous'; // 'continuous' | 'quantized' (8-band flat)
     this.enabled = options.enabled ?? true;
     this.canvas = null;
   }
@@ -91,6 +102,8 @@ class VisibilityCanvasLayer extends L.Layer {
 
   _render() {
     if (!this._map || !this.canvas) return;
+    const container = this._map.getContainer();
+    if (!container || container.offsetParent === null) return;
     const size = this._map.getSize();
     if (!size.x || !size.y) return;
 
@@ -99,8 +112,9 @@ class VisibilityCanvasLayer extends L.Layer {
     this.canvas.style.width = `${size.x}px`;
     this.canvas.style.height = `${size.y}px`;
 
-    // Render on an internal backing buffer (~360px wide) for smooth <15ms interactive updates
-    const scale = Math.min(1, 360 / size.x);
+    // Higher backing resolution in Flat Bands mode so contour boundaries stay sharp & detailed
+    const maxW = this.mode === 'quantized' ? 520 : 380;
+    const scale = Math.min(1, maxW / size.x);
     const w = Math.max(80, Math.round(size.x * scale));
     const h = Math.max(60, Math.round(size.y * scale));
     this.canvas.width = w;
@@ -113,40 +127,10 @@ class VisibilityCanvasLayer extends L.Layer {
     const img = ctx.createImageData(w, h);
     const buf = img.data;
 
-    if (this.mode === 'quantized') {
-      // Render discrete 2°x2° Yallop A-D bands clipped at +-60° lat
-      const cellCache = new Map();
-      for (let py = 0; py < h; py++) {
-        const cy = (py + 0.5) / scale;
-        for (let px = 0; px < w; px++) {
-          const cx = (px + 0.5) / scale;
-          const ll = this._map.containerPointToLatLng([cx, cy]);
-          if (ll.lat > 60 || ll.lat < -60) continue;
-          const lon = ((ll.lng + 180) % 360 + 360) % 360 - 180;
-          const qLat = Math.floor(ll.lat / 2) * 2 + 1;
-          const qLon = Math.floor(lon / 2) * 2 + 1;
-          const key = `${qLat},${qLon}`;
-          let rgba = cellCache.get(key);
-          if (!rgba) {
-            const m = evaluateCrescent(this.dateIso, qLat, qLon, 0);
-            const z = classifyYallopZone(m);
-            rgba = zoneToQuantizedRgba(z);
-            cellCache.set(key, rgba);
-          }
-          const idx = (py * w + px) * 4;
-          buf[idx] = rgba[0];
-          buf[idx + 1] = rgba[1];
-          buf[idx + 2] = rgba[2];
-          buf[idx + 3] = rgba[3];
-        }
-      }
-      ctx.putImageData(img, 0, 0);
-      return;
-    }
-
-    // Continuous non-quantized adaptive grid over the exact current viewport
-    const gx = 44;
-    const gy = 28;
+    // Viewport-adaptive fast vector-table evaluation grid (smooth & detailed at any zoom, <40ms)
+    const evalGridPoint = getEveningGridEvaluator(this.dateIso);
+    const gx = 38;
+    const gy = 24;
     const gridP = new Float32Array((gx + 1) * (gy + 1));
 
     for (let j = 0; j <= gy; j++) {
@@ -156,13 +140,14 @@ class VisibilityCanvasLayer extends L.Layer {
         const ll = this._map.containerPointToLatLng([cx, cy]);
         const clampedLat = Math.max(-72, Math.min(72, ll.lat));
         const lon = ((ll.lng + 180) % 360 + 360) % 360 - 180;
-        const m = evaluateCrescent(this.dateIso, clampedLat, lon, 0);
+        const m = evalGridPoint(clampedLat, lon);
         const { stationProb } = predictNakedEyeProb(m, this.modelParams);
         gridP[j * (gx + 1) + i] = stationProb;
       }
     }
 
-    // Bilinear interpolation to every pixel on the backing canvas
+    const colorFn = this.mode === 'quantized' ? probToFlatBandRgba : probToRgba;
+
     for (let py = 0; py < h; py++) {
       const fy = (py / (h - 1)) * gy;
       const j0 = Math.min(gy - 1, Math.floor(fy));
@@ -183,7 +168,7 @@ class VisibilityCanvasLayer extends L.Layer {
           p01 * (1 - tx) * ty +
           p11 * tx * ty;
 
-        const [r, g, b, a] = probToRgba(p);
+        const [r, g, b, a] = colorFn(p);
         const idx = (py * w + px) * 4;
         buf[idx] = r;
         buf[idx + 1] = g;
@@ -217,18 +202,12 @@ export class EidMapController {
       worldCopyJump: true,
     });
 
-    // OpenStreetMap tiles styled into dark observatory palette via CSS .leaflet-tile-pane filter
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors',
-      maxZoom: 19,
-    }).addTo(this.map);
+    addDarkOsmTiles(this.map);
 
-    // Custom panes to guarantee clean stacking
     this.map.createPane('jurisdictionPane').style.zIndex = 340;
     this.map.createPane('arcsPane').style.zIndex = 480;
     this.map.createPane('stationPane').style.zIndex = 650;
 
-    // 1. Jurisdiction polygons from world-atlas TopoJSON
     const geo = topoFeature(worldAtlas, worldAtlas.objects.countries);
     this.jurisdictionLayer = L.geoJSON(geo, {
       pane: 'jurisdictionPane',
@@ -259,7 +238,6 @@ export class EidMapController {
       },
     }).addTo(this.map);
 
-    // 2. Visibility surface overlay
     this.visLayer = new VisibilityCanvasLayer({
       dateIso: null,
       modelParams: this.modelParams,
@@ -267,13 +245,11 @@ export class EidMapController {
       enabled: true,
     }).addTo(this.map);
 
-    // 3. Layer groups for follower arcs, SA stations, HilalWatchZA pins, and active pin
     this.arcsGroup = L.layerGroup().addTo(this.map);
     this.stationsGroup = L.layerGroup().addTo(this.map);
     this.reportsGroup = L.layerGroup();
     this.pinGroup = L.layerGroup().addTo(this.map);
 
-    // Click anywhere on map to inspect coordinates
     this.map.on('click', (e) => {
       this.onSelectLocation({
         name: `Custom Point (${e.latlng.lat.toFixed(2)}°, ${e.latlng.lng.toFixed(2)}°)`,
@@ -285,6 +261,11 @@ export class EidMapController {
         zone: 'local_sighting',
       });
     });
+  }
+
+  invalidate() {
+    this.map.invalidateSize();
+    this.visLayer._render();
   }
 
   _styleCountry(feat) {
@@ -299,7 +280,7 @@ export class EidMapController {
       };
     }
     return {
-      color: isSel ? '#fde047' : meta.color,
+      color: isSel ? '#f2cb6b' : meta.color,
       weight: isSel ? 2 : 0.8,
       opacity: isSel ? 0.95 : 0.5,
       fillColor: meta.color,
@@ -321,9 +302,9 @@ export class EidMapController {
     const marker = L.circleMarker([lat, lon], {
       pane: 'stationPane',
       radius: 7,
-      color: '#fde047',
+      color: '#f2cb6b',
       weight: 2.5,
-      fillColor: '#f59e0b',
+      fillColor: '#d9a742',
       fillOpacity: 0.9,
     });
     if (label) marker.bindTooltip(label, { direction: 'top' });
@@ -357,12 +338,12 @@ export class EidMapController {
       const { stationProb } = predictNakedEyeProb(m, this.modelParams);
       const pct = (stationProb * 100).toFixed(0);
       const color =
-        stationProb >= 0.7 ? '#10b981' : stationProb >= 0.3 ? '#f59e0b' : stationProb > 0.02 ? '#38bdf8' : '#f43f5e';
+        stationProb >= 0.7 ? '#10b981' : stationProb >= 0.3 ? '#d9a742' : stationProb > 0.02 ? '#38bdf8' : '#c93b3b';
 
       const marker = L.circleMarker([st.lat, st.lon], {
         pane: 'stationPane',
         radius: 6,
-        color: '#070b14',
+        color: '#060c1a',
         weight: 1.5,
         fillColor: color,
         fillOpacity: 0.95,
@@ -371,11 +352,11 @@ export class EidMapController {
       marker.bindPopup(`
         <div style="min-width:210px;font-size:12px;line-height:1.45">
           <strong>${st.name}</strong><br/>
-          <span style="color:#94a3b8">${st.province} · ${st.elevation_m} m ASL · ${st.organization}</span><br/>
+          <span style="color:#9eb0cc">${st.province} · ${st.elevation_m} m ASL · ${st.organization}</span><br/>
           <hr style="border:none;border-top:1px solid rgba(148,163,184,0.2);margin:5px 0"/>
           Naked-eye site prob: <strong style="color:${color}">${pct}%</strong><br/>
           W = ${m.valid ? m.wArcmin.toFixed(2) : '—'}' · ARCV = ${m.valid ? m.arcvDeg.toFixed(1) : '—'}° · Lag = ${m.valid ? m.lagMin.toFixed(0) : '—'} min<br/>
-          <span style="color:#94a3b8">${st.notes}</span>
+          <span style="color:#9eb0cc">${st.notes}</span>
         </div>
       `);
 
@@ -416,10 +397,7 @@ export class EidMapController {
         fillColor: seen ? '#34d399' : '#fb7185',
         fillOpacity: 0.85,
       });
-      marker.bindTooltip(
-        `${r.loc} (${r.d}): ${r.vis} · ${r.cond || 'unknown sky'} — ${r.by}`,
-        { direction: 'top' }
-      );
+      marker.bindTooltip(`${r.loc} (${r.d}): ${r.vis} · ${r.cond || 'unknown sky'} — ${r.by}`, { direction: 'top' });
       marker.addTo(this.reportsGroup);
     }
   }
@@ -452,6 +430,95 @@ export class EidMapController {
       );
       arc.bindTooltip(`${c.name} → ${hubName}`);
       arc.addTo(this.arcsGroup);
+    }
+  }
+}
+
+export class HistoryMapController {
+  constructor({ containerId, modelParams, saStations, saReports }) {
+    this.modelParams = modelParams;
+    this.saStations = saStations;
+    this.saReports = saReports;
+
+    this.map = L.map(containerId, {
+      center: [-29.0, 24.5],
+      zoom: 5,
+      minZoom: 3,
+      maxZoom: 12,
+    });
+    addDarkOsmTiles(this.map);
+
+    this.map.createPane('histStations').style.zIndex = 650;
+    this.visLayer = new VisibilityCanvasLayer({
+      dateIso: null,
+      modelParams: this.modelParams,
+      mode: 'continuous',
+      enabled: true,
+    }).addTo(this.map);
+
+    this.stationsGroup = L.layerGroup().addTo(this.map);
+    this.reportsGroup = L.layerGroup();
+  }
+
+  invalidate() {
+    this.map.invalidateSize({ pan: false });
+    this.visLayer._render();
+  }
+
+  renderRecord(obs, showReports = false) {
+    if (!obs) return;
+    this.visLayer.setState({ dateIso: obs.ev, mode: 'continuous', enabled: true });
+    this.stationsGroup.clearLayers();
+
+    const mentioned = new Set((obs.cities || []).map((c) => c.toLowerCase()));
+    const evalFast = getEveningGridEvaluator(obs.ev);
+
+    for (const st of this.saStations) {
+      const m = evalFast(st.lat, st.lon);
+      const isMentioned =
+        mentioned.has(st.city.toLowerCase()) ||
+        mentioned.has(st.name.toLowerCase()) ||
+        [...mentioned].some((c) => st.name.toLowerCase().includes(c));
+
+      const color = isMentioned ? (obs.sighted ? '#34d399' : '#fb7185') : '#38bdf8';
+      const marker = L.circleMarker([st.lat, st.lon], {
+        pane: 'histStations',
+        radius: isMentioned ? 8 : 5,
+        color: isMentioned ? '#f2cb6b' : '#060c1a',
+        weight: isMentioned ? 2.2 : 1.2,
+        fillColor: color,
+        fillOpacity: isMentioned ? 0.96 : 0.72,
+      });
+      marker.bindTooltip(
+        `<strong>${st.name}</strong> (${obs.ev})<br/>${
+          isMentioned ? 'Logged in this historical record · ' : ''
+        }W=${m.valid ? m.wArcmin.toFixed(2) : '—'}', ARCV=${m.valid ? m.arcvDeg.toFixed(1) : '—'}°, Lag=${
+          m.valid ? m.lagMin.toFixed(0) : '—'
+        }m`,
+        { direction: 'top' }
+      );
+      marker.addTo(this.stationsGroup);
+    }
+
+    this.reportsGroup.clearLayers();
+    if (showReports) {
+      if (!this.map.hasLayer(this.reportsGroup)) this.reportsGroup.addTo(this.map);
+      for (const r of this.saReports) {
+        if (typeof r.lat !== 'number' || typeof r.lon !== 'number') continue;
+        const seen = r.vis === 'naked' || r.vis === 'optical';
+        L.circleMarker([r.lat, r.lon], {
+          pane: 'histStations',
+          radius: 4.5,
+          color: '#ffffff',
+          weight: 1,
+          fillColor: seen ? '#34d399' : '#fb7185',
+          fillOpacity: 0.85,
+        })
+          .bindTooltip(`${r.loc} (${r.d}): ${r.vis} · ${r.cond || 'unknown'} — ${r.by}`)
+          .addTo(this.reportsGroup);
+      }
+    } else if (this.map.hasLayer(this.reportsGroup)) {
+      this.map.removeLayer(this.reportsGroup);
     }
   }
 }

@@ -8,6 +8,133 @@ const DEG2RAD = Math.PI / 180;
 const RAD2DEG = 180 / Math.PI;
 const AU_KM = 149597870.7;
 const MOON_RADIUS_KM = 1737.4;
+const EARTH_RAD_AU = 6378.137 / AU_KM;
+
+const conjCache = new Map();
+const eveningTableCache = new Map();
+
+function getConjunctionsForDate(dateIso) {
+  if (conjCache.has(dateIso)) return conjCache.get(dateIso);
+  const [y, m, d] = dateIso.split('-').map(Number);
+  const dayMs = Date.UTC(y, m - 1, d, 12, 0, 0);
+  const c1 = Astronomy.SearchMoonPhase(0, new Date(dayMs - 4 * 86400 * 1000), 6);
+  const c2 = c1 ? Astronomy.SearchMoonPhase(0, new Date(c1.date.getTime() + 20 * 86400 * 1000), 15) : null;
+  const res = { c1, c2 };
+  conjCache.set(dateIso, res);
+  return res;
+}
+
+function fastGmstDeg(ms) {
+  const daysSinceJ2000 = ms / 86400000 - 10957.5;
+  return (((280.46061837 + 360.98564736629 * daysSinceJ2000) % 360) + 360) % 360;
+}
+
+function buildEveningTable(dateIso) {
+  if (eveningTableCache.has(dateIso)) return eveningTableCache.get(dateIso);
+  const [y, m, d] = dateIso.split('-').map(Number);
+  const t0Ms = Date.UTC(y, m - 1, d, 0, 0, 0) - 14 * 3600000;
+  const stepMs = 3600 * 1000; // 1h steps across 54h span
+  const n = 55;
+  const moonV = new Array(n);
+  const sunV = new Array(n);
+  for (let i = 0; i < n; i++) {
+    const t = Astronomy.MakeTime(new Date(t0Ms + i * stepMs));
+    const rot = Astronomy.Rotation_EQJ_EQD(t);
+    moonV[i] = Astronomy.RotateVector(rot, Astronomy.GeoVector(Astronomy.Body.Moon, t, true));
+    sunV[i] = Astronomy.RotateVector(rot, Astronomy.GeoVector(Astronomy.Body.Sun, t, true));
+  }
+  const { c1, c2 } = getConjunctionsForDate(dateIso);
+  const tab = { y, m, d, t0Ms, stepMs, n, moonV, sunV, c1, c2 };
+  eveningTableCache.set(dateIso, tab);
+  return tab;
+}
+
+function interpVec(arr, t0Ms, stepMs, ms) {
+  const f = (ms - t0Ms) / stepMs;
+  const i = Math.max(0, Math.min(arr.length - 2, Math.floor(f)));
+  const u = f - i;
+  const a = arr[i];
+  const b = arr[i + 1];
+  return { x: a.x + (b.x - a.x) * u, y: a.y + (b.y - a.y) * u, z: a.z + (b.z - a.z) * u };
+}
+
+function fastAltAz(tab, vecArr, ms, cosLat, sinLat, lonDeg) {
+  const v = interpVec(vecArr, tab.t0Ms, tab.stepMs, ms);
+  const lstRad = (fastGmstDeg(ms) + lonDeg) * DEG2RAD;
+  const sinLst = Math.sin(lstRad);
+  const cosLst = Math.cos(lstRad);
+  const dx = v.x - EARTH_RAD_AU * cosLat * cosLst;
+  const dy = v.y - EARTH_RAD_AU * cosLat * sinLst;
+  const dz = v.z - EARTH_RAD_AU * sinLat;
+  const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+  const south = sinLat * (cosLst * dx + sinLst * dy) - cosLat * dz;
+  const east = -sinLst * dx + cosLst * dy;
+  const up = cosLat * (cosLst * dx + sinLst * dy) + sinLat * dz;
+  const alt = Math.asin(Math.max(-1, Math.min(1, up / dist))) * RAD2DEG;
+  const az = (Math.atan2(east, -south) * RAD2DEG + 360) % 360;
+  return { alt, az, dist };
+}
+
+function fastBracketSet(tab, vecArr, centerMs, targetAlt, cosLat, sinLat, lonDeg) {
+  const start = centerMs - 5 * 3600000;
+  let pt = start;
+  let pa = fastAltAz(tab, vecArr, pt, cosLat, sinLat, lonDeg).alt;
+  for (let h = 1; h <= 10; h++) {
+    const ct = start + h * 3600000;
+    const ca = fastAltAz(tab, vecArr, ct, cosLat, sinLat, lonDeg).alt;
+    if (pa >= targetAlt && ca < targetAlt) {
+      let a = pt;
+      let b = ct;
+      for (let k = 0; k < 7; k++) {
+        const mid = 0.5 * (a + b);
+        if (fastAltAz(tab, vecArr, mid, cosLat, sinLat, lonDeg).alt >= targetAlt) a = mid;
+        else b = mid;
+      }
+      return 0.5 * (a + b);
+    }
+    pt = ct;
+    pa = ca;
+  }
+  return null;
+}
+
+/**
+ * Return a fast cached topocentric evaluator `(lat, lon) => metrics` for map grid rendering.
+ */
+export function getEveningGridEvaluator(dateIso) {
+  const tab = buildEveningTable(dateIso);
+  return (lat, lon) => {
+    const latRad = lat * DEG2RAD;
+    const cosLat = Math.cos(latRad);
+    const sinLat = Math.sin(latRad);
+    const approxSS = Date.UTC(tab.y, tab.m - 1, tab.d, 18, 0, 0) - (lon / 15) * 3600000;
+    const ssMs = fastBracketSet(tab, tab.sunV, approxSS, -0.833, cosLat, sinLat, lon);
+    if (!ssMs) return { valid: false, q: -9, lagMin: -999, ageHours: -99, arclDeg: 0 };
+    const msMs = fastBracketSet(tab, tab.moonV, ssMs + 1800000, -0.55, cosLat, sinLat, lon);
+    const lagMin = msMs ? (msMs - ssMs) / 60000 : -999;
+    const bestMs = lagMin > 0 ? ssMs + (4 / 9) * lagMin * 60000 : ssMs;
+    const hm = fastAltAz(tab, tab.moonV, bestMs, cosLat, sinLat, lon);
+    const hs = fastAltAz(tab, tab.sunV, bestMs, cosLat, sinLat, lon);
+    const arcvDeg = hm.alt - hs.alt;
+    const dazDeg = Math.abs((((hm.az - hs.az + 180) % 360 + 360) % 360) - 180);
+    const cosArcl = Math.max(
+      -1,
+      Math.min(
+        1,
+        Math.sin(hm.alt * DEG2RAD) * Math.sin(hs.alt * DEG2RAD) +
+          Math.cos(hm.alt * DEG2RAD) * Math.cos(hs.alt * DEG2RAD) * Math.cos(dazDeg * DEG2RAD)
+      )
+    );
+    const arclDeg = Math.acos(cosArcl) * RAD2DEG;
+    const sdArcmin = Math.asin(MOON_RADIUS_KM / (hm.dist * AU_KM)) * RAD2DEG * 60;
+    const wArcmin = sdArcmin * (1 - Math.cos(arclDeg * DEG2RAD));
+    const q = (arcvDeg - (11.8371 - 6.3226 * wArcmin + 0.7319 * wArcmin ** 2 - 0.1018 * wArcmin ** 3)) / 10;
+    let conj = tab.c1;
+    if (tab.c2 && tab.c2.date.getTime() <= ssMs + 6 * 3600000) conj = tab.c2;
+    const ageHours = conj ? (ssMs - conj.date.getTime()) / 3600000 : null;
+    return { valid: true, lagMin, ageHours, arclDeg, arcvDeg, wArcmin, q };
+  };
+}
 
 export const HIJRI_MONTH_SHORT = {
   1: 'Muh',
@@ -100,15 +227,11 @@ export function evaluateCrescent(dateIso, lat, lon, elevationM = 0) {
   const moonset = Astronomy.SearchRiseSet(Astronomy.Body.Moon, observer, -1, moonSearchStart, 1.25);
   const lagMin = moonset ? (moonset.date.getTime() - sunset.date.getTime()) / 60000 : -999;
 
-  // Most recent geocentric conjunction prior to sunset + 12h
-  const conjSearchStart = new Date(sunset.date.getTime() - 4 * 86400 * 1000);
-  let conj = Astronomy.SearchMoonPhase(0, conjSearchStart, 5);
-  if (conj) {
-    // Check if there is a slightly later conjunction still <= sunset + 6h
-    const nextConj = Astronomy.SearchMoonPhase(0, new Date(conj.date.getTime() + 20 * 86400 * 1000), 15);
-    if (nextConj && nextConj.date.getTime() <= sunset.date.getTime() + 6 * 3600 * 1000) {
-      conj = nextConj;
-    }
+  // Cached geocentric conjunction lookup
+  const { c1, c2 } = getConjunctionsForDate(dateIso);
+  let conj = c1;
+  if (c2 && c2.date.getTime() <= sunset.date.getTime() + 6 * 3600 * 1000) {
+    conj = c2;
   }
   const ageHours = conj ? (sunset.date.getTime() - conj.date.getTime()) / 3600000 : null;
 
@@ -370,12 +493,20 @@ export function buildIslamicEvents(refDate = new Date(), historicalObs = []) {
   const historicEvents = pastYear.length >= 3 ? pastYear : pastAll.slice(-3);
 
   const events = [...historicEvents, ...upcoming];
-  const nextEid = upcoming.find((e) => e.eidType !== 'ramadan') || upcoming[0] || events[0];
-  return { events, historicEvents, upcomingEvents: upcoming, defaultEventId: nextEid.id };
+  const nextEvent = upcoming[0] || events[0];
+  const nextEid = upcoming.find((e) => e.eidType !== 'ramadan') || nextEvent;
+  return {
+    events,
+    historicEvents,
+    upcomingEvents: upcoming,
+    nextEventId: nextEvent.id,
+    nextEidId: nextEid.id,
+    defaultEventId: nextEvent.id,
+  };
 }
 
 /**
- * Evaluate Turkey / ECFR 2016 global criterion anywhere on Earth on `dateIso`:
+ * Evaluate Türkiye / ECFR 2016 global criterion anywhere on Earth on `dateIso`:
  * Moon altitude > 5° and elongation > 8° at local sunset.
  */
 export function evaluateTurkeyGlobal(dateIso) {
@@ -435,8 +566,8 @@ export function computeEidDayProbabilities(event, selection, modelParams) {
     const tr = evaluateTurkeyGlobal(ev1);
     pDay1 = tr.met ? 0.99 : 0.01;
     ruleExplanation = tr.met
-      ? `Turkey / ECFR global calculation met (Alt ${tr.alt.toFixed(1)}° > 5°, Elong ${tr.arcl.toFixed(1)}° > 8° near ${tr.sampleLat}°, ${tr.sampleLon}°).`
-      : 'Turkey / ECFR global calculation NOT met anywhere on Earth on Evening 29 — month starts Day 2.';
+      ? `Türkiye / ECFR global calculation met (Alt ${tr.alt.toFixed(1)}° > 5°, Elong ${tr.arcl.toFixed(1)}° > 8° near ${tr.sampleLat}°, ${tr.sampleLon}°).`
+      : 'Türkiye / ECFR global calculation NOT met anywhere on Earth on Evening 29 — month starts Day 2.';
   } else if (zone === 'regional_criteria') {
     // Check MABIMS 3°/6.4° for SE Asia or local empirical
     const mabimsMet = localEv1.valid && localEv1.moonAltSunset >= 3 && localEv1.arclSunsetDeg >= 6.4;

@@ -21,13 +21,10 @@
       <header class="topbar">
         <div class="brand">
           <svg class="brand-emblem" viewBox="0 0 44 44" width="40" height="40" aria-hidden="true">
-            <!-- Classical Islamic 8-pointed Rub el Hizb star -->
             <rect x="7" y="7" width="30" height="30" rx="2" fill="#0b1428" stroke="#d9a742" stroke-width="1.5" />
             <rect x="7" y="7" width="30" height="30" rx="2" transform="rotate(45 22 22)" fill="#12203d" stroke="#d9a742" stroke-width="1.5" />
-            <!-- Inner octagon & subtle Ndebele diamond inlay -->
             <circle cx="22" cy="22" r="11.5" fill="#091529" stroke="#1ca39b" stroke-width="1.1" />
             <polygon points="22,12.5 31.5,22 22,31.5 12.5,22" fill="none" stroke="#226fd6" stroke-width="0.9" stroke-opacity="0.7" />
-            <!-- Burnished Gold Crescent Moon -->
             <path d="M24.4 15.2a6.8 6.8 0 1 0 3.6 12.1 5.5 5.5 0 1 1-3.6-12.1z" fill="#f2cb6b" />
           </svg>
           <div>
@@ -37,48 +34,53 @@
         </div>
 
         <div class="controls-bar">
-          <div class="control-group">
-            <label for="event-select">Target Event</label>
-            <select id="event-select"></select>
-          </div>
+          <div class="forecast-controls" id="forecast-controls">
+            <div class="control-group">
+              <label for="event-select">Target Event</label>
+              <select id="event-select"></select>
+            </div>
 
-          <div class="control-group search-group">
-            <label for="location-search">Country / City / Station</label>
-            <div class="search-wrap">
-              <input
-                id="location-search"
-                type="text"
-                placeholder="Type country or city (e.g. South Africa, Cape Town)..."
-                autocomplete="off"
-              />
-              <button id="clear-search" class="icon-btn" title="Reset to South Africa" type="button">ZA</button>
-              <div id="search-results" class="search-dropdown hidden"></div>
+            <div class="control-group search-group">
+              <label for="location-search">Country / City / Station</label>
+              <div class="search-wrap">
+                <input
+                  id="location-search"
+                  type="text"
+                  placeholder="Type country or city (e.g. South Africa, Cape Town)..."
+                  autocomplete="off"
+                />
+                <button id="clear-search" class="icon-btn" title="Reset to South Africa" type="button">ZA</button>
+                <div id="search-results" class="search-dropdown hidden"></div>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label>Observation Evening</label>
+              <div class="segmented" role="group" aria-label="Observation evening">
+                <button id="btn-ev1" class="seg-btn active" type="button">29th Evening</button>
+                <button id="btn-ev2" class="seg-btn" type="button">30th Evening</button>
+              </div>
             </div>
           </div>
 
-          <div class="control-group">
-            <label>Observation Evening</label>
-            <div class="segmented" role="group" aria-label="Observation evening">
-              <button id="btn-ev1" class="seg-btn active" type="button">29th Evening</button>
-              <button id="btn-ev2" class="seg-btn" type="button">30th Evening</button>
-            </div>
+          <div class="topbar-actions">
+            <button id="btn-history" class="ghost-btn" type="button">History</button>
+            <button id="btn-methodology" class="ghost-btn" type="button">How It Works</button>
+            <button id="btn-acknowledgements" class="ghost-btn" type="button">Acknowledgements</button>
           </div>
-
-          <button id="btn-methodology" class="ghost-btn" type="button">How It Works</button>
-          <button id="btn-acknowledgements" class="ghost-btn" type="button">Acknowledgements</button>
         </div>
       </header>
 
-      <main class="workspace">
+      <!-- Forecast Workspace -->
+      <main class="workspace" id="forecast-view">
         <aside class="sidebar">
-          <!-- 1. Next Eid Probability Card -->
           <section class="card hero-card">
             <div class="card-header">
               <div>
-                <div class="eyebrow" id="hero-eyebrow">NEXT RELEVANT EID</div>
-                <h2 id="hero-title">Eid al-Fitr 1448 AH</h2>
+                <div class="eyebrow" id="hero-eyebrow">NEXT RELEVANT EVENT</div>
+                <h2 id="hero-title">Ramadan 1448 AH</h2>
               </div>
-              <span id="jurisdiction-badge" class="badge badge-local">Local Sighting</span>
+              <span id="jurisdiction-badge" class="badge badge-local_sighting">Local Sighting</span>
             </div>
             <div class="location-line" id="selected-location-line">
               South Africa · National COSSA/UUCSA Network
@@ -87,20 +89,18 @@
             <p class="rule-note" id="rule-explanation"></p>
           </section>
 
-          <!-- 2. Empirical Analogs & (W, ARCV) Chart -->
           <section class="card">
             <div class="card-header">
               <h3>Empirical Sighting Evidence</h3>
               <span class="mono-pill" id="analog-summary-pill">—</span>
             </div>
             <p class="muted-small" id="analog-description">
-              Historical South African 29th evenings at similar crescent visibility size (COSSA naked-eye rules, 2008–2026).
+              Historical South African 29th evenings at similar crescent visibility size (COSSA naked-eye rules, 2009–2026).
             </p>
             <div id="scatter-container" class="scatter-wrap"></div>
             <div id="analog-list" class="analog-chips"></div>
           </section>
 
-          <!-- 3. Local Sky & Crescent Parameters -->
           <section class="card">
             <div class="card-header">
               <h3>Local Sunset &amp; Crescent Metrics</h3>
@@ -109,7 +109,6 @@
             <div class="metrics-grid" id="metrics-grid"></div>
           </section>
 
-          <!-- 4. Observation Hotspots (SA Stations) -->
           <section class="card">
             <div class="card-header">
               <h3 id="stations-title">South Africa Observation Sites</h3>
@@ -125,13 +124,12 @@
         <section class="map-stage">
           <div id="map"></div>
 
-          <!-- Map Floating Controls -->
           <div class="map-overlay top-right">
             <div class="layer-panel">
               <div class="panel-title">Map Layers</div>
               <div class="segmented small" role="group" aria-label="Surface mode">
                 <button id="mode-continuous" class="seg-btn active" type="button">Continuous %</button>
-                <button id="mode-quantized" class="seg-btn" type="button">Quantized (A–D)</button>
+                <button id="mode-quantized" class="seg-btn" type="button">Flat Bands</button>
               </div>
               <label class="check-row">
                 <input type="checkbox" id="chk-heatmap" checked />
@@ -156,12 +154,91 @@
             </div>
           </div>
 
-          <!-- Legend -->
           <div class="map-overlay bottom-left">
             <div class="legend-card" id="map-legend"></div>
           </div>
         </section>
       </main>
+
+      <!-- Dedicated Historical Archive Workspace (Zero Forecasts) -->
+      <section class="history-workspace hidden" id="history-view">
+        <div class="history-toolbar">
+          <div class="history-kpis" id="history-kpis"></div>
+          <div class="history-filters">
+            <select id="hist-filter-month" aria-label="Filter by Hijri month">
+              <option value="all">All Hijri Months (187)</option>
+              <option value="eid_ram">Ramadan &amp; Eids Only</option>
+              <option value="9">Ramadan (9)</option>
+              <option value="10">Shawwal / Eid al-Fitr (10)</option>
+              <option value="12">Dhul Hijjah / Eid al-Adha (12)</option>
+              <option value="1">Muharram (1)</option>
+              <option value="2">Safar (2)</option>
+              <option value="3">Rabi al-Awwal (3)</option>
+              <option value="4">Rabi al-Thani (4)</option>
+              <option value="5">Jumada al-Ula (5)</option>
+              <option value="6">Jumada al-Akhirah (6)</option>
+              <option value="7">Rajab (7)</option>
+              <option value="8">Shaban (8)</option>
+              <option value="11">Dhul Qadah (11)</option>
+            </select>
+            <select id="hist-filter-outcome" aria-label="Filter by sighting outcome">
+              <option value="all">All Outcomes</option>
+              <option value="sighted">Sighted on 29th</option>
+              <option value="not_sighted">Not Sighted (30d)</option>
+            </select>
+            <input id="hist-filter-search" type="text" placeholder="Filter year, date, or city..." />
+            <label class="check-row compact">
+              <input type="checkbox" id="hist-chk-reports" />
+              <span>GPS Field Logs (21)</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="history-grid">
+          <div class="history-table-card card">
+            <div class="card-header">
+              <h3>South African Historical Decisions Archive (1430–1448 AH)</h3>
+              <span class="mono-pill" id="hist-count-pill">187 records</span>
+            </div>
+            <div class="history-table-scroll">
+              <table class="history-table">
+                <thead>
+                  <tr>
+                    <th>Hijri Month</th>
+                    <th>29th Evening</th>
+                    <th>SA Outcome</th>
+                    <th>1st / Eid</th>
+                    <th>W′</th>
+                    <th>ARCV</th>
+                    <th>Lag</th>
+                    <th>q</th>
+                    <th>Logged Cities</th>
+                  </tr>
+                </thead>
+                <tbody id="history-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="history-inspector">
+            <div class="card hero-card" id="history-detail-card"></div>
+            <div class="card">
+              <div class="card-header">
+                <h3>All 187 Historical Evenings (W vs ARCV)</h3>
+                <span class="mono-pill" id="hist-selected-pill">—</span>
+              </div>
+              <div id="history-scatter-container" class="scatter-wrap"></div>
+            </div>
+            <div class="card history-map-card">
+              <div class="card-header">
+                <h3>Historical Evening Horizon Map</h3>
+                <span class="mono-pill" id="hist-map-date-pill">—</span>
+              </div>
+              <div id="history-map"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     <!-- Methodology & How It Works Modal -->

@@ -10,21 +10,27 @@ import {
   computeEidDayProbabilities,
   evaluateCrescent,
   findEmpiricalAnalogs,
+  formatDisplayDate,
   formatTimeInOffset,
   formatUtcTime,
   HIJRI_MONTH_SHORT,
   predictNakedEyeProb,
   yallopZoneLabel,
 } from './astronomy.js';
-import { EidMapController } from './map.js';
+import { EidMapController, FLAT_BANDS, HistoryMapController } from './map.js';
 import { renderEmpiricalScatter } from './scatter.js';
 
-const { events, historicEvents, upcomingEvents, defaultEventId } = buildIslamicEvents(
+const { events, historicEvents, upcomingEvents, nextEventId, nextEidId, defaultEventId } = buildIslamicEvents(
   new Date(),
   empiricalData.historical_observations
 );
 
+const sortedHistory = [...empiricalData.historical_observations].sort((a, b) =>
+  b.ev.localeCompare(a.ev)
+);
+
 const state = {
+  viewMode: 'forecast', // 'forecast' | 'history'
   eventId: defaultEventId,
   eveningIdx: 0, // 0 = Evening 1 (29th), 1 = Evening 2 (30th)
   surfaceMode: 'continuous',
@@ -33,6 +39,8 @@ const state = {
   showReports: false,
   showJurisdictions: true,
   showArcs: false,
+  selectedHistoryKey: sortedHistory[0] ? `${sortedHistory[0].hy}-${sortedHistory[0].hm}` : null,
+  histShowReports: false,
   selection: {
     name: 'South Africa (National COSSA Network)',
     country: 'South Africa',
@@ -46,12 +54,16 @@ const state = {
 };
 
 const dom = {
+  forecastControls: document.getElementById('forecast-controls'),
+  forecastView: document.getElementById('forecast-view'),
+  historyView: document.getElementById('history-view'),
   eventSelect: document.getElementById('event-select'),
   searchInput: document.getElementById('location-search'),
   searchResults: document.getElementById('search-results'),
   clearSearch: document.getElementById('clear-search'),
   btnEv1: document.getElementById('btn-ev1'),
   btnEv2: document.getElementById('btn-ev2'),
+  btnHistory: document.getElementById('btn-history'),
   btnMethodology: document.getElementById('btn-methodology'),
   btnAcknowledgements: document.getElementById('btn-acknowledgements'),
   modal: document.getElementById('methodology-modal'),
@@ -85,9 +97,29 @@ const dom = {
   chkJurisdictions: document.getElementById('chk-jurisdictions'),
   chkArcs: document.getElementById('chk-arcs'),
   mapLegend: document.getElementById('map-legend'),
+  // History view DOM
+  historyKpis: document.getElementById('history-kpis'),
+  histFilterMonth: document.getElementById('hist-filter-month'),
+  histFilterOutcome: document.getElementById('hist-filter-outcome'),
+  histFilterSearch: document.getElementById('hist-filter-search'),
+  histChkReports: document.getElementById('hist-chk-reports'),
+  histCountPill: document.getElementById('hist-count-pill'),
+  historyTableBody: document.getElementById('history-table-body'),
+  historyDetailCard: document.getElementById('history-detail-card'),
+  histSelectedPill: document.getElementById('hist-selected-pill'),
+  historyScatterContainer: document.getElementById('history-scatter-container'),
+  histMapDatePill: document.getElementById('hist-map-date-pill'),
 };
 
-// Populate grouped event dropdown: Upcoming Events + Past Year Historic Sightings
+let historyMapCtrl = null;
+
+function normalizeText(s) {
+  return String(s || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+}
+
 function populateEventDropdown() {
   dom.eventSelect.innerHTML = '';
   const upcomingGroup = document.createElement('optgroup');
@@ -164,7 +196,7 @@ function buildSearchIndex() {
     kind: 'country',
     label: c.name,
     sub: `${c.zone_label} · ${c.authority}`,
-    searchKey: `${c.name} ${c.authority}`.toLowerCase(),
+    searchKey: normalizeText(`${c.name} ${c.iso === '792' ? 'turkey' : ''} ${c.authority}`),
     payload: {
       name: c.name,
       country: c.name,
@@ -185,7 +217,9 @@ function buildSearchIndex() {
     sub: city.is_sa_station
       ? `COSSA/SA Station · ${city.elevation_m}m ASL · ${city.organization}`
       : `${getZoneLabel(city.zone)} · ${city.lat.toFixed(2)}°, ${city.lon.toFixed(2)}°`,
-    searchKey: `${city.name} ${city.city || ''} ${city.country} ${city.province || ''}`.toLowerCase(),
+    searchKey: normalizeText(
+      `${city.name} ${city.city || ''} ${city.country} ${city.iso === '792' ? 'turkey' : ''} ${city.province || ''}`
+    ),
     payload: {
       ...city,
       zoom: city.is_sa_station ? 10 : 8,
@@ -198,7 +232,7 @@ function buildSearchIndex() {
 const searchIndex = buildSearchIndex();
 
 function handleSearchInput() {
-  const q = dom.searchInput.value.trim().toLowerCase();
+  const q = normalizeText(dom.searchInput.value.trim());
   if (!q) {
     dom.searchResults.classList.add('hidden');
     return;
@@ -206,8 +240,8 @@ function handleSearchInput() {
   const hits = searchIndex
     .filter((item) => item.searchKey.includes(q))
     .sort((a, b) => {
-      const aStarts = a.label.toLowerCase().startsWith(q) ? 0 : 1;
-      const bStarts = b.label.toLowerCase().startsWith(q) ? 0 : 1;
+      const aStarts = normalizeText(a.label).startsWith(q) ? 0 : 1;
+      const bStarts = normalizeText(b.label).startsWith(q) ? 0 : 1;
       if (aStarts !== bStarts) return aStarts - bStarts;
       if (a.kind !== b.kind && a.kind === 'country') return -1;
       return a.label.localeCompare(b.label);
@@ -237,19 +271,18 @@ function renderLegend() {
       ? `<div><strong>Continuous Empirical Naked-Eye Probability</strong> (viewport-adaptive)</div>
          <div class="legend-gradient"></div>
          <div class="legend-ticks"><span>0% (Below limit)</span><span>50%</span><span>100%</span></div>`
-      : `<div><strong>Quantized Yallop Bands</strong> (2°×2° raster, ±60° lat)</div>
+      : `<div><strong>Flat Visibility Bands</strong> (8-level crisp contour bands)</div>
          <div class="zone-legend-grid" style="border-top:none;padding-top:4px;margin-top:4px">
-           <div class="zone-dot-item"><span class="zone-dot" style="background:#008000"></span>A: Easily visible</div>
-           <div class="zone-dot-item"><span class="zone-dot" style="background:#00d5cc"></span>B: Perfect conds</div>
-           <div class="zone-dot-item"><span class="zone-dot" style="background:#787882"></span>C: Optical to find</div>
-           <div class="zone-dot-item"><span class="zone-dot" style="background:#ff0000"></span>D: Optical only</div>
+           ${FLAT_BANDS.map(
+             (b) => `<div class="zone-dot-item"><span class="zone-dot" style="background:${b.color};border-radius:2px"></span>${b.label}</div>`
+           ).join('')}
          </div>`;
 
   const zoneHtml = state.showJurisdictions
     ? `<div class="zone-legend-grid">
          <div class="zone-dot-item"><span class="zone-dot" style="background:#14965a"></span>Local Sighting</div>
          <div class="zone-dot-item"><span class="zone-dot" style="background:#38bdf8"></span>Follows Saudi</div>
-         <div class="zone-dot-item"><span class="zone-dot" style="background:#a855f7"></span>Turkey / ECFR</div>
+         <div class="zone-dot-item"><span class="zone-dot" style="background:#a855f7"></span>Türkiye / ECFR</div>
          <div class="zone-dot-item"><span class="zone-dot" style="background:#d9a742"></span>Regional Criteria</div>
          <div class="zone-dot-item"><span class="zone-dot" style="background:#ec4899"></span>Split Communities</div>
        </div>`
@@ -258,20 +291,21 @@ function renderLegend() {
   dom.mapLegend.innerHTML = modeHtml + zoneHtml;
 }
 
+function getHeroEyebrow(ev) {
+  if (ev.isHistoric) return 'HISTORIC SIGHTING';
+  if (ev.id === nextEidId) return 'NEXT RELEVANT EID';
+  if (ev.id === nextEventId && ev.eidType === 'ramadan') return 'NEXT RELEVANT EVENT';
+  if (ev.eidType === 'ramadan') return 'FUTURE RAMADAN';
+  return 'FUTURE EID';
+}
+
 function renderAll() {
   const ev = getCurrentEvent();
   const sel = state.selection;
   const activeEvening = state.eveningIdx === 0 ? ev.evening1 : ev.evening2;
 
-  // 1. Next / Historic Eid Probability Card
   const result = computeEidDayProbabilities(ev, sel, empiricalData.model);
-  if (ev.isHistoric) {
-    dom.heroEyebrow.textContent = 'HISTORIC SIGHTING';
-  } else if (ev.eidType === 'ramadan') {
-    dom.heroEyebrow.textContent = 'UPCOMING RAMADAN';
-  } else {
-    dom.heroEyebrow.textContent = 'NEXT RELEVANT EID';
-  }
+  dom.heroEyebrow.textContent = getHeroEyebrow(ev);
   dom.heroTitle.textContent = ev.shortLabel;
 
   const zone = sel.zone || 'local_sighting';
@@ -301,10 +335,12 @@ function renderAll() {
   }
   dom.ruleExplanation.textContent = result.ruleExplanation;
 
-  // 2. Empirical Analogs & Scatter Plot
-  const activeMetrics = state.eveningIdx === 0
-    ? (result.saAnchorBest ? result.saAnchorBest.metrics : result.localEv1)
-    : result.localEv2;
+  const activeMetrics =
+    state.eveningIdx === 0
+      ? result.saAnchorBest
+        ? result.saAnchorBest.metrics
+        : result.localEv1
+      : result.localEv2;
 
   const analogsInfo = findEmpiricalAnalogs(activeMetrics?.q, empiricalData.historical_observations, 0.08);
   if (analogsInfo.count > 0) {
@@ -328,7 +364,6 @@ function renderAll() {
     dom.analogList.appendChild(chip);
   }
 
-  // 3. Local Sky & Crescent Metrics
   const localM = state.eveningIdx === 0 ? result.localEv1 : result.localEv2;
   const yZone = classifyYallopZone(localM);
   const { stationProb } = predictNakedEyeProb(localM, empiricalData.model);
@@ -347,12 +382,9 @@ function renderAll() {
     ['Yallop Classification', yallopZoneLabel(yZone)],
   ];
   dom.metricsGrid.innerHTML = metricItems
-    .map(
-      ([k, v]) => `<div class="metric-box"><div class="metric-label">${k}</div><div class="metric-val">${v}</div></div>`
-    )
+    .map(([k, v]) => `<div class="metric-box"><div class="metric-label">${k}</div><div class="metric-val">${v}</div></div>`)
     .join('');
 
-  // 4. South Africa Observation Stations List
   dom.stationsList.innerHTML = '';
   const stationRows = saStations
     .map((st) => {
@@ -393,7 +425,6 @@ function renderAll() {
     dom.stationsList.appendChild(btn);
   }
 
-  // 5. Update Map Layers & Legend
   mapCtrl.updateVisibility({
     dateIso: activeEvening,
     mode: state.surfaceMode,
@@ -404,6 +435,145 @@ function renderAll() {
     showArcs: state.showArcs,
   });
   renderLegend();
+}
+
+// ---------------------------------------------------------------------------
+// Dedicated History Archive Mode (Zero Forecasts)
+// ---------------------------------------------------------------------------
+
+function getFilteredHistory() {
+  const mf = dom.histFilterMonth.value;
+  const of = dom.histFilterOutcome.value;
+  const q = normalizeText(dom.histFilterSearch.value.trim());
+
+  return sortedHistory.filter((r) => {
+    if (mf === 'eid_ram' && ![9, 10, 12].includes(r.hm)) return false;
+    if (mf !== 'all' && mf !== 'eid_ram' && String(r.hm) !== mf) return false;
+    if (of === 'sighted' && !r.sighted) return false;
+    if (of === 'not_sighted' && r.sighted) return false;
+    if (q) {
+      const hay = normalizeText(
+        `${r.hy} ${r.hname} ${HIJRI_MONTH_SHORT[r.hm] || ''} ${r.ev} ${r.start} ${r.eid || ''} ${(r.cities || []).join(' ')}`
+      );
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+function renderHistoryKpis() {
+  const total = sortedHistory.length;
+  const sighted = sortedHistory.filter((r) => r.sighted).length;
+  const notSighted = total - sighted;
+  const oldest = sortedHistory[sortedHistory.length - 1];
+  const newest = sortedHistory[0];
+  dom.historyKpis.innerHTML = `
+    <div class="kpi-chip"><span class="kpi-label">Stored Decisions</span><strong>${total}</strong></div>
+    <div class="kpi-chip kpi-yes"><span class="kpi-label">Sighted on 29th</span><strong>${sighted}</strong></div>
+    <div class="kpi-chip kpi-no"><span class="kpi-label">Not Sighted (30d)</span><strong>${notSighted}</strong></div>
+    <div class="kpi-chip"><span class="kpi-label">Archive Span</span><strong>${oldest?.hy}–${newest?.hy} AH</strong></div>
+    <div class="kpi-chip"><span class="kpi-label">GPS Field Logs</span><strong>${saReports.length}</strong></div>
+  `;
+}
+
+function renderHistoryInspector(obs) {
+  if (!obs) return;
+  const key = `${obs.hy}-${obs.hm}`;
+  dom.histSelectedPill.textContent = `${HIJRI_MONTH_SHORT[obs.hm] || obs.hname} ${obs.hy}`;
+  dom.histMapDatePill.textContent = obs.ev;
+
+  const outcomeBadge = obs.sighted
+    ? `<span class="badge badge-local_sighting">Sighted on 29th (29d prev) ✓</span>`
+    : `<span class="badge badge-split_communities">Not Sighted (30d Istikmal) ✕</span>`;
+
+  const citiesStr = obs.cities?.length ? obs.cities.join(', ') : 'National bulletin (no city listed)';
+  const srcStr = (obs.src || []).join(', ');
+
+  dom.historyDetailCard.innerHTML = `
+    <div class="card-header">
+      <div>
+        <div class="eyebrow">STORED HISTORICAL RECORD</div>
+        <h2>${obs.hname} ${obs.hy} AH</h2>
+      </div>
+      ${outcomeBadge}
+    </div>
+    <div class="location-line">29th Evening: ${formatDisplayDate(obs.ev)} (${obs.ev})</div>
+    <div class="metrics-grid">
+      <div class="metric-box"><div class="metric-label">1st of Month (SA)</div><div class="metric-val">${obs.start || '—'}</div></div>
+      <div class="metric-box"><div class="metric-label">${obs.hm === 12 ? 'Eid al-Adha (10th)' : obs.hm === 10 ? 'Eid al-Fitr (1st)' : 'Anchor Station'}</div><div class="metric-val">${obs.eid || obs.best_st || '—'}</div></div>
+      <div class="metric-box"><div class="metric-label">Crescent Width W′</div><div class="metric-val">${obs.w.toFixed(3)}'</div></div>
+      <div class="metric-box"><div class="metric-label">ARCV / ARCL</div><div class="metric-val">${obs.arcv.toFixed(2)}° / ${obs.arcl.toFixed(2)}°</div></div>
+      <div class="metric-box"><div class="metric-label">Sunset–Moonset Lag</div><div class="metric-val">${obs.lag.toFixed(1)} min</div></div>
+      <div class="metric-box"><div class="metric-label">Yallop q / Odeh V</div><div class="metric-val">${obs.sa_best_q.toFixed(3)} / ${obs.sa_best_v.toFixed(2)}</div></div>
+    </div>
+    <p class="rule-note"><strong>Logged Cities:</strong> ${citiesStr} · <strong>Sources:</strong> <code>${srcStr}</code></p>
+  `;
+
+  const pointMetrics = { valid: true, wArcmin: obs.w, arcvDeg: obs.arcv, q: obs.sa_best_q };
+  renderEmpiricalScatter(dom.historyScatterContainer, sortedHistory, pointMetrics, { usedWindow: 0.05, analogs: [obs] });
+
+  if (!historyMapCtrl) {
+    historyMapCtrl = new HistoryMapController({
+      containerId: 'history-map',
+      modelParams: empiricalData.model,
+      saStations,
+      saReports,
+    });
+  }
+  requestAnimationFrame(() => {
+    historyMapCtrl.map.invalidateSize({ pan: false });
+    historyMapCtrl.renderRecord(obs, state.histShowReports);
+  });
+}
+
+function renderHistoryView() {
+  renderHistoryKpis();
+  const rows = getFilteredHistory();
+  dom.histCountPill.textContent = `${rows.length} of ${sortedHistory.length} records`;
+
+  let selectedObs = rows.find((r) => `${r.hy}-${r.hm}` === state.selectedHistoryKey) || rows[0] || sortedHistory[0];
+  if (selectedObs) state.selectedHistoryKey = `${selectedObs.hy}-${selectedObs.hm}`;
+
+  dom.historyTableBody.innerHTML = '';
+  for (const r of rows) {
+    const k = `${r.hy}-${r.hm}`;
+    const tr = document.createElement('tr');
+    tr.className = k === state.selectedHistoryKey ? 'active' : '';
+    const dateCell = r.eid && r.hm === 12 ? `${r.start} (Eid ${r.eid})` : r.start;
+    tr.innerHTML = `
+      <td><strong>${HIJRI_MONTH_SHORT[r.hm] || r.hname} ${r.hy}</strong></td>
+      <td class="mono-cell">${r.ev}</td>
+      <td><span class="outcome-pill ${r.sighted ? 'yes' : 'no'}">${r.sighted ? 'Sighted ✓' : 'Not Sighted ✕'}</span></td>
+      <td class="mono-cell">${dateCell || '—'}</td>
+      <td class="mono-cell">${r.w.toFixed(2)}'</td>
+      <td class="mono-cell">${r.arcv.toFixed(1)}°</td>
+      <td class="mono-cell">${r.lag.toFixed(0)}m</td>
+      <td class="mono-cell">${r.sa_best_q.toFixed(2)}</td>
+      <td>${(r.cities || []).join(', ') || '—'}</td>
+    `;
+    tr.addEventListener('click', () => {
+      state.selectedHistoryKey = k;
+      renderHistoryView();
+    });
+    dom.historyTableBody.appendChild(tr);
+  }
+  renderHistoryInspector(selectedObs);
+}
+
+function setViewMode(mode) {
+  state.viewMode = mode;
+  const isHist = mode === 'history';
+  dom.forecastView.classList.toggle('hidden', isHist);
+  dom.forecastControls.classList.toggle('hidden', isHist);
+  dom.historyView.classList.toggle('hidden', !isHist);
+  dom.btnHistory.classList.toggle('btn-active-gold', isHist);
+  dom.btnHistory.textContent = isHist ? '← Forecasts' : 'History';
+
+  if (isHist) {
+    renderHistoryView();
+  } else {
+    setTimeout(() => mapCtrl.invalidate(), 40);
+  }
 }
 
 function renderMethodologyModal() {
@@ -420,12 +590,12 @@ function renderMethodologyModal() {
     .join('');
 
   dom.methodologyBody.innerHTML = `
-    <p><strong>Empirical Calibration:</strong> Calibrated on <strong>${cv.n_samples}</strong> historic South African 29th-evening decisions (1429–1448 AH / 2008–2026) compiled under COSSA/UUCSA naked-eye rules (${cv.n_sighted} sighted, ${cv.n_not_sighted} not sighted; 0 cross-source conflicts).</p>
+    <p><strong>Empirical Calibration:</strong> Calibrated on <strong>${cv.n_samples}</strong> historic South African 29th-evening decisions (1429–1448 AH / 2009–2026) compiled under COSSA/UUCSA naked-eye rules (${cv.n_sighted} sighted, ${cv.n_not_sighted} not sighted; 0 cross-source conflicts).</p>
     <ul>
       <li><strong>5-Fold Cross-Validation:</strong> ROC-AUC = <code>${cv.roc_auc}</code> · Accuracy = <code>${(cv.accuracy * 100).toFixed(1)}%</code> · Brier Score = <code>${cv.brier_score}</code></li>
       <li><strong>50% National Sighting Threshold:</strong> <code>q = ${cv.q50_midpoint}</code> (with hard Danjon limit <code>ARCL ≥ 6.4°</code> and <code>lag &gt; 0 min</code>)</li>
     </ul>
-    <h3>Empirical Calibration Bins (South Africa 2008–2026)</h3>
+    <h3>Empirical Calibration Bins (South Africa 2009–2026)</h3>
     <table>
       <thead><tr><th>Visibility Regime</th><th>Sighted / Total</th><th>Observed Rate</th><th>Model Pred</th></tr></thead>
       <tbody>${binsHtml}</tbody>
@@ -532,6 +702,18 @@ dom.chkJurisdictions.addEventListener('change', (e) => {
 dom.chkArcs.addEventListener('change', (e) => {
   state.showArcs = e.target.checked;
   renderAll();
+});
+
+dom.btnHistory.addEventListener('click', () => {
+  setViewMode(state.viewMode === 'forecast' ? 'history' : 'forecast');
+});
+
+dom.histFilterMonth.addEventListener('change', renderHistoryView);
+dom.histFilterOutcome.addEventListener('change', renderHistoryView);
+dom.histFilterSearch.addEventListener('input', renderHistoryView);
+dom.histChkReports.addEventListener('change', (e) => {
+  state.histShowReports = e.target.checked;
+  renderHistoryView();
 });
 
 dom.btnMethodology.addEventListener('click', () => {
