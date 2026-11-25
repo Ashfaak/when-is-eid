@@ -211,6 +211,11 @@ input[type='text']:focus {
   margin-bottom: 0.45rem;
 }
 
+.segmented.small .seg-btn {
+  padding: 0.32rem 0.45rem;
+  font-size: 0.72rem;
+}
+
 .seg-btn {
   border: none;
   background: transparent;
@@ -594,7 +599,7 @@ input[type='text']:focus {
 }
 
 .layer-panel {
-  width: 268px;
+  width: 304px;
 }
 
 .panel-title {
@@ -969,6 +974,46 @@ input[type='text']:focus {
   color: var(--text);
   border: 1px solid var(--border);
   font-size: 0.76rem;
+}
+
+.history-table th[data-tip],
+.metric-box[data-tip],
+.kpi-chip[data-tip],
+.zone-dot-item[data-tip],
+.mono-pill[data-tip] {
+  cursor: help;
+}
+
+.has-tip,
+.history-table th[data-tip] {
+  text-decoration: underline dotted rgba(217, 167, 66, 0.52);
+  text-underline-offset: 3px;
+}
+
+.site-vs-national-note {
+  margin-top: 0.55rem;
+  padding: 0.48rem 0.62rem;
+  border-radius: 8px;
+  background: rgba(28, 163, 155, 0.12);
+  border: 1px solid rgba(28, 163, 155, 0.35);
+  font-size: 0.74rem;
+  line-height: 1.42;
+  color: var(--ivory);
+}
+
+.app-tooltip {
+  position: fixed;
+  z-index: 5000;
+  pointer-events: none;
+  max-width: 280px;
+  padding: 0.48rem 0.64rem;
+  background: rgba(11, 20, 40, 0.98);
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.74rem;
+  line-height: 1.44;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.62);
 }
 
 @media (max-width: 960px) {

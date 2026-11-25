@@ -128,8 +128,9 @@
             <div class="layer-panel">
               <div class="panel-title">Map Layers</div>
               <div class="segmented small" role="group" aria-label="Surface mode">
-                <button id="mode-continuous" class="seg-btn active" type="button">Continuous %</button>
+                <button id="mode-yallop" class="seg-btn active" type="button">Yallop Bands</button>
                 <button id="mode-quantized" class="seg-btn" type="button">Flat Bands</button>
+                <button id="mode-continuous" class="seg-btn" type="button">Continuous %</button>
               </div>
               <label class="check-row">
                 <input type="checkbox" id="chk-heatmap" checked />
@@ -204,15 +205,15 @@
               <table class="history-table">
                 <thead>
                   <tr>
-                    <th>Hijri Month</th>
-                    <th>29th Evening</th>
-                    <th>SA Outcome</th>
-                    <th>1st / Eid</th>
-                    <th>W′</th>
-                    <th>ARCV</th>
-                    <th>Lag</th>
-                    <th>q</th>
-                    <th>Logged Cities</th>
+                    <th data-tip="Hijri calendar month and year of the lunar cycle being evaluated.">Hijri Month</th>
+                    <th data-tip="Gregorian evening of the 29th of the preceding Hijri month when physical observers look for the new crescent.">29th Evening</th>
+                    <th data-tip="Official South African UUCSA / COSSA determination: Sighted on the 29th (29-day previous month) or Not Sighted (completing 30 days / Istikmal).">SA Outcome</th>
+                    <th data-tip="Official 1st day of the new Hijri month in South Africa (and Eid al-Adha 10th Dhul Hijjah date when applicable).">1st / Eid</th>
+                    <th data-tip="Topocentric Crescent Width (W′) in arcminutes — apparent illuminated thickness of the lunar crescent.">W′</th>
+                    <th data-tip="Arc of Vision (ARCV) in degrees — vertical altitude separation between Moon and Sun at best observation time.">ARCV</th>
+                    <th data-tip="Moonset minus Sunset time in minutes — how long the crescent remains above the horizon after sunset.">Lag</th>
+                    <th data-tip="Yallop q visibility criterion evaluated at South Africa's best horizon site on the 29th evening.">q</th>
+                    <th data-tip="South African cities/towns where observers logged physical sightings (or weather outcomes) in historical archives.">Logged Cities</th>
                   </tr>
                 </thead>
                 <tbody id="history-table-body"></tbody>
@@ -265,6 +266,7 @@
       </div>
     </div>
 
+    <div id="app-tooltip" class="app-tooltip hidden" role="tooltip"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

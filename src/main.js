@@ -11,13 +11,13 @@ import {
   evaluateCrescent,
   findEmpiricalAnalogs,
   formatDisplayDate,
-  formatTimeInOffset,
   formatUtcTime,
   HIJRI_MONTH_SHORT,
   predictNakedEyeProb,
   yallopZoneLabel,
 } from './astronomy.js';
-import { EidMapController, FLAT_BANDS, HistoryMapController } from './map.js';
+import { formatLocalTime } from './timezones.js';
+import { EidMapController, FLAT_BANDS, HistoryMapController, YALLOP_BANDS } from './map.js';
 import { renderEmpiricalScatter } from './scatter.js';
 
 const { events, historicEvents, upcomingEvents, nextEventId, nextEidId, defaultEventId } = buildIslamicEvents(
@@ -29,11 +29,22 @@ const sortedHistory = [...empiricalData.historical_observations].sort((a, b) =>
   b.ev.localeCompare(a.ev)
 );
 
+const DEFAULT_SA_SELECTION = {
+  name: 'South Africa (National COSSA Network)',
+  country: 'South Africa',
+  iso: '710',
+  lat: -29.0,
+  lon: 24.5,
+  elevation_m: 340,
+  zone: 'local_sighting',
+  zoom: 5,
+};
+
 const state = {
   viewMode: 'forecast', // 'forecast' | 'history'
   eventId: defaultEventId,
   eveningIdx: 0, // 0 = Evening 1 (29th), 1 = Evening 2 (30th)
-  surfaceMode: 'continuous',
+  surfaceMode: 'yallop',
   heatmapEnabled: true,
   showStations: true,
   showReports: false,
@@ -41,16 +52,7 @@ const state = {
   showArcs: false,
   selectedHistoryKey: sortedHistory[0] ? `${sortedHistory[0].hy}-${sortedHistory[0].hm}` : null,
   histShowReports: false,
-  selection: {
-    name: 'South Africa (National COSSA Network)',
-    country: 'South Africa',
-    iso: '710',
-    lat: -33.9178,
-    lon: 18.4028,
-    elevation_m: 340,
-    zone: 'local_sighting',
-    zoom: 5,
-  },
+  selection: { ...DEFAULT_SA_SELECTION, lat: -33.9178, lon: 18.4028 },
 };
 
 const dom = {
@@ -89,6 +91,7 @@ const dom = {
   stationsTitle: document.getElementById('stations-title'),
   stationsCountPill: document.getElementById('stations-count-pill'),
   stationsList: document.getElementById('stations-list'),
+  modeYallop: document.getElementById('mode-yallop'),
   modeContinuous: document.getElementById('mode-continuous'),
   modeQuantized: document.getElementById('mode-quantized'),
   chkHeatmap: document.getElementById('chk-heatmap'),
@@ -109,6 +112,7 @@ const dom = {
   histSelectedPill: document.getElementById('hist-selected-pill'),
   historyScatterContainer: document.getElementById('history-scatter-container'),
   histMapDatePill: document.getElementById('hist-map-date-pill'),
+  appTooltip: document.getElementById('app-tooltip'),
 };
 
 let historyMapCtrl = null;
@@ -172,7 +176,17 @@ const mapCtrl = new EidMapController({
       countryMeta.zoom || 5
     );
   },
+  onResetCustomPoint: () => resetToSouthAfrica(),
 });
+
+function resetToSouthAfrica() {
+  state.selection = { ...DEFAULT_SA_SELECTION };
+  dom.searchInput.value = 'South Africa';
+  dom.searchResults.classList.add('hidden');
+  mapCtrl.setActiveCountry('710');
+  mapCtrl.resetView(-29.0, 24.5, 5);
+  renderAll();
+}
 
 function getCurrentEvent() {
   return events.find((e) => e.id === state.eventId) || upcomingEvents[0] || events[0];
@@ -187,7 +201,7 @@ function selectLocation(loc, zoom = 6) {
   dom.searchInput.value = loc.country === loc.name ? loc.name : `${loc.name}, ${loc.country}`;
   dom.searchResults.classList.add('hidden');
   mapCtrl.setActiveCountry(loc.iso || null);
-  mapCtrl.focusLocation(loc.lat, loc.lon, zoom, loc.name);
+  mapCtrl.focusLocation(loc.lat, loc.lon, zoom, loc.name, { isCustom: Boolean(loc.isCustom) });
   renderAll();
 }
 
@@ -266,17 +280,26 @@ function handleSearchInput() {
 }
 
 function renderLegend() {
-  const modeHtml =
-    state.surfaceMode === 'continuous'
-      ? `<div><strong>Continuous Empirical Naked-Eye Probability</strong> (viewport-adaptive)</div>
-         <div class="legend-gradient"></div>
-         <div class="legend-ticks"><span>0% (Below limit)</span><span>50%</span><span>100%</span></div>`
-      : `<div><strong>Flat Visibility Bands</strong> (8-level crisp contours)</div>
-         <div class="flat-legend-list">
-           ${FLAT_BANDS.map(
-             (b) => `<div class="zone-dot-item" title="${b.pctRange} local sighting probability"><span class="zone-dot" style="background:${b.color};border-radius:2px"></span>${b.label}</div>`
-           ).join('')}
-         </div>`;
+  let modeHtml;
+  if (state.surfaceMode === 'yallop') {
+    modeHtml = `<div><strong>Yallop Visibility Bands</strong></div>
+       <div class="flat-legend-list">
+         ${YALLOP_BANDS.map(
+           (b) => `<div class="zone-dot-item" data-tip="${b.title}"><span class="zone-dot" style="background:${b.color};border-radius:2px"></span>${b.label}</div>`
+         ).join('')}
+       </div>`;
+  } else if (state.surfaceMode === 'quantized') {
+    modeHtml = `<div><strong>Flat Visibility Bands</strong></div>
+       <div class="flat-legend-list">
+         ${FLAT_BANDS.map(
+           (b) => `<div class="zone-dot-item" data-tip="${b.pctRange} local single-site naked-eye sighting probability"><span class="zone-dot" style="background:${b.color};border-radius:2px"></span>${b.label}</div>`
+         ).join('')}
+       </div>`;
+  } else {
+    modeHtml = `<div><strong>Continuous Empirical Naked-Eye Probability</strong></div>
+       <div class="legend-gradient"></div>
+       <div class="legend-ticks"><span>0% (Below limit)</span><span>50%</span><span>100%</span></div>`;
+  }
 
   const zoneHtml = state.showJurisdictions
     ? `<div class="zone-legend-grid">
@@ -333,6 +356,16 @@ function renderAll() {
     `;
     dom.eidDaysContainer.appendChild(row);
   }
+
+  const isSouthAfrica = sel.iso === '710' || sel.country === 'South Africa';
+  const isSpecificSaSite =
+    isSouthAfrica && sel.name !== 'South Africa (National COSSA Network)' && sel.name !== 'South Africa';
+  if (isSpecificSaSite) {
+    const note = document.createElement('div');
+    note.className = 'site-vs-national-note';
+    note.innerHTML = `<strong>${sel.name} local horizon:</strong> ${(result.localStationProb1 * 100).toFixed(1)}% single-site sighting chance · <strong>Official Eid date:</strong> ${(result.days[0].probability * 100).toFixed(1)}% / ${(result.days[1].probability * 100).toFixed(1)}% (South Africa follows national UUCSA/COSSA consensus across all sites).`;
+    dom.eidDaysContainer.appendChild(note);
+  }
   dom.ruleExplanation.textContent = result.ruleExplanation;
 
   const activeMetrics =
@@ -349,6 +382,8 @@ function renderAll() {
   } else {
     dom.analogSummaryPill.textContent = '0 historical analogs';
   }
+  dom.analogSummaryPill.dataset.tip =
+    'Count and percentage of historic South African 29th evenings (2009–2026) whose Yallop q fell within ±0.08 of this evening.';
   dom.analogDescription.textContent =
     `Evaluated for ${activeEvening} (${state.eveningIdx === 0 ? '29th' : '30th'} evening)${result.saAnchorBest && state.eveningIdx === 0 ? ` at SA best horizon (${result.saAnchorBest.name})` : ''}. Gold diamond = candidate evening; shaded band = similar visibility size (Δq ± ${analogsInfo.usedWindow?.toFixed(2) || '0.08'}).`;
 
@@ -368,21 +403,70 @@ function renderAll() {
   const yZone = classifyYallopZone(localM);
   const { stationProb } = predictNakedEyeProb(localM, empiricalData.model);
   dom.yallopPill.textContent = `Yallop ${yZone} · ${(stationProb * 100).toFixed(1)}%`;
+  dom.yallopPill.dataset.tip =
+    'Yallop 1997 visibility zone (A–F) paired with this specific location’s single-site naked-eye sighting probability.';
+
+  const sunsetFmt = formatLocalTime(localM.sunsetTime, sel);
+  const moonsetFmt = formatLocalTime(localM.moonsetTime, sel);
+  const tzNote = sunsetFmt.ianaTz ? ` (${sunsetFmt.ianaTz}, automatic DST applied)` : ' (nautical longitude estimate)';
 
   const metricItems = [
-    ['Sunset (Approx Local)', formatTimeInOffset(localM.sunsetTime, sel.lon)],
-    ['Moonset (Approx Local)', formatTimeInOffset(localM.moonsetTime, sel.lon)],
-    ['Lag (Moonset − Sunset)', localM.valid ? `${localM.lagMin.toFixed(1)} min` : '—'],
-    ['Moon Age at Sunset', localM.ageHours !== null && localM.ageHours !== undefined ? `${localM.ageHours.toFixed(1)} hrs` : '—'],
-    ['Crescent Width W', localM.valid ? `${localM.wArcmin.toFixed(3)}'` : '—'],
-    ['Arc of Vision (ARCV)', localM.valid ? `${localM.arcvDeg.toFixed(2)}°` : '—'],
-    ['Elongation (ARCL)', localM.valid ? `${localM.arclDeg.toFixed(2)}°` : '—'],
-    ['Yallop q / Odeh V', localM.valid ? `${localM.q.toFixed(3)} / ${localM.v.toFixed(2)}` : '—'],
-    ['Conjunction (New Moon)', formatUtcTime(localM.conjunctionUtc ? { date: new Date(localM.conjunctionUtc) } : null)],
-    ['Yallop Classification', yallopZoneLabel(yZone)],
+    [
+      sunsetFmt.isExact ? 'Sunset (Local)' : 'Sunset (Approx Local)',
+      sunsetFmt.text,
+      `Local solar sunset time on the selected observation evening${tzNote}.`,
+    ],
+    [
+      moonsetFmt.isExact ? 'Moonset (Local)' : 'Moonset (Approx Local)',
+      moonsetFmt.text,
+      `Local upper-limb moonset time on the selected evening${tzNote}.`,
+    ],
+    [
+      'Lag (Moonset − Sunset)',
+      localM.valid ? `${localM.lagMin.toFixed(1)} min` : '—',
+      'Minutes between sunset and moonset. Negative lag means the Moon sets before the Sun and cannot be seen.',
+    ],
+    [
+      'Moon Age at Sunset',
+      localM.ageHours !== null && localM.ageHours !== undefined ? `${localM.ageHours.toFixed(1)} hrs` : '—',
+      'Hours elapsed since geocentric conjunction (astronomical New Moon) at local sunset.',
+    ],
+    [
+      'Crescent Width W',
+      localM.valid ? `${localM.wArcmin.toFixed(3)}'` : '—',
+      'Topocentric angular thickness of the lit crescent in arcminutes (′). Wider crescents are easier for the naked eye to resolve.',
+    ],
+    [
+      'Arc of Vision (ARCV)',
+      localM.valid ? `${localM.arcvDeg.toFixed(2)}°` : '—',
+      'Altitude difference between the Moon and Sun at best observation time (sunset + 4/9 of lag). Controls twilight sky brightness.',
+    ],
+    [
+      'Elongation (ARCL)',
+      localM.valid ? `${localM.arclDeg.toFixed(2)}°` : '—',
+      'Angular separation between the Sun and Moon in degrees. Below the Danjon limit (~6.4°–7°), no lit crescent can form.',
+    ],
+    [
+      'Yallop q / Odeh V',
+      localM.valid ? `${localM.q.toFixed(3)} / ${localM.v.toFixed(2)}` : '—',
+      'Combined crescent visibility indices balancing ARCV against crescent width W. Higher values indicate an easier naked-eye sighting.',
+    ],
+    [
+      'Conjunction (New Moon)',
+      formatUtcTime(localM.conjunctionUtc ? { date: new Date(localM.conjunctionUtc) } : null),
+      'Exact UTC instant of geocentric New Moon conjunction (0° ecliptic elongation) for this lunar month.',
+    ],
+    [
+      'Yallop Classification',
+      yallopZoneLabel(yZone),
+      'Bernard Yallop (1997, HMNAO TN 69) global visibility category A–F based on q.',
+    ],
   ];
   dom.metricsGrid.innerHTML = metricItems
-    .map(([k, v]) => `<div class="metric-box"><div class="metric-label">${k}</div><div class="metric-val">${v}</div></div>`)
+    .map(
+      ([k, v, tip]) =>
+        `<div class="metric-box" data-tip="${tip}"><div class="metric-label has-tip">${k}</div><div class="metric-val">${v}</div></div>`
+    )
     .join('');
 
   dom.stationsList.innerHTML = '';
@@ -468,11 +552,11 @@ function renderHistoryKpis() {
   const oldest = sortedHistory[sortedHistory.length - 1];
   const newest = sortedHistory[0];
   dom.historyKpis.innerHTML = `
-    <div class="kpi-chip"><span class="kpi-label">Stored Decisions</span><strong>${total}</strong></div>
-    <div class="kpi-chip kpi-yes"><span class="kpi-label">Sighted on 29th</span><strong>${sighted}</strong></div>
-    <div class="kpi-chip kpi-no"><span class="kpi-label">Not Sighted (30d)</span><strong>${notSighted}</strong></div>
-    <div class="kpi-chip"><span class="kpi-label">Archive Span</span><strong>${oldest?.hy}–${newest?.hy} AH</strong></div>
-    <div class="kpi-chip"><span class="kpi-label">GPS Field Logs</span><strong>${saReports.length}</strong></div>
+    <div class="kpi-chip" data-tip="Total verified monthly South African UUCSA / COSSA / MCW crescent decisions stored in the archive."><span class="kpi-label has-tip">Stored Decisions</span><strong>${total}</strong></div>
+    <div class="kpi-chip kpi-yes" data-tip="Months where a verified naked-eye crescent sighting was confirmed in South Africa on the 29th evening (29-day preceding month)."><span class="kpi-label has-tip">Sighted on 29th</span><strong>${sighted}</strong></div>
+    <div class="kpi-chip kpi-no" data-tip="Months with no confirmed South African sighting on the 29th evening, completing 30 days (Istikmal)."><span class="kpi-label has-tip">Not Sighted (30d)</span><strong>${notSighted}</strong></div>
+    <div class="kpi-chip" data-tip="Hijri year range covered by the stored South African observation records."><span class="kpi-label has-tip">Archive Span</span><strong>${oldest?.hy}–${newest?.hy} AH</strong></div>
+    <div class="kpi-chip" data-tip="Individual GPS-tagged South African field observer reports imported from HilalWatchZA."><span class="kpi-label has-tip">GPS Field Logs</span><strong>${saReports.length}</strong></div>
   `;
 }
 
@@ -499,12 +583,12 @@ function renderHistoryInspector(obs) {
     </div>
     <div class="location-line">29th Evening: ${formatDisplayDate(obs.ev)} (${obs.ev})</div>
     <div class="metrics-grid">
-      <div class="metric-box"><div class="metric-label">1st of Month (SA)</div><div class="metric-val">${obs.start || '—'}</div></div>
-      <div class="metric-box"><div class="metric-label">${obs.hm === 12 ? 'Eid al-Adha (10th)' : obs.hm === 10 ? 'Eid al-Fitr (1st)' : 'Anchor Station'}</div><div class="metric-val">${obs.eid || obs.best_st || '—'}</div></div>
-      <div class="metric-box"><div class="metric-label">Crescent Width W′</div><div class="metric-val">${obs.w.toFixed(3)}'</div></div>
-      <div class="metric-box"><div class="metric-label">ARCV / ARCL</div><div class="metric-val">${obs.arcv.toFixed(2)}° / ${obs.arcl.toFixed(2)}°</div></div>
-      <div class="metric-box"><div class="metric-label">Sunset–Moonset Lag</div><div class="metric-val">${obs.lag.toFixed(1)} min</div></div>
-      <div class="metric-box"><div class="metric-label">Yallop q / Odeh V</div><div class="metric-val">${obs.sa_best_q.toFixed(3)} / ${obs.sa_best_v.toFixed(2)}</div></div>
+      <div class="metric-box" data-tip="Official 1st Gregorian date of this Hijri month as declared in South Africa."><div class="metric-label has-tip">1st of Month (SA)</div><div class="metric-val">${obs.start || '—'}</div></div>
+      <div class="metric-box" data-tip="${obs.hm === 12 || obs.hm === 10 ? 'Official Eid date celebrated in South Africa for this lunar month.' : 'Best-horizon South African weather hub used to score this evening.'}"><div class="metric-label has-tip">${obs.hm === 12 ? 'Eid al-Adha (10th)' : obs.hm === 10 ? 'Eid al-Fitr (1st)' : 'Anchor Station'}</div><div class="metric-val">${obs.eid || obs.best_st || '—'}</div></div>
+      <div class="metric-box" data-tip="Topocentric Crescent Width (W′) in arcminutes at the best South African horizon."><div class="metric-label has-tip">Crescent Width W′</div><div class="metric-val">${obs.w.toFixed(3)}'</div></div>
+      <div class="metric-box" data-tip="Arc of Vision (vertical Sun–Moon separation at best time) and Elongation (ARCL, angular Sun–Moon separation) in degrees."><div class="metric-label has-tip">ARCV / ARCL</div><div class="metric-val">${obs.arcv.toFixed(2)}° / ${obs.arcl.toFixed(2)}°</div></div>
+      <div class="metric-box" data-tip="Minutes elapsed between local sunset and moonset at the anchor horizon."><div class="metric-label has-tip">Sunset–Moonset Lag</div><div class="metric-val">${obs.lag.toFixed(1)} min</div></div>
+      <div class="metric-box" data-tip="Yallop 1997 (q) and Odeh 2004 (V) empirical visibility indices at South Africa’s best horizon."><div class="metric-label has-tip">Yallop q / Odeh V</div><div class="metric-val">${obs.sa_best_q.toFixed(3)} / ${obs.sa_best_v.toFixed(2)}</div></div>
     </div>
     <p class="rule-note"><strong>Logged Cities:</strong> ${citiesStr} · <strong>Sources:</strong> <code>${srcStr}</code></p>
   `;
@@ -640,20 +724,7 @@ document.addEventListener('click', (e) => {
   if (!e.target.closest('.search-group')) dom.searchResults.classList.add('hidden');
 });
 
-dom.clearSearch.addEventListener('click', () => {
-  selectLocation(
-    {
-      name: 'South Africa (National COSSA Network)',
-      country: 'South Africa',
-      iso: '710',
-      lat: -29.0,
-      lon: 24.5,
-      elevation_m: 340,
-      zone: 'local_sighting',
-    },
-    5
-  );
-});
+dom.clearSearch.addEventListener('click', () => resetToSouthAfrica());
 
 dom.btnEv1.addEventListener('click', () => {
   state.eveningIdx = 0;
@@ -669,19 +740,17 @@ dom.btnEv2.addEventListener('click', () => {
   renderAll();
 });
 
-dom.modeContinuous.addEventListener('click', () => {
-  state.surfaceMode = 'continuous';
-  dom.modeContinuous.classList.add('active');
-  dom.modeQuantized.classList.remove('active');
+function setSurfaceMode(mode) {
+  state.surfaceMode = mode;
+  dom.modeYallop.classList.toggle('active', mode === 'yallop');
+  dom.modeQuantized.classList.toggle('active', mode === 'quantized');
+  dom.modeContinuous.classList.toggle('active', mode === 'continuous');
   renderAll();
-});
+}
 
-dom.modeQuantized.addEventListener('click', () => {
-  state.surfaceMode = 'quantized';
-  dom.modeQuantized.classList.add('active');
-  dom.modeContinuous.classList.remove('active');
-  renderAll();
-});
+dom.modeYallop.addEventListener('click', () => setSurfaceMode('yallop'));
+dom.modeQuantized.addEventListener('click', () => setSurfaceMode('quantized'));
+dom.modeContinuous.addEventListener('click', () => setSurfaceMode('continuous'));
 
 dom.chkHeatmap.addEventListener('change', (e) => {
   state.heatmapEnabled = e.target.checked;
@@ -729,6 +798,39 @@ dom.btnAcknowledgements.addEventListener('click', () => {
 });
 dom.ackCloseBtn.addEventListener('click', () => dom.ackModal.classList.add('hidden'));
 dom.ackCloseBg.addEventListener('click', () => dom.ackModal.classList.add('hidden'));
+
+// Floating explainer tooltips
+let activeTipTarget = null;
+function showTooltipFor(el) {
+  const text = el?.dataset?.tip;
+  if (!text) return;
+  activeTipTarget = el;
+  dom.appTooltip.textContent = text;
+  dom.appTooltip.classList.remove('hidden');
+  const rect = el.getBoundingClientRect();
+  const tipRect = dom.appTooltip.getBoundingClientRect();
+  let top = rect.top - tipRect.height - 8;
+  if (top < 8) top = rect.bottom + 8;
+  let left = rect.left + rect.width / 2 - tipRect.width / 2;
+  left = Math.max(8, Math.min(window.innerWidth - tipRect.width - 8, left));
+  dom.appTooltip.style.top = `${top}px`;
+  dom.appTooltip.style.left = `${left}px`;
+}
+function hideTooltip() {
+  activeTipTarget = null;
+  dom.appTooltip.classList.add('hidden');
+}
+document.addEventListener('mouseover', (e) => {
+  const el = e.target.closest?.('[data-tip]');
+  if (el) showTooltipFor(el);
+  else if (activeTipTarget) hideTooltip();
+});
+document.addEventListener('mouseout', (e) => {
+  if (activeTipTarget && (!e.relatedTarget || !activeTipTarget.contains(e.relatedTarget))) {
+    hideTooltip();
+  }
+});
+document.addEventListener('scroll', hideTooltip, true);
 
 // Initial boot
 dom.searchInput.value = 'South Africa';

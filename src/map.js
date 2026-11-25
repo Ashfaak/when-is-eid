@@ -11,6 +11,21 @@ import { feature as topoFeature } from 'topojson-client';
 import worldAtlas from 'world-atlas/countries-110m.json';
 import { evaluateCrescent, getEveningGridEvaluator, predictNakedEyeProb } from './astronomy.js';
 
+export const YALLOP_BANDS = [
+  { zone: 'A', minQ: 0.216, label: 'A — Easily visible', title: 'Yallop Zone A (q > +0.216): Easily visible to the naked eye', color: '#10b981', rgba: [16, 185, 129, 175] },
+  { zone: 'B', minQ: -0.014, label: 'B — Visible if perfect conditions', title: 'Yallop Zone B (−0.014 < q ≤ +0.216): Visible under perfect atmospheric conditions', color: '#84cc16', rgba: [132, 204, 22, 162] },
+  { zone: 'C', minQ: -0.160, label: 'C — May need optical aid to find', title: 'Yallop Zone C (−0.160 < q ≤ −0.014): May need optical aid to find, then naked eye', color: '#eab308', rgba: [234, 179, 8, 154] },
+  { zone: 'D', minQ: -0.232, label: 'D — Needs optical aid only', title: 'Yallop Zone D (−0.232 < q ≤ −0.160): Will need optical aid to find the crescent', color: '#d97706', rgba: [217, 119, 6, 148] },
+  { zone: 'E', minQ: -0.293, label: 'E — Not visible with telescope', title: 'Yallop Zone E (−0.293 < q ≤ −0.232): Not visible with a conventional telescope', color: '#c93b3b', rgba: [201, 59, 59, 138] },
+];
+
+function yallopQToRgba(q) {
+  for (const band of YALLOP_BANDS) {
+    if (q > band.minQ) return band.rgba;
+  }
+  return [0, 0, 0, 0];
+}
+
 export const FLAT_BANDS = [
   { min: 0.95, max: 1.01, label: 'Easily visible', pctRange: '95–100%', color: '#34d399', rgba: [52, 211, 153, 175] },
   { min: 0.85, max: 0.95, label: 'Readily visible (naked eye)', pctRange: '85–95%', color: '#10b981', rgba: [16, 185, 129, 168] },
@@ -63,6 +78,48 @@ function fixAntimeridianGeoJson(geo) {
   };
 }
 
+function pointInRing(lon, lat, ring) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i][0];
+    const yi = ring[i][1];
+    const xj = ring[j][0];
+    const yj = ring[j][1];
+    const intersect = yi > lat !== yj > lat && lon < ((xj - xi) * (lat - yi)) / (yj - yi + 1e-12) + xi;
+    if (intersect) inside = !inside;
+  }
+  return inside;
+}
+
+function pointInPolygonCoords(lon, lat, polyCoords) {
+  if (!polyCoords.length) return false;
+  if (!pointInRing(lon, lat, polyCoords[0])) return false;
+  for (let h = 1; h < polyCoords.length; h++) {
+    if (pointInRing(lon, lat, polyCoords[h])) return false;
+  }
+  return true;
+}
+
+function findCountryIsoAt(geo, lat, lon) {
+  if (!geo?.features) return null;
+  const normLon = ((lon + 180) % 360 + 360) % 360 - 180;
+  const candidateLons = [normLon, normLon + 360, normLon - 360];
+  for (const feat of geo.features) {
+    const g = feat.geometry;
+    if (!g) continue;
+    for (const testLon of candidateLons) {
+      if (g.type === 'Polygon') {
+        if (pointInPolygonCoords(testLon, lat, g.coordinates)) return String(feat.id || '');
+      } else if (g.type === 'MultiPolygon') {
+        for (const poly of g.coordinates) {
+          if (pointInPolygonCoords(testLon, lat, poly)) return String(feat.id || '');
+        }
+      }
+    }
+  }
+  return null;
+}
+
 function probToRgba(p) {
   if (p <= 0.005) return [0, 0, 0, 0];
   const alpha = Math.round(38 + Math.min(1, p * 1.15) * 128);
@@ -111,7 +168,7 @@ class VisibilityCanvasLayer extends L.Layer {
     super();
     this.dateIso = options.dateIso;
     this.modelParams = options.modelParams;
-    this.mode = options.mode || 'continuous'; // 'continuous' | 'quantized' (8-band flat)
+    this.mode = options.mode || 'yallop'; // 'yallop' | 'quantized' (8-band flat) | 'continuous'
     this.enabled = options.enabled ?? true;
     this.canvas = null;
   }
@@ -153,8 +210,8 @@ class VisibilityCanvasLayer extends L.Layer {
     this.canvas.style.width = `${size.x}px`;
     this.canvas.style.height = `${size.y}px`;
 
-    // Higher backing resolution in Flat Bands mode so contour boundaries stay sharp & detailed
-    const maxW = this.mode === 'quantized' ? 520 : 380;
+    // Higher backing resolution in Yallop & Flat Bands modes so contour boundaries stay sharp & detailed
+    const maxW = this.mode === 'continuous' ? 380 : 520;
     const scale = Math.min(1, maxW / size.x);
     const w = Math.max(80, Math.round(size.x * scale));
     const h = Math.max(60, Math.round(size.y * scale));
@@ -172,7 +229,9 @@ class VisibilityCanvasLayer extends L.Layer {
     const evalGridPoint = getEveningGridEvaluator(this.dateIso);
     const gx = 38;
     const gy = 24;
-    const gridP = new Float32Array((gx + 1) * (gy + 1));
+    const isYallop = this.mode === 'yallop';
+    const gridVals = new Float32Array((gx + 1) * (gy + 1));
+    const gridValid = isYallop ? new Float32Array((gx + 1) * (gy + 1)) : null;
 
     for (let j = 0; j <= gy; j++) {
       const cy = (j / gy) * size.y;
@@ -182,12 +241,24 @@ class VisibilityCanvasLayer extends L.Layer {
         const clampedLat = Math.max(-72, Math.min(72, ll.lat));
         const lon = ((ll.lng + 180) % 360 + 360) % 360 - 180;
         const m = evalGridPoint(clampedLat, lon);
-        const { stationProb } = predictNakedEyeProb(m, this.modelParams);
-        gridP[j * (gx + 1) + i] = stationProb;
+        const kIdx = j * (gx + 1) + i;
+        if (isYallop) {
+          const feasible =
+            m.valid && m.lagMin > 0 && (m.ageHours === null || m.ageHours > 0) && m.arclDeg >= 6.4;
+          gridValid[kIdx] = feasible ? 1 : 0;
+          gridVals[kIdx] = feasible ? m.q : -0.35;
+        } else {
+          const { stationProb } = predictNakedEyeProb(m, this.modelParams);
+          gridVals[kIdx] = stationProb;
+        }
       }
     }
 
-    const colorFn = this.mode === 'quantized' ? probToFlatBandRgba : probToRgba;
+    const colorFn = isYallop
+      ? yallopQToRgba
+      : this.mode === 'quantized'
+        ? probToFlatBandRgba
+        : probToRgba;
 
     for (let py = 0; py < h; py++) {
       const fy = (py / (h - 1)) * gy;
@@ -198,18 +269,40 @@ class VisibilityCanvasLayer extends L.Layer {
         const i0 = Math.min(gx - 1, Math.floor(fx));
         const tx = fx - i0;
 
-        const p00 = gridP[j0 * (gx + 1) + i0];
-        const p10 = gridP[j0 * (gx + 1) + (i0 + 1)];
-        const p01 = gridP[(j0 + 1) * (gx + 1) + i0];
-        const p11 = gridP[(j0 + 1) * (gx + 1) + (i0 + 1)];
+        const w00 = (1 - tx) * (1 - ty);
+        const w10 = tx * (1 - ty);
+        const w01 = (1 - tx) * ty;
+        const w11 = tx * ty;
 
-        const p =
-          p00 * (1 - tx) * (1 - ty) +
-          p10 * tx * (1 - ty) +
-          p01 * (1 - tx) * ty +
-          p11 * tx * ty;
+        const k00 = j0 * (gx + 1) + i0;
+        const k10 = k00 + 1;
+        const k01 = k00 + (gx + 1);
+        const k11 = k01 + 1;
 
-        const [r, g, b, a] = colorFn(p);
+        let r = 0, g = 0, b = 0, a = 0;
+        if (isYallop) {
+          const v =
+            gridValid[k00] * w00 +
+            gridValid[k10] * w10 +
+            gridValid[k01] * w01 +
+            gridValid[k11] * w11;
+          if (v >= 0.5) {
+            const qVal =
+              gridVals[k00] * w00 +
+              gridVals[k10] * w10 +
+              gridVals[k01] * w01 +
+              gridVals[k11] * w11;
+            [r, g, b, a] = yallopQToRgba(qVal);
+          }
+        } else {
+          const p =
+            gridVals[k00] * w00 +
+            gridVals[k10] * w10 +
+            gridVals[k01] * w01 +
+            gridVals[k11] * w11;
+          [r, g, b, a] = colorFn(p);
+        }
+
         const idx = (py * w + px) * 4;
         buf[idx] = r;
         buf[idx + 1] = g;
@@ -222,18 +315,28 @@ class VisibilityCanvasLayer extends L.Layer {
 }
 
 export class EidMapController {
-  constructor({ containerId, modelParams, jurisdictionsData, saStations, saReports, onSelectLocation, onSelectCountry }) {
+  constructor({
+    containerId,
+    modelParams,
+    jurisdictionsData,
+    saStations,
+    saReports,
+    onSelectLocation,
+    onSelectCountry,
+    onResetCustomPoint,
+  }) {
     this.modelParams = modelParams;
     this.jurisdictionsData = jurisdictionsData;
     this.saStations = saStations;
     this.saReports = saReports;
     this.onSelectLocation = onSelectLocation;
     this.onSelectCountry = onSelectCountry;
+    this.onResetCustomPoint = onResetCustomPoint;
 
     this.countryByIso = new Map(jurisdictionsData.countries.map((c) => [c.iso, c]));
     this.activeIso = '710';
     this.activeDateIso = null;
-    this.surfaceMode = 'continuous';
+    this.surfaceMode = 'yallop';
 
     this.map = L.map(containerId, {
       center: [-29.0, 24.5],
@@ -250,6 +353,7 @@ export class EidMapController {
     this.map.createPane('stationPane').style.zIndex = 650;
 
     const geo = fixAntimeridianGeoJson(topoFeature(worldAtlas, worldAtlas.objects.countries));
+    this.worldGeo = geo;
     this.jurisdictionLayer = L.geoJSON(geo, {
       pane: 'jurisdictionPane',
       style: (feat) => this._styleCountry(feat),
@@ -269,6 +373,7 @@ export class EidMapController {
               name,
               country: name,
               iso: String(feat.id || ''),
+              tzIso: String(feat.id || ''),
               lat: e.latlng.lat,
               lon: e.latlng.lng,
               elevation_m: 0,
@@ -282,7 +387,7 @@ export class EidMapController {
     this.visLayer = new VisibilityCanvasLayer({
       dateIso: null,
       modelParams: this.modelParams,
-      mode: 'continuous',
+      mode: 'yallop',
       enabled: true,
     }).addTo(this.map);
 
@@ -292,14 +397,18 @@ export class EidMapController {
     this.pinGroup = L.layerGroup().addTo(this.map);
 
     this.map.on('click', (e) => {
+      if (e.originalEvent && e.originalEvent.detail >= 2) return;
+      const tzIso = findCountryIsoAt(this.worldGeo, e.latlng.lat, e.latlng.lng);
       this.onSelectLocation({
         name: `Custom Point (${e.latlng.lat.toFixed(2)}°, ${e.latlng.lng.toFixed(2)}°)`,
         country: 'Custom Coordinates',
         iso: null,
+        tzIso,
         lat: e.latlng.lat,
         lon: e.latlng.lng,
         elevation_m: 0,
         zone: 'local_sighting',
+        isCustom: true,
       });
     });
   }
@@ -337,18 +446,39 @@ export class EidMapController {
     this._renderFollowerArcs();
   }
 
-  focusLocation(lat, lon, zoom = 6, label = '') {
+  clearPin() {
+    this.pinGroup.clearLayers();
+  }
+
+  resetView(lat = -29.0, lon = 24.5, zoom = 5) {
+    this.pinGroup.clearLayers();
+    this.map.flyTo([lat, lon], zoom, { duration: 0.65 });
+  }
+
+  focusLocation(lat, lon, zoom = 6, label = '', { isCustom = false } = {}) {
     this.map.flyTo([lat, lon], zoom, { duration: 0.65 });
     this.pinGroup.clearLayers();
     const marker = L.circleMarker([lat, lon], {
       pane: 'stationPane',
-      radius: 7,
+      radius: isCustom ? 8 : 7,
       color: '#f2cb6b',
       weight: 2.5,
       fillColor: '#d9a742',
       fillOpacity: 0.9,
     });
-    if (label) marker.bindTooltip(label, { direction: 'top' });
+    if (isCustom) {
+      marker.bindTooltip(`${label}<br/><span style="color:#9eb0cc">Double-click point to remove &amp; reset</span>`, {
+        direction: 'top',
+      });
+      marker.on('click', (e) => L.DomEvent.stopPropagation(e));
+      marker.on('dblclick', (e) => {
+        L.DomEvent.stopPropagation(e);
+        L.DomEvent.preventDefault(e);
+        if (this.onResetCustomPoint) this.onResetCustomPoint();
+      });
+    } else if (label) {
+      marker.bindTooltip(label, { direction: 'top' });
+    }
     marker.addTo(this.pinGroup);
   }
 
