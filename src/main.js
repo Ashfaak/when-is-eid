@@ -37,7 +37,7 @@ const state = {
   heatmapEnabled: true,
   showStations: true,
   showReports: false,
-  showJurisdictions: true,
+  showJurisdictions: false,
   showArcs: false,
   selectedHistoryKey: sortedHistory[0] ? `${sortedHistory[0].hy}-${sortedHistory[0].hm}` : null,
   histShowReports: false,
@@ -271,10 +271,10 @@ function renderLegend() {
       ? `<div><strong>Continuous Empirical Naked-Eye Probability</strong> (viewport-adaptive)</div>
          <div class="legend-gradient"></div>
          <div class="legend-ticks"><span>0% (Below limit)</span><span>50%</span><span>100%</span></div>`
-      : `<div><strong>Flat Visibility Bands</strong> (8-level crisp contour bands)</div>
-         <div class="zone-legend-grid" style="border-top:none;padding-top:4px;margin-top:4px">
+      : `<div><strong>Flat Visibility Bands</strong> (8-level crisp contours)</div>
+         <div class="flat-legend-list">
            ${FLAT_BANDS.map(
-             (b) => `<div class="zone-dot-item"><span class="zone-dot" style="background:${b.color};border-radius:2px"></span>${b.label}</div>`
+             (b) => `<div class="zone-dot-item" title="${b.pctRange} local sighting probability"><span class="zone-dot" style="background:${b.color};border-radius:2px"></span>${b.label}</div>`
            ).join('')}
          </div>`;
 

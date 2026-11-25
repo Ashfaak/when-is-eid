@@ -644,6 +644,13 @@ input[type='text']:focus {
   border-top: 1px solid var(--border-subtle);
 }
 
+.flat-legend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 0.4rem;
+}
+
 .zone-dot-item {
   display: flex;
   align-items: center;

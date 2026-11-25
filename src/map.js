@@ -12,15 +12,56 @@ import worldAtlas from 'world-atlas/countries-110m.json';
 import { evaluateCrescent, getEveningGridEvaluator, predictNakedEyeProb } from './astronomy.js';
 
 export const FLAT_BANDS = [
-  { min: 0.95, max: 1.01, label: '95–100%', color: '#34d399', rgba: [52, 211, 153, 175] },
-  { min: 0.85, max: 0.95, label: '85–95%', color: '#10b981', rgba: [16, 185, 129, 168] },
-  { min: 0.70, max: 0.85, label: '70–85%', color: '#1ca39b', rgba: [28, 163, 155, 162] },
-  { min: 0.50, max: 0.70, label: '50–70%', color: '#84cc16', rgba: [132, 204, 22, 156] },
-  { min: 0.30, max: 0.50, label: '30–50%', color: '#eab308', rgba: [234, 179, 8, 154] },
-  { min: 0.15, max: 0.30, label: '15–30%', color: '#d97706', rgba: [217, 119, 6, 150] },
-  { min: 0.05, max: 0.15, label: '5–15%', color: '#c93b3b', rgba: [201, 59, 59, 145] },
-  { min: 0.01, max: 0.05, label: '1–5%', color: '#991b1b', rgba: [153, 27, 27, 132] },
+  { min: 0.95, max: 1.01, label: 'Easily visible', pctRange: '95–100%', color: '#34d399', rgba: [52, 211, 153, 175] },
+  { min: 0.85, max: 0.95, label: 'Readily visible (naked eye)', pctRange: '85–95%', color: '#10b981', rgba: [16, 185, 129, 168] },
+  { min: 0.70, max: 0.85, label: 'Visible to naked eye', pctRange: '70–85%', color: '#1ca39b', rgba: [28, 163, 155, 162] },
+  { min: 0.50, max: 0.70, label: 'Visible in clear conditions', pctRange: '50–70%', color: '#84cc16', rgba: [132, 204, 22, 156] },
+  { min: 0.30, max: 0.50, label: 'Visible if perfect conditions', pctRange: '30–50%', color: '#eab308', rgba: [234, 179, 8, 154] },
+  { min: 0.15, max: 0.30, label: 'May need optical aid to find', pctRange: '15–30%', color: '#d97706', rgba: [217, 119, 6, 150] },
+  { min: 0.05, max: 0.15, label: 'Needs optical aid to locate', pctRange: '5–15%', color: '#c93b3b', rgba: [201, 59, 59, 145] },
+  { min: 0.01, max: 0.05, label: 'Only visible with optical aid', pctRange: '1–5%', color: '#991b1b', rgba: [153, 27, 27, 132] },
 ];
+
+function unwrapRing(ring) {
+  if (!ring.length) return ring;
+  const out = [[ring[0][0], ring[0][1]]];
+  let minLon = ring[0][0];
+  for (let i = 1; i < ring.length; i++) {
+    let lon = ring[i][0];
+    const prevLon = out[i - 1][0];
+    while (lon - prevLon > 180) lon -= 360;
+    while (lon - prevLon < -180) lon += 360;
+    if (lon < minLon) minLon = lon;
+    out.push([lon, ring[i][1]]);
+  }
+  // Keep rings that cross -180 on the eastern (+180) side (e.g. Fiji poly 1 & Wrangel Island)
+  if (minLon < -180) {
+    for (let i = 0; i < out.length; i++) out[i][0] += 360;
+  }
+  return out;
+}
+
+function fixAntimeridianGeoJson(geo) {
+  return {
+    ...geo,
+    features: geo.features
+      .filter((feat) => String(feat.id) !== '010' && feat.properties?.name !== 'Antarctica')
+      .map((feat) => {
+        const g = feat.geometry;
+        if (!g) return feat;
+        if (g.type === 'Polygon') {
+          return { ...feat, geometry: { ...g, coordinates: g.coordinates.map(unwrapRing) } };
+        }
+        if (g.type === 'MultiPolygon') {
+          return {
+            ...feat,
+            geometry: { ...g, coordinates: g.coordinates.map((poly) => poly.map(unwrapRing)) },
+          };
+        }
+        return feat;
+      }),
+  };
+}
 
 function probToRgba(p) {
   if (p <= 0.005) return [0, 0, 0, 0];
@@ -208,7 +249,7 @@ export class EidMapController {
     this.map.createPane('arcsPane').style.zIndex = 480;
     this.map.createPane('stationPane').style.zIndex = 650;
 
-    const geo = topoFeature(worldAtlas, worldAtlas.objects.countries);
+    const geo = fixAntimeridianGeoJson(topoFeature(worldAtlas, worldAtlas.objects.countries));
     this.jurisdictionLayer = L.geoJSON(geo, {
       pane: 'jurisdictionPane',
       style: (feat) => this._styleCountry(feat),
@@ -236,7 +277,7 @@ export class EidMapController {
           }
         });
       },
-    }).addTo(this.map);
+    });
 
     this.visLayer = new VisibilityCanvasLayer({
       dateIso: null,
